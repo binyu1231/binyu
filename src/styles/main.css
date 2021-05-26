@@ -9,35 +9,25 @@ body,
 }
 
 html.dark {
-  background: #121212;
+  @apply bg-cool-gray-900 text-white;
 }
 
-#nprogress {
-  pointer-events: none;
+html {
+  @apply bg-warm-gray-200 text-dark-900 transition-all;
+  font-size: 20px;
+  font-family: Heiti TC;
 }
 
-#nprogress .bar {
-  @apply bg-teal-600 opacity-75;
-
-  position: fixed;
-  z-index: 1031;
-  top: 0;
-  left: 0;
-
-  width: 100%;
-  height: 2px;
+.container {
+  @apply mx-auto;
+  max-width: 1400px;
+  
 }
 
-.btn {
-  @apply px-4 py-1 rounded inline-block
-    bg-teal-600 text-white cursor-pointer
-    hover:bg-teal-700
-    disabled:cursor-default disabled:bg-gray-600 disabled:opacity-50;
+.block-bg-color {
+  @apply bg-warm-gray-300 dark:bg-gray-700;
 }
 
-.icon-btn {
-  @apply inline-block cursor-pointer select-none
-    opacity-75 transition duration-200 ease-in-out
-    hover:opacity-100 hover:text-teal-600;
-  font-size: 0.9em;
+.border-line-color {
+  @apply border-black dark:border-white;
 }

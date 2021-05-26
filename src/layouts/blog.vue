@@ -5,24 +5,20 @@ const blogs = ref([])
 
 fetch('/meta/config.json').then(res => res.json())
   .then((config) => {
-    blogs.value = config.blogs.slice(0, 7)
+    blogs.value = config.blogs
   })
 </script>
 <template>
   <main class="container pt-10">
     <Header title="Binyu.me" class="mb-8" />
 
-    <div class="clearfix md:flex">
+    <div class="flex">
+      <div class="md:w-1/4">
+        <ArticleList :list="blogs.slice(0, 7)" />
+      </div>
       <div class="md:w-1/2">
-        <ArticleList :list="blogs" />
-      </div>
-      <div class="md:w-1/4">
-        <PictureList />
-      </div>
-      <div class="md:w-1/4">
-        <TipList />
+        <router-view x="2" />
       </div>
     </div>
-    <!-- <router-view /> -->
   </main>
 </template>

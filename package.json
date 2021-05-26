@@ -1,6 +1,7 @@
 {
   "private": true,
   "scripts": {
+    "gen": "node scripts/gen.js",
     "dev": "vite --port 3333 --open",
     "build": "cross-env NODE_ENV=production vite-ssg build",
     "preview": "vite preview",
@@ -9,6 +10,9 @@
   "dependencies": {
     "@vueuse/core": "^4.9.2",
     "@vueuse/head": "^0.5.1",
+    "markdown-it": "^12.0.6",
+    "markdown-it-meta": "^0.0.1",
+    "marked": "^2.0.5",
     "nprogress": "^0.2.0",
     "prism-theme-vars": "^0.2.2",
     "vue": "^3.0.11",
