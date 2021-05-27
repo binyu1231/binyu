@@ -9,13 +9,13 @@ body,
 }
 
 html.dark {
-  @apply bg-cool-gray-900 text-white;
+  @apply bg-cool-gray-900 text-gray-300;
 }
 
 html {
   @apply bg-warm-gray-200 text-dark-900 transition-all;
   font-size: 20px;
-  font-family: Heiti TC;
+  font-family: Heiti TC, Heiti;
 }
 
 .container {

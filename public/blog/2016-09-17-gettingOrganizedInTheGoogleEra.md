@@ -1,7 +1,7 @@
 ---
 title: 《Google工作整理术》
 date: 2016-09-17
-cover: ''
+cover: https://img9.doubanio.com/view/subject/l/public/s28348255.jpg
 desc: 
 ---
 

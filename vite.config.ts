@@ -70,8 +70,8 @@ export default defineConfig({
     VitePWA({
       registerType: 'autoUpdate',
       manifest: {
-        name: 'Vitesse',
-        short_name: 'Vitesse',
+        name: 'Binyu',
+        short_name: 'Binyu',
         theme_color: '#ffffff',
         icons: [
           {

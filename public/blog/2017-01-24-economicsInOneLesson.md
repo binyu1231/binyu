@@ -1,6 +1,7 @@
 ---
 title: 《一课经济学》
 date: 2017-01-24
+cover: https://img9.doubanio.com/view/subject/l/public/s28786556.jpg
 ---
 
 

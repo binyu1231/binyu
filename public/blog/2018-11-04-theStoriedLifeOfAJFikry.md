@@ -1,15 +1,9 @@
 ---
 title: 《岛上书店》
 date: 2018-11-04
-cover: https://img14.360buyimg.com/n1/jfs/t18307/116/2684631523/92267/752b64f7/5b0272a5Nfce03d2f.jpg
+cover: https://img1.doubanio.com/view/subject/l/public/s29810488.jpg
 desc: “没有人会成为一座孤岛，或者一座完美的孤岛”
 ---
-
-"没有人会成为一座孤岛，或者一座完美的孤岛"
-
-
-<!-- more -->
-
 
 ### 没有人是一座孤岛
 

@@ -73,7 +73,7 @@ const props = defineProps({
       style="height: 240px; width: calc(25% - 10px)"
     >
       <div class="flex h-full px-2 py-2">
-        <div class="text-lg " style="writing-mode: vertical-lr;">
+        <div class="text-lg md:whitespace-nowrap" style="writing-mode: vertical-lr;">
           {{ props.list[3].title }}
         </div>
         <div class="text-xs break-all h-full py-4 flex-1" style="writing-mode: vertical-lr;">
@@ -90,7 +90,7 @@ const props = defineProps({
       style="height: 240px; width: calc(25% - 10px)"
     >
       <div class="flex h-full px-2 py-2">
-        <div class="text-lg " style="writing-mode: vertical-lr;">
+        <div class="text-lg md:whitespace-nowrap" style="writing-mode: vertical-lr;">
           {{ props.list[4].title }}
         </div>
         <div class="text-xs break-all h-full py-4 flex-1" style="writing-mode: vertical-lr;">
@@ -107,7 +107,7 @@ const props = defineProps({
       style="height: 240px; width: calc(25% - 10px)"
     >
       <div class="flex h-full px-2 py-2">
-        <div class="text-lg " style="writing-mode: vertical-lr;">
+        <div class="text-lg md:whitespace-nowrap" style="writing-mode: vertical-lr;">
           {{ props.list[5].title }}
         </div>
         <div class="text-xs break-all h-full py-4 flex-1" style="writing-mode: vertical-lr;">
@@ -124,7 +124,7 @@ const props = defineProps({
       style="height: 240px; width: calc(25% - 10px)"
     >
       <div class="flex h-full px-2 py-2">
-        <div class="text-lg " style="writing-mode: vertical-lr;">
+        <div class="text-lg md:whitespace-nowrap" style="writing-mode: vertical-lr;">
           {{ props.list[6].title }}
         </div>
         <div class="text-xs break-all h-full py-4 flex-1" style="writing-mode: vertical-lr;">
