@@ -1,7 +1,7 @@
 ---
 title: 《奔跑吧, 程序员》
 date: 2020-08-08
-cover: https://img2.doubanio.com/view/subject/l/public/s29816092.jpg
+cover: https://xinghe-blog-bucket.oss-cn-beijing.aliyuncs.com/img/helloStartup.jpg
 ---
 
 

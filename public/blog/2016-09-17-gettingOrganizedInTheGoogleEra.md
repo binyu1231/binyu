@@ -1,10 +1,9 @@
 ---
 title: 《Google工作整理术》
 date: 2016-09-17
-cover: https://img9.doubanio.com/view/subject/l/public/s28348255.jpg
+cover: https://xinghe-blog-bucket.oss-cn-beijing.aliyuncs.com/img/gettingOrganizedInTheGoogleEra.jpg
 desc: 
 ---
-
 
 读这本书实际是被这本书的标题吸引了。对于一个程序猿来讲，Google 这家公司的任何决定和方法好像都值得去学习一下。这本书虽然是 Google 前 CIO 写的，并且也介绍了各种 Google 产品。但书的主旨其实在于为读者提供一个新的思路，就是我们如何利用周身的各种事物，**在我们的大脑和工作生活之间建立并维护一个适合自己的组织结构关系**。
 

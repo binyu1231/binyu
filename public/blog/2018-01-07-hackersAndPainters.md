@@ -1,7 +1,7 @@
 ---
 title: 《黑客与画家》
 date: 2018-01-07
-cover: https://img9.doubanio.com/view/subject/l/public/s27043406.jpg
+cover: https://xinghe-blog-bucket.oss-cn-beijing.aliyuncs.com/img/hackersAndPainters.jpg
 ---
 
 

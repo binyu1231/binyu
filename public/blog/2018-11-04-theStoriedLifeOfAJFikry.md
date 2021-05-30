@@ -1,7 +1,7 @@
 ---
 title: 《岛上书店》
 date: 2018-11-04
-cover: https://img1.doubanio.com/view/subject/l/public/s29810488.jpg
+cover: https://xinghe-blog-bucket.oss-cn-beijing.aliyuncs.com/img/theStoriedLifeOfAJFikry.jpg
 desc: “没有人会成为一座孤岛，或者一座完美的孤岛”
 ---
 

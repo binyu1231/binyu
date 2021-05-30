@@ -2,7 +2,7 @@
 title: 《东京女子会》
 date: 2020-11-18
 desc: 我們為什麼要讀爛小說
-cover: https://img2.doubanio.com/view/subject/l/public/s29794583.jpg
+cover: https://xinghe-blog-bucket.oss-cn-beijing.aliyuncs.com/img/2020-11-18-tokyoWomenStory.jpg
 ---
 
 > 如同憋着气潜水，这本书需要我们忍着痛阅读。推理天王-东野圭吾推荐。
