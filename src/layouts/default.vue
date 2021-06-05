@@ -3,5 +3,6 @@
     <Header title="Binyu.me" class="mb-4" />
     <router-view />
     <Footer />
+    <ToTop />
   </main>
 </template>

@@ -7,6 +7,10 @@ const props = defineProps({
     required: true,
     default: [],
   },
+  descVisiable: {
+    type: Boolean,
+    default: true,
+  },
 })
 </script>
 <template>
@@ -23,10 +27,10 @@ const props = defineProps({
         <div class="text-2xl mb-3">
           {{ props.list[0].title }}
         </div>
-        <div class="ml-2 text-sm px-2 font-normal border-1 border-white inline-block mb-5">
+        <!-- <div class="ml-2 text-sm px-2 font-normal border-1 border-white inline-block mb-5">
           閲讀
-        </div>
-        <div class="text-sm text-right pl-4">
+        </div> -->
+        <div v-if="descVisiable" class="text-sm text-right pl-4">
           {{ props.list[0].desc }}
         </div>
       </div>
@@ -42,7 +46,7 @@ const props = defineProps({
         <div class="text-lg  flex-1" style="writing-mode: vertical-rl;">
           {{ props.list[1].title }}
         </div>
-        <div class="text-xs break-all h-full pt-8" style="writing-mode: vertical-rl;">
+        <div v-if="descVisiable" class="text-xs break-all h-full pt-8" style="writing-mode: vertical-rl;">
           {{ props.list[1].desc }}
         </div>
       </div>
@@ -59,7 +63,7 @@ const props = defineProps({
         <div class="text-lg  flex-1 text-right">
           {{ props.list[2].title }}
         </div>
-        <div class="text-sm break-all h-full pt-6 pl-4">
+        <div v-if="descVisiable" class="text-sm break-all h-full pt-6 pl-4">
           {{ props.list[2].desc }}
         </div>
       </div>
@@ -76,7 +80,7 @@ const props = defineProps({
         <div class="text-lg md:whitespace-nowrap" style="writing-mode: vertical-lr;">
           {{ props.list[3].title }}
         </div>
-        <div class="text-xs break-all h-full py-4 flex-1" style="writing-mode: vertical-lr;">
+        <div v-if="descVisiable" class="text-xs break-all h-full py-4 flex-1" style="writing-mode: vertical-lr;">
           {{ props.list[3].desc }}
         </div>
       </div>
@@ -93,7 +97,7 @@ const props = defineProps({
         <div class="text-lg md:whitespace-nowrap" style="writing-mode: vertical-lr;">
           {{ props.list[4].title }}
         </div>
-        <div class="text-xs break-all h-full py-4 flex-1" style="writing-mode: vertical-lr;">
+        <div v-if="descVisiable" class="text-xs break-all h-full py-4 flex-1" style="writing-mode: vertical-lr;">
           {{ props.list[4].desc }}
         </div>
       </div>
@@ -110,7 +114,7 @@ const props = defineProps({
         <div class="text-lg md:whitespace-nowrap" style="writing-mode: vertical-lr;">
           {{ props.list[5].title }}
         </div>
-        <div class="text-xs break-all h-full py-4 flex-1" style="writing-mode: vertical-lr;">
+        <div v-if="descVisiable" class="text-xs break-all h-full py-4 flex-1" style="writing-mode: vertical-lr;">
           {{ props.list[5].desc }}
         </div>
       </div>
@@ -127,7 +131,7 @@ const props = defineProps({
         <div class="text-lg md:whitespace-nowrap" style="writing-mode: vertical-lr;">
           {{ props.list[6].title }}
         </div>
-        <div class="text-xs break-all h-full py-4 flex-1" style="writing-mode: vertical-lr;">
+        <div v-if="descVisiable" class="text-xs break-all h-full py-4 flex-1" style="writing-mode: vertical-lr;">
           {{ props.list[6].desc }}
         </div>
       </div>

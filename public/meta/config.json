@@ -3,7 +3,9 @@
     {
       "title": "2021 动画们",
       "date": "2021-05-30T00:00:00.000Z",
-      "file": "2021-05-30-Claymore"
+      "cover": "https://th.bing.com/th/id/R46f39e708485745b0ff98dac11563e62?rik=9CNY7pSy5lPwvg&riu=http%3a%2f%2finews.gtimg.com%2fnewsapp_match%2f0%2f2193553579%2f0&ehk=JE62dWiMQp9G9UnjFxr6P9WB839z6bpe69GL0o93gvI%3d&risl=1&pid=ImgRaw",
+      "desc": "持續追番中...",
+      "file": "2021-05-30-animation"
     },
     {
       "title": "2020的动画们",
@@ -29,7 +31,7 @@
       "title": "《岛上书店》",
       "date": "2018-11-04T00:00:00.000Z",
       "cover": "https://xinghe-blog-bucket.oss-cn-beijing.aliyuncs.com/img/theStoriedLifeOfAJFikry.jpg",
-      "desc": "“没有人会成为一座孤岛，或者一座完美的孤岛”",
+      "desc": "“没有人会成为一座孤岛，至少不是一座完美的孤岛”",
       "file": "2018-11-04-theStoriedLifeOfAJFikry"
     },
     {
@@ -41,6 +43,7 @@
     {
       "title": "我眼中的前端",
       "date": "2018-02-02T00:00:00.000Z",
+      "cover": "https://tse3-mm.cn.bing.net/th/id/OIP.H95MjPG0dUxP4XnI3boGUwHaFj?pid=ImgDet&rs=1",
       "file": "2018-02-02-whatsFE"
     },
     {
@@ -93,22 +96,22 @@
       {
         "title": "《你不知道的JavaScript（上卷）》02 this 读书笔记",
         "date": "2020-11-20T00:00:00.000Z",
-        "categories": [
-          [
-            "杂谈",
-            "读书笔记"
-          ],
-          [
-            "编程语言",
-            "JavaScript"
-          ]
-        ],
         "tag": [
           "JavaScript",
           "读书笔记"
         ],
         "cover": "https://xinghe-blog-bucket.oss-cn-beijing.aliyuncs.com/img/you-dont-know-javascript.jpg",
         "file": "you-dont-know-javascript-02"
+      },
+      {
+        "title": "《你不知道的JavaScript（上卷）》01作用域与闭包",
+        "date": "2020-11-19T00:00:00.000Z",
+        "tag": [
+          "JavaScript",
+          "读书笔记"
+        ],
+        "cover": "https://xinghe-blog-bucket.oss-cn-beijing.aliyuncs.com/img/you-dont-know-javascript.jpg",
+        "file": "you-dont-know-javascript-01"
       },
       {
         "title": "lodash",
@@ -233,10 +236,6 @@
       {
         "title": "README",
         "file": "README"
-      },
-      {
-        "title": "you-dont-know-javascript-01",
-        "file": "you-dont-know-javascript-01"
       },
       {
         "title": "you-dont-know-javascript-04",

@@ -20,5 +20,6 @@ fetch('/meta/config.json').then(res => res.json())
         <router-view x="2" />
       </div>
     </div>
+    <ToTop />
   </main>
 </template>

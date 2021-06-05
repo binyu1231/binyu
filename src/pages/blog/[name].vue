@@ -55,7 +55,7 @@ fetch('/meta/config.json').then(res => res.json())
 <template>
   <div class="flex justify-between">
     <div class="md:w-1/4 sm:hidden md:block">
-      <ArticleList :list="blogs.slice(0, 7)" />
+      <ArticleList :list="blogs.slice(0, 7)" :desc-visiable="false" />
       <More @click="goList" />
     </div>
     <div
@@ -74,7 +74,5 @@ fetch('/meta/config.json').then(res => res.json())
       </div>
       <div></div>
     </div>
-
-    <ToTop />
   </div>
 </template>

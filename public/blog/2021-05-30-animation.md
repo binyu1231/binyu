@@ -1,6 +1,8 @@
 ---
 title: 2021 动画们
 date: 2021-05-30
+cover: https://th.bing.com/th/id/R46f39e708485745b0ff98dac11563e62?rik=9CNY7pSy5lPwvg&riu=http%3a%2f%2finews.gtimg.com%2fnewsapp_match%2f0%2f2193553579%2f0&ehk=JE62dWiMQp9G9UnjFxr6P9WB839z6bpe69GL0o93gvI%3d&risl=1&pid=ImgRaw
+desc: 持續追番中...
 ---
 
 ## 新番
@@ -69,4 +71,4 @@ yyds
 
 ![](https://th.bing.com/th/id/R0c1e3e4d3c4980463e92585e8c709207?rik=9e7SB15zFQfNyw&riu=http%3a%2f%2ff.st-hatena.com%2fimages%2ffotolife%2fp%2fpema%2f20130524%2f20130524164243.gif&ehk=G51%2fOCWQGHP%2f%2bc8LXAcrpIDrKbGktyeynqh93BX7%2b3c%3d&risl=&pid=ImgRaw)
 
-博士非常可爱，可爱的要领，是以真挚的纯真的心面对与处理世间的事情。
+博士非常可爱! 我覺得塑造可爱的要领，是以真挚的纯真的心面对与处理世间的事情。當然還需要自己製造機器人來包容自己。

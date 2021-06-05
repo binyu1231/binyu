@@ -1,9 +1,6 @@
 ---
 title: 《你不知道的JavaScript（上卷）》02 this 读书笔记
 date: 2020-11-20
-categories:
-- [杂谈, 读书笔记]
-- [编程语言, JavaScript]
 tag: 
 - JavaScript
 - 读书笔记

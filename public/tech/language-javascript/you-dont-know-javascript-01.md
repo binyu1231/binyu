@@ -1,8 +1,11 @@
-# 《你不知道的JavaScript（上卷）》- 01作用域与闭包
-
-2020-11-19
-
-![](https://xinghe-blog-bucket.oss-cn-beijing.aliyuncs.com/img/you-dont-know-javascript.jpg)
+---
+title: 《你不知道的JavaScript（上卷）》01作用域与闭包
+date: 2020-11-19
+tag: 
+- JavaScript
+- 读书笔记
+cover: https://xinghe-blog-bucket.oss-cn-beijing.aliyuncs.com/img/you-dont-know-javascript.jpg
+---
 
 ## 作用域是什么
 
