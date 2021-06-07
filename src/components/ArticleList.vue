@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { defineProps } from 'vue'
+import { useRouter } from 'vue-router'
 
+const router = useRouter()
 const props = defineProps({
   list: {
     type: Array as any,
@@ -19,9 +21,9 @@ const props = defineProps({
       v-if="props.list[0]"
       data-order="1"
       :cover="props.list[0].cover"
-      :href="'/blog/' + props.list[0].file"
       class="w-3/4 h-32 pb-1 pr-1 mr-2 mb-2"
       style="height: 240px; width: calc(75% - 10px)"
+      @click="router.push('/blog/' + props.list[0].file)"
     >
       <div class="px-4 pt-8">
         <div class="text-2xl mb-3">
@@ -39,8 +41,8 @@ const props = defineProps({
       v-if="props.list[1]"
       data-order="2"
       :cover="props.list[1].cover"
-      :href="'/blog/' + props.list[1].file"
       style="height: 240px; width: calc(25% - 10px)"
+      @click="router.push('/blog/' + props.list[1].file)"
     >
       <div class="flex flex-row-reverse h-full px-2 py-2">
         <div class="text-lg  flex-1" style="writing-mode: vertical-rl;">
@@ -56,8 +58,8 @@ const props = defineProps({
       data-order="3"
       class="mr-2 mb-2"
       :cover="props.list[2].cover || '#8EBC93'"
-      :href="'/blog/' + props.list[2].file"
       style="height: 140px; width: calc(100% - 10px)"
+      @click="router.push('/blog/' + props.list[2].file)"
     >
       <div class="flex flex-col-reverse h-full px-2 py-2">
         <div class="text-lg  flex-1 text-right">
@@ -72,9 +74,9 @@ const props = defineProps({
       v-if="props.list[3]"
       data-order="4"
       :cover="props.list[3].cover || '#8EBC93'"
-      :href="'/blog/' + props.list[3].file"
       class="mr-2 mb-2"
       style="height: 240px; width: calc(25% - 10px)"
+      @click="router.push('/blog/' + props.list[3].file)"
     >
       <div class="flex h-full px-2 py-2">
         <div class="text-lg md:whitespace-nowrap" style="writing-mode: vertical-lr;">
@@ -89,9 +91,9 @@ const props = defineProps({
       v-if="props.list[4]"
       data-order="5"
       :cover="props.list[4].cover || '#D6B663'"
-      :href="'/blog/' + props.list[4].file"
       class="mr-2 mb-2"
       style="height: 240px; width: calc(25% - 10px)"
+      @click="router.push('/blog/' + props.list[4].file)"
     >
       <div class="flex h-full px-2 py-2">
         <div class="text-lg md:whitespace-nowrap" style="writing-mode: vertical-lr;">
@@ -106,9 +108,9 @@ const props = defineProps({
       v-if="props.list[5]"
       data-order="6"
       :cover="props.list[5].cover || '#8675B5'"
-      :href="'/blog/' + props.list[5].file"
       class="mr-2 mb-2"
       style="height: 240px; width: calc(25% - 10px)"
+      @click="router.push('/blog/' + props.list[5].file)"
     >
       <div class="flex h-full px-2 py-2">
         <div class="text-lg md:whitespace-nowrap" style="writing-mode: vertical-lr;">
@@ -123,9 +125,9 @@ const props = defineProps({
       v-if="props.list[6]"
       data-order="7"
       :cover="props.list[6].cover || '#8675B5'"
-      :href="'/blog/' + props.list[6].file"
       class="mr-2 mb-2"
       style="height: 240px; width: calc(25% - 10px)"
+      @click="router.push('/blog/' + props.list[6].file)"
     >
       <div class="flex h-full px-2 py-2">
         <div class="text-lg md:whitespace-nowrap" style="writing-mode: vertical-lr;">

@@ -17,7 +17,7 @@ fetch('/meta/config.json').then(res => res.json())
         <ArticleList :list="blogs.slice(0, 7)" />
       </div>
       <div class="md:w-1/2">
-        <router-view x="2" />
+        <router-view />
       </div>
     </div>
     <ToTop />

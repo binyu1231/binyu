@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { defineProps, ref } from 'vue'
+import { defineProps, ref, watch } from 'vue'
 import markdown from 'markdown-it'
 import { useRouter } from 'vue-router'
 
@@ -30,26 +30,27 @@ function goList() {
   router.push('/blogs')
 }
 
-fetch(`/blog/${props.name}.md`).then(res => res.text())
-  .then(mdText => mdText.replace(/^---[\w\W]+?---/, ''))
-  .then((res) => {
-    content.value = md.render(res)
-    metaObj.value = md.meta
+watch(() => props.name, () => {
+  fetch(`/blog/${props.name}.md`).then(res => res.text())
+    .then(mdText => mdText.replace(/^---[\w\W]+?---/, ''))
+    .then((res) => {
+      content.value = md.render(res)
+      metaObj.value = md.meta
 
-    return fetch('/meta/config.json').then(res => res.json())
-  })
-  .then(({ blogs }) => {
-    const index = blogs.findIndex((bg: any) => bg.file === props.name)
-    current.value = blogs[index]
-    prev.value = blogs[(index + 1) % blogs.length]
-    next.value = blogs[(index - 1 + blogs.length) % blogs.length]
-  })
+      return fetch('/meta/config.json').then(res => res.json())
+    })
+    .then(({ blogs }) => {
+      const index = blogs.findIndex((bg: any) => bg.file === props.name)
+      current.value = blogs[index]
+      prev.value = blogs[(index + 1) % blogs.length]
+      next.value = blogs[(index - 1 + blogs.length) % blogs.length]
+    })
 
-fetch('/meta/config.json').then(res => res.json())
-  .then((config) => {
-    blogs.value = config.blogs
-  })
-
+  fetch('/meta/config.json').then(res => res.json())
+    .then((config) => {
+      blogs.value = config.blogs
+    })
+}, { immediate: true })
 </script>
 
 <template>
@@ -67,7 +68,7 @@ fetch('/meta/config.json').then(res => res.json())
     <div class="md:w-1/4" style="font-family: Heiti;">
       <img class="w-full" :src="current.cover" alt="">
       <h2 class="py-2 text-center font-bold">
-        {{ current.title }} <small>{{ current.date.slice(0, 10) }}</small>
+        {{ current.title }} <small>{{ current.date }}</small>
       </h2>
       <div class="text-sm text-center">
         {{ current.desc }}

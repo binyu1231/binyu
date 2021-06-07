@@ -3,6 +3,10 @@ const path = require('path')
 const Markdown = require('markdown-it')
 const meta = require('markdown-it-meta')
 
+function toDouble(n) {
+  return n < 10 ? `0${n}` : `${n}`
+}
+
 function metaInfos(dirPath) {
   const files = fs.readdirSync(dirPath, 'utf-8')
 
@@ -21,7 +25,7 @@ function metaInfos(dirPath) {
       }
     })
 
-  infos.sort((a, b) => b.date - a.date)
+  infos.sort((a, b) => new Date(b.date) - new Date(a.date))
 
   return infos
 }
