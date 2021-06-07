@@ -18,10 +18,15 @@ function metaInfos(dirPath) {
       md.use(meta)
       md.render(mdtext)
       const filename = file.replace('.md', '')
+
+      const d = new Date(md.meta.date)
+      const dateString = md.meta.date ? `${d.getFullYear()}-${toDouble(d.getMonth() + 1)}-${toDouble(d.getDate())}` : ''
+
       return {
         title: filename,
         ...md.meta,
         file: filename,
+        date: dateString,
       }
     })
 
