@@ -15,6 +15,11 @@ fetch('/meta/config.json').then(res => res.json())
     <div class="clearfix md:flex">
       <div class="md:w-1/2">
         <ArticleList :list="blogs" />
+        <div class="flex justify-end pr-2">
+          <router-link to="/blogs">
+            <More />
+          </router-link>
+        </div>
       </div>
       <div class="md:w-1/4">
         <PictureList />

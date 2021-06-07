@@ -1,10 +1,9 @@
 <script setup lang="ts">
-import { defineProps, ref, watch } from 'vue'
+import { defineProps, ref } from 'vue'
+// @ts-ignore
 import markdown from 'markdown-it'
-import { useRouter } from 'vue-router'
 
 const md = markdown()
-const router = useRouter()
 // md.use(meta)
 
 const props = defineProps({
@@ -25,10 +24,6 @@ const current = ref<any>({
 const prev = ref<any>({})
 const next = ref<any>({})
 const blogs = ref([])
-
-function goList() {
-  router.push('/blogs')
-}
 
 watch(() => props.name, () => {
   fetch(`/blog/${props.name}.md`).then(res => res.text())
@@ -57,7 +52,9 @@ watch(() => props.name, () => {
   <div class="flex justify-between">
     <div class="md:w-1/4 sm:hidden md:block">
       <ArticleList :list="blogs.slice(0, 7)" :desc-visiable="false" />
-      <More @click="goList" />
+      <router-link to="/blogs">
+        <More />
+      </router-link>
     </div>
     <div
       class="md:w-4/9 text-sm font-extralight prose prose-sm m-auto text-left font-normal"
