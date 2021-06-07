@@ -1,8 +1,6 @@
 <script setup lang="ts">
 import { defineProps } from 'vue'
-import { useRouter } from 'vue-router'
 
-const router = useRouter()
 const props = defineProps({
   list: {
     type: Array as any,
@@ -32,7 +30,10 @@ const props = defineProps({
         <!-- <div class="ml-2 text-sm px-2 font-normal border-1 border-white inline-block mb-5">
           閲讀
         </div> -->
-        <div v-if="descVisiable" class="text-sm text-right pl-4">
+        <div
+          v-if="descVisiable"
+          class="text-sm text-right pl-4"
+        >
           {{ props.list[0].desc }}
         </div>
       </div>
@@ -45,10 +46,17 @@ const props = defineProps({
       :href="'/blog/' + props.list[1].file"
     >
       <div class="flex flex-row-reverse h-full px-2 py-2">
-        <div class="text-lg  flex-1" style="writing-mode: vertical-rl;">
+        <div
+          class="text-lg  flex-1"
+          style="writing-mode: vertical-rl;"
+        >
           {{ props.list[1].title }}
         </div>
-        <div v-if="descVisiable" class="text-xs break-all h-full pt-8" style="writing-mode: vertical-rl;">
+        <div
+          v-if="descVisiable"
+          class="text-xs break-all h-full pt-8"
+          style="writing-mode: vertical-rl;"
+        >
           {{ props.list[1].desc }}
         </div>
       </div>
@@ -62,10 +70,13 @@ const props = defineProps({
       :href="'/blog/' + props.list[2].file"
     >
       <div class="flex flex-col-reverse h-full px-2 py-2">
-        <div class="text-lg  flex-1 text-right">
+        <div class="text-lg flex-1 text-right">
           {{ props.list[2].title }}
         </div>
-        <div v-if="descVisiable" class="text-sm break-all h-full pt-6 pl-4">
+        <div
+          v-if="descVisiable"
+          class="text-sm break-all h-full pt-6 pl-4"
+        >
           {{ props.list[2].desc }}
         </div>
       </div>
@@ -79,10 +90,17 @@ const props = defineProps({
       :href="'/blog/' + props.list[3].file"
     >
       <div class="flex h-full px-2 py-2">
-        <div class="text-lg md:whitespace-nowrap" style="writing-mode: vertical-lr;">
+        <div
+          class="text-lg md:whitespace-nowrap"
+          style="writing-mode: vertical-lr;"
+        >
           {{ props.list[3].title }}
         </div>
-        <div v-if="descVisiable" class="text-xs break-all h-full py-4 flex-1" style="writing-mode: vertical-lr;">
+        <div
+          v-if="descVisiable"
+          class="text-xs break-all h-full py-4 flex-1"
+          style="writing-mode: vertical-lr;"
+        >
           {{ props.list[3].desc }}
         </div>
       </div>
@@ -96,10 +114,17 @@ const props = defineProps({
       :href="'/blog/' + props.list[4].file"
     >
       <div class="flex h-full px-2 py-2">
-        <div class="text-lg md:whitespace-nowrap" style="writing-mode: vertical-lr;">
+        <div
+          class="text-lg md:whitespace-nowrap"
+          style="writing-mode: vertical-lr;"
+        >
           {{ props.list[4].title }}
         </div>
-        <div v-if="descVisiable" class="text-xs break-all h-full py-4 flex-1" style="writing-mode: vertical-lr;">
+        <div
+          v-if="descVisiable"
+          class="text-xs break-all h-full py-4 flex-1"
+          style="writing-mode: vertical-lr;"
+        >
           {{ props.list[4].desc }}
         </div>
       </div>
@@ -113,10 +138,17 @@ const props = defineProps({
       style="height: 240px; width: calc(25% - 10px)"
     >
       <div class="flex h-full px-2 py-2">
-        <div class="text-lg md:whitespace-nowrap" style="writing-mode: vertical-lr;">
+        <div
+          class="text-lg md:whitespace-nowrap"
+          style="writing-mode: vertical-lr;"
+        >
           {{ props.list[5].title }}
         </div>
-        <div v-if="descVisiable" class="text-xs break-all h-full py-4 flex-1" style="writing-mode: vertical-lr;">
+        <div
+          v-if="descVisiable"
+          class="text-xs break-all h-full py-4 flex-1"
+          style="writing-mode: vertical-lr;"
+        >
           {{ props.list[5].desc }}
         </div>
       </div>
@@ -130,10 +162,17 @@ const props = defineProps({
       :href="'/blog/' + props.list[6].file"
     >
       <div class="flex h-full px-2 py-2">
-        <div class="text-lg md:whitespace-nowrap" style="writing-mode: vertical-lr;">
+        <div
+          class="text-lg md:whitespace-nowrap"
+          style="writing-mode: vertical-lr;"
+        >
           {{ props.list[6].title }}
         </div>
-        <div v-if="descVisiable" class="text-xs break-all h-full py-4 flex-1" style="writing-mode: vertical-lr;">
+        <div
+          v-if="descVisiable"
+          class="text-xs break-all h-full py-4 flex-1"
+          style="writing-mode: vertical-lr;"
+        >
           {{ props.list[6].desc }}
         </div>
       </div>

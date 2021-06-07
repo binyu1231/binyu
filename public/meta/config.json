@@ -69,11 +69,6 @@
   "tech": {
     "language-javascript": [
       {
-        "title": "README",
-        "file": "README",
-        "date": ""
-      },
-      {
         "title": "js 编程实践",
         "file": "awesome",
         "date": ""
@@ -241,17 +236,17 @@
         "date": ""
       },
       {
+        "title": "README",
+        "file": "README",
+        "date": ""
+      },
+      {
         "title": "you-dont-know-javascript-04",
         "file": "you-dont-know-javascript-04",
         "date": ""
       }
     ],
     "language-python": [
-      {
-        "title": "README",
-        "file": "README",
-        "date": ""
-      },
       {
         "title": "flask",
         "file": "flask",
@@ -311,6 +306,11 @@
           "python"
         ],
         "file": "python-numpy"
+      },
+      {
+        "title": "README",
+        "file": "README",
+        "date": ""
       }
     ]
   }

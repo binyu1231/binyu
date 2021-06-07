@@ -13,7 +13,7 @@ fetch('/meta/config.json').then(res => res.json())
     <Header title="Binyu.me" class="mb-8" />
 
     <div class="flex">
-      <div class="md:w-1/4">
+      <div class="md:w-1/4 opacity-50 hover:opacity-100">
         <ArticleList :list="blogs.slice(0, 7)" />
       </div>
       <div class="md:w-1/2">

@@ -20,7 +20,11 @@ const props = defineProps({
         </a>
       </div>
       <div class="absolute left-6 top-3 flex items-end">
-        <a href="javascript:;" class="text-6xl cursor-pointer" @click="$router.push('/')">
+        <a
+          href="javascript:;"
+          class="text-6xl cursor-pointer"
+          @click="$router.push('/')"
+        >
           {{ props.title }}
         </a>
       </div>

@@ -20,20 +20,8 @@
       <li><mdi-svg /></li> -->
     </ul>
   </Dropbox>
-  <Dropbox title="Coloration" class="mb-4">
-    <ul>
-      <li>JavaScript</li>
-      <li>JavaScript</li>
-      <li>JavaScript</li>
-      <li>JavaScript</li>
-    </ul>
+  <!--
+    <Dropbox title="Coloration" class="mb-4">
   </Dropbox>
-  <Dropbox title="languages" class="mb-4">
-    <ul>
-      <li>JavaScript</li>
-      <li>JavaScript</li>
-      <li>JavaScript</li>
-      <li>JavaScript</li>
-    </ul>
-  </Dropbox>
+  -->
 </template>
