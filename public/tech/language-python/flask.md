@@ -264,6 +264,41 @@ db = SQLAlchemy(app)
 - SQLite（Linux，macOS）: sqlite:////absolute/path/to/database
 - SQLite（Windows）: sqlite:///c:/absolute/path/to/database
 
+### 一对多关系
+
+``` py
+# 一
+class Role(db.Model):
+    # ...
+    users = db.relationship('User', backref='role')
+
+# 多
+class User(db.Model):
+    # ...
+    role_id = db.Column(db.Integer, db.ForeignKey('roles.id'))
+```
+
+### 多对多关系
+
+``` py
+registrations = db.Table('registrations',
+    db.Column('student_id', db.Integer, db.ForeignKey('students.id')),
+    db.Column('class_id', db.Integer, db.ForeignKey('classes.id'))
+)
+
+class Student(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String)
+    classes = db.relationship('Class',
+                              secondary=registrations,
+                              backref=db.backref('students', lazy='dynamic'),
+                              lazy='dynamic')
+
+class Class(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String)
+```
+
 
 #### 最常用的SQLAlchemy列类型
 
