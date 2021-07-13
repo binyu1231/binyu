@@ -35,7 +35,7 @@ watch(() => route.path, () => {
   prev.value = currentIdx > 0 ? posts[currentIdx - 1] : null
   next.value = currentIdx < posts.length - 1 ? posts[currentIdx + 1] : null
   current.value = posts[currentIdx]
-  window.scrollTo({ top: 0 })
+  globalThis.scrollTo({ top: 0 })
 }, { immediate: true })
 
 </script>

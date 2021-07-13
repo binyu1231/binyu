@@ -18,7 +18,7 @@ function trans () {
 
 }
 
-useEventListener(window, 'resize', trans)
+useEventListener(globalThis, 'resize', trans)
 onMounted(trans)
 
 

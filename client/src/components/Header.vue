@@ -7,7 +7,7 @@ const mobileNavOpen = ref(false)
 const mobileNav = ref<HTMLElement | null>(null)
 const hamburger = ref<HTMLButtonElement | null>(null)
 
-useEventListener(document, 'click', function clickOutside (e: MouseEvent) {
+useEventListener(globalThis.document, 'click', function clickOutside (e: MouseEvent) {
   if (
     !mobileNavOpen.value 
     || mobileNav.value?.contains(e.target as Node) 
@@ -17,7 +17,7 @@ useEventListener(document, 'click', function clickOutside (e: MouseEvent) {
   
 })
 
-useEventListener(document, 'keydown', function keyPress (event: KeyboardEvent) {
+useEventListener(globalThis.document, 'keydown', function keyPress (event: KeyboardEvent) {
   if (!mobileNavOpen.value || event.code !== '27') return
       mobileNavOpen.value = false
 })

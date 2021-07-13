@@ -1,5 +1,3 @@
-<script lang="ts">
-</script>
 <template>
   <PageLayout
     cover="https://xinghe-blog-bucket.oss-cn-beijing.aliyuncs.com/img/blog-coloration-cover.jpg"
