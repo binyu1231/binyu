@@ -3,7 +3,8 @@
   NODE_VERSION = "14"
 
 [build]
-  publish = "dist"
+  base = "client/"
+  publish = "dist/"
   command = "npx pnpm i --store=node_modules/.pnpm-store && npx pnpm run build"
 
 [[redirects]]
