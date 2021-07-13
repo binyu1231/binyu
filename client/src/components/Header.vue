@@ -60,7 +60,7 @@ useEventListener(document, 'keydown', function keyPress (event: KeyboardEvent) {
               <router-link 
                 to="/" 
                 class="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100 px-5 py-2 flex items-center transition duration-150 ease-in-out">
-                Blog
+                Home
               </router-link>
             </li>
             <li>

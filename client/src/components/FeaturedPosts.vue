@@ -13,16 +13,16 @@
             </figure>
             <div class="relative flex flex-col h-full text-white">
               <header class="flex-grow">
-                <router-link class="hover:underline" to="/blog-post">
+                <router-link class="hover:underline" to="/colorations">
                   <h3 class="text-lg font-red-hat-display font-bold tracking-tight mb-2">
-                    Coloration lib Documents
+                    Coloration Code Documents
                     <br />
                     
                   </h3>
                 </router-link>
               </header>
               <footer>
-                <div class="text-sm opacity-80">By Josh Wang · Nov 16, 2020</div>
+                <div class="text-sm opacity-80">一些工具库的文档</div>
               </footer>
             </div>
           </article>
@@ -75,6 +75,7 @@
             </figure>
             <div class="relative flex flex-col h-full text-white">
               <header class="flex-grow">
+                
                 <router-link class="hover:underline" to="/blog-post">
                   <h3 class="text-lg font-red-hat-display font-bold tracking-tight mb-2">
                     Music half pie

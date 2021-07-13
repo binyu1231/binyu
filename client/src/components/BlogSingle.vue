@@ -15,18 +15,6 @@ const props = defineProps({
 </script>
 <template>
   <section class="relative">
-    <!-- Background image -->
-    <div class="absolute inset-0 h-128 pt-16 box-content">
-      <img 
-        class="absolute inset-0 w-full h-full object-cover opacity-25" 
-        :src="props.post.cover" 
-        width="1440" 
-        height="577" 
-        alt="About" 
-      />
-      <div class="absolute inset-0 bg-gradient-to-t from-white dark:from-gray-900" aria-hidden="true"></div>
-    </div>
-
     <div class="relative max-w-6xl mx-auto px-4 sm:px-6">
       <div class="pt-32 pb-12 md:pt-40 md:pb-20">
         <div class="max-w-3xl mx-auto">

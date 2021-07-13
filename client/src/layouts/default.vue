@@ -30,6 +30,8 @@ watch(() => route.path, () => {
   const name = path.replace(/\/.*\//, '')
   const currentIdx = posts.findIndex(p => p.file === name)
 
+  if (currentIdx < 0) return
+
   prev.value = currentIdx > 0 ? posts[currentIdx - 1] : null
   next.value = currentIdx < posts.length - 1 ? posts[currentIdx + 1] : null
   current.value = posts[currentIdx]
@@ -38,7 +40,7 @@ watch(() => route.path, () => {
 
 </script>
 <template>
-  <PageLayout>
+  <PageLayout :cover="current.cover">
     <!-- Page sections -->
     <BlogSingle :post="current">
       <router-view />

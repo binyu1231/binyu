@@ -5,7 +5,7 @@ const hero = posts[0]
 const normals = posts.slice(1)
 </script>
 <template>
-<PageLayout>
+<PageLayout :cover="hero.cover">
   <HeroBlog :post="hero" />
   <FeaturedPosts />
   <div class="max-w-6xl mx-auto px-4 sm:px-6">
