@@ -3,26 +3,30 @@ meta:
   layout: empty
 </route>
 
+[[toc]]
 
-# @coloration/asker manual
+# @coloration/asker
 
 - Github: <https://github.com/coloration/asker>
-- document above:
+- Living Document: <https://binyu.me/coloration/asker>
+- Github Document Page: <https://github.com/coloration/asker/blob/master/DOCUMENT.md>
 
 <!-- more -->
 
 <p style="display: flex;">
-  <img src="https://img.shields.io/npm/v/@coloration/asker.svg" alt="version">
-  <img src="https://img.shields.io/npm/l/@coloration/asker.svg" alt="lic">
-  <img src="https://img.shields.io/npm/dm/@coloration/asker.svg" alt="Download">
-  <img src="https://img.shields.io/bundlephobia/min/@coloration/asker@0.9.0" alt="min">
-  <img src="https://img.shields.io/bundlephobia/minzip/@coloration/asker@0.9.0" alt="minzip">
+  <img style="margin-right: 6px" src="https://img.shields.io/npm/v/@coloration/asker.svg" alt="version">
+  <img style="margin-right: 6px" src="https://img.shields.io/npm/l/@coloration/asker.svg" alt="lic">
+  <img style="margin-right: 6px" src="https://img.shields.io/npm/dm/@coloration/asker.svg" alt="Download">
+  <img style="margin-right: 6px" src="https://img.shields.io/bundlephobia/min/@coloration/asker@0.9.0" alt="min">
+  <img style="margin-right: 6px" src="https://img.shields.io/bundlephobia/minzip/@coloration/asker@0.9.0" alt="minzip">
 </p>
 
 
 ## Startup
 
 ### Install
+
+> HTML
 
 ``` html
 <script src="https://raw.githubusercontent.com/coloration/asker/master/dist/index.js"></script>
@@ -32,8 +36,7 @@ Asker.get('http://api.io`')
 </script>
 ```
 
-or
-
+> Node Project
 
 ```bash
 $ yarn add @coloration/asker -S
@@ -41,13 +44,12 @@ $ yarn add @coloration/asker -S
 $ npm i @coloration/asker -S
 ```
 
-### Use
+### Simple Usage
 
 > JavaScript
 
 ``` js
 import { Asker } from '@coloration/asker'
-
 
 Asker.get('http://api.io/list', { page: 1, size: 20 })
 ```
@@ -64,7 +66,7 @@ type FooDto {
 Asker.get<FooDto>('http://api.io/list' { page: 1 })
 ```
 
-## Instance
+### Instance Usage
 
 You can initialize to cache some configure
 
@@ -79,91 +81,9 @@ api.get('/list', { page: 1, size: 20 })
 api.post('/article', { title: 'a article', content: 'write ...' })
 ```
 
-This is a detail configure for Asker, there are some example for configure after this:
+[detail of configure on above](#conf)
 
-``` ts
-export interface AskerConf {
-  /** a sub url, it will be added after `baseUrl` at last */
-  url?: string,
-  
-  /** the url first part */
-  baseUrl?: string,
-  
-  /** the string result */
-  query?: string,
-  
-  /** the transferred object for post  */
-  body?: any,
-  
-  /** if you need to set the query string when you call the post like methods, 
-   * you could set this  */
-  params?: { [key: string]: any },
-  
-  /** request method, will be override when you invoke instance[method] */
-  method?: 'get' | 'option' | 'head' | 'post' | 'put' | 'patch' | 'delete',
-  
-  /** request headers */
-  headers?: { [key: string]: any }
-
-  /** will cache response after first (getLike) request, 
-   * second will return the cache */
-  getCache?: boolean
-
-  /** asker will change the data type auto by this */
-  postType?: 'json' | 'form-data' | 'text' | 'form-urlencoded',
-  
-  /** default 'object' will call 'JSON.parse()', other return string */
-  responseType?: 'object' | 'text',
-  
-  /** waiting over timeout(MS), asker will call the 'onTimeout' or 'reject' */
-  timeout?: number,
-
-  /** set `XMLHTTPRequest` withCredentials */
-  withCredentials?: true,
-
-  /** custom validator, default is `status >= 200 && status < 300` */
-  validator?: (status: number) => boolean,
-
-  /** custom adapter: you can replace default xhr adapter, `Asker.jsonp` is 
-   * implemented by this way。 it also can be used in mock, you can pass a 
-   * data (except `undefined`), it will return a response wrapped by 
-   * `AskerResponse` object. Or you pass a function return a custom data
-  */
-  adapter?: string | number | boolean | { [key: string]: any } | any[] |
-    ((response: any, defaultResponse: AskerResponse) => Promise) | 
-    ((response: T, defaultResponse: AskerResponse) => Promise)
-  ,
-  
-  /** hook chain change the `AskerConf` before the request  */
-  before?: (conf: AskerConf) => AskerConf | ((conf: AskerConf) => AskerConf)[],
-  
-  /** hook chain change your resopnse after the request */
-  after?: (response: any) => any
-
-  /** called when xhr trigger `error` event */
-  onError?: (errType: string, xhr: XMLHttpRequest, conf: AskerConf) => any,
-
-  /** called when xhr trigger `abort` event */
-  onAbort?: (errType: string, xhr: XMLHttpRequest, conf: AskerConf) => any,
-
-  /** called when xhr trigger `timeout` event */
-  onTimeout?: (errType: string, xhr: XMLHttpRequest, conf: AskerConf) => any,
-
-  /** called when xhr trigger `upload.progress` event */
-  onUploadProgress?: (e: ProgressEvent, xhr: XMLHttpRequest, conf: AskerConf) => any,
-  
-  /** called when xhr trigger `progress` event */
-  onDownloadProgress?: (e: ProgressEvent, xhr: XMLHttpRequest, conf: AskerConf) => any
-
-  /** cancellion */
-  canceler?: Canceler
-
-  /** other custom props */
-  [key: string]: any
-}
-```
-
-## Methods
+## Methods Usage
 
 ### Normal
 
@@ -223,6 +143,10 @@ Asker.batch(
 .then(allResponses => {})
 ```
 
+## Features
+
+> some differences from other request tool
+
 ### Custom Adapter & Mock
 
 The `jsonp` and `batch` methods are implemented by `adpater`. You also could implement some other methods. Other platforms, for example, miniprogram, the enviorment support JavaScript, but not support `XMLHTTPRequest`.
@@ -238,7 +162,7 @@ export function get (url, params, conf) {
 }
 ```
 
-#### Uniapp Request Example 
+**Uniapp Request Example** 
 
 ``` js
 import { Asker } from '@coloration/asker'
@@ -279,10 +203,6 @@ Asker.get('whatever string', whateverParam, {
 .then(response => {}) // [1, 2, 3]
 }
 ```
-
-## Features
-
-> some differences from other request tool
 
 ### Cache responses for Getlike methods
 
@@ -372,3 +292,233 @@ Asker.get('http://api.io/test-timeout2', null, { timeout: 3000 })
   message === Asker.errorType.TIMEOUT
 })
 ```
+
+### Unified Catcher
+
+from `1.1.0`
+
+we can set a unified function to handle error.
+
+```ts
+
+``` 
+
+<!-- more -->
+
+## Documents
+
+### methods
+
+- get: `<T = any>(url: string, params?: any, conf?: AskerConf) => Promise<T>`
+- delete: `<T = any>(url: string, params?: any, conf?: AskerConf) => Promise<T>`
+- head: `<T = any>(url: string, params?: any, conf?: AskerConf) => Promise<T>`
+- option: `<T = any>(url: string, params?: any, conf?: AskerConf) => Promise<T>`
+
+- post: `<T = any>(url: string, body?: any, conf?: AskerConf) => Promise<T>`
+- put: `<T = any>(url: string, body?: any, conf?: AskerConf) => Promise<T>`
+- patch: `<T = any>(url: string, body?: any, conf?: AskerConf) => Promise<T>`
+
+- jsonp: `AskerJsonpConf` extends `AskerConf`. an addition option is `jsonp`. It's will be specitied with callback function name. like `callName`
+  - `<T = any>(url?: string, params?: any, conf?: AskerJsonpConf): Promise<T>`
+  - `<T = any>(url?: string, callName?: string, conf?: AskerJsonpConf): Promise<T>`
+
+- batch: `AskerBatchConf` extends `AskerConf`. `slice` option means, how much requests in one batch will be send. `retry` option means, how many times to retry when the request fail.
+  - `<T = any>(url?: string, paramsOrbody?: any[], conf?: AskerBatchConf): Promise<T>`
+
+
+### Helper 
+
+`import {} from '@coloration/asker'`
+
+#### query2Object
+
+`(obj: { [key: string]: any }, encode = false) => string`
+
+- format plain object to query string witch like `window.location.search`. But it does not have `?` chat.
+- `encode`: if spec it `true`, it will transform every `**value**` with `encodeURIComponent`. Default is `false`.
+
+
+#### object2Query
+
+`<T = any> (query: string, raw = false) => T`
+
+- format query string to object. every chat before the first `?` will be discarded. Included the `?`.
+- `raw`: if spec it `true`. the `**value**` will be format with `JSON.parse`. string number will be number, string boolean will be boolean, and so on.
+
+
+#### splitBlob
+
+`(fileOrblob: Blob, piece: number): Blob[]`
+
+- split the file or blob with piece. The function will return one Blob Array. Its' length is `Math.ceil(Blob.size / piece)`
+
+
+### HTTP Status Code
+
+from 0.8.0
+
+```ts
+// import { HttpStatus } from '@coloration/asker'
+export declare enum HttpStatus {
+  continue = 100,
+  switchingProtocols = 101,
+  processing = 102,
+  earlyHints = 103,
+
+  ok = 200,
+  created = 201,
+  accepted = 202,
+  nonauthoritativeInformation = 203,
+  noContent = 204,
+  resetContent = 205,
+  partialContent = 206,
+  multistatus = 207,
+  alreadyReported = 208,
+  imUsed = 226,
+
+  multipleChoices = 300,
+  movedPermanently = 301,
+  found = 302,
+  seeOther = 303,
+  notModified = 304,
+  useProxy = 305,
+  switchProxy = 306,
+  temporaryRedirect = 307,
+  permanentRedirect = 308,
+
+  badRequest = 400,
+  unauthorized = 401,
+  paymentRequired = 402,
+  forbidden = 403,
+  notFound = 404,
+  methodNotAllowed = 405,
+  notAcceptable = 406,
+  proxyAuthenticationRequired = 407,
+  requestTimeout = 408,
+  conflict = 409,
+  gone = 410,
+  lengthRequired = 411,
+  preconditionFailed = 412,
+  requestEntityTooLarge = 413,
+  requesturiTooLong = 414,
+  unsupportedMediaType = 415,
+  requestedRangeNotSatisfiable = 416,
+  expectationFailed = 417,
+  iAmATeapot = 418,
+  misdirectedRequest = 421,
+  unprocessableEntity = 422,
+  locked = 423,
+  unprocessableEntity = 424,
+  tooEarly = 425,
+  upgradeRequired = 426,
+  preconditionRequired = 428,
+  tooManyRequests = 429,
+  requestHeaderFieldsTooLarge = 431,
+  unavailableForLegalReasons = 451,
+
+  internalServerError = 500,
+  notImplemented = 501,
+  badGateway = 502,
+  serviceUnavailable = 503,
+  gatewayTimeout = 504,
+  httpVersionNotSupported = 505,
+  variantAlsoNegotiates = 506,
+  insufficientStorage = 507,
+  loopDetected = 508,
+  notExtended = 510,
+  networkAuthenticationRequired = 511
+}
+```
+
+### Conf
+
+``` ts
+export interface AskerConf {
+  /** a sub url, it will be added after `baseUrl` at last */
+  url?: string,
+  
+  /** the url first part */
+  baseUrl?: string,
+  
+  /** the string result */
+  query?: string,
+  
+  /** the transferred object for post  */
+  body?: any,
+  
+  /** if you need to set the query string when you call the post like methods, you could set this  */
+  params?: { [key: string]: any },
+  
+  /** request method, will be override when you invoke instance[method] */
+  method?: 'get' | 'option' | 'head' | 'post' | 'put' | 'patch' | 'delete',
+  
+  /** request headers */
+  headers?: { [key: string]: any }
+
+  /** will cache response after first (getLike) request, second will return the cache. 
+   * if spec a number. the cache will be hold on `seconds`. after it will be delete.
+   **/
+  getCache?: boolean | number
+
+  /** asker will change the data type auto by this */
+  postType?: 'json' | 'form-data' | 'text' | 'form-urlencoded',
+  
+  /** */
+  responseType?: 'arraybuffer' | 'blob' | 'document' | 'json' | 'text' | 'stream',
+  /** */
+  errorResponseType?: 'json' | 'text',
+  
+  /** waiting over timeout(MS), asker will call the 'onTimeout' or 'reject' */
+  timeout?: number,
+
+  /** set `XMLHTTPRequest` withCredentials */
+  withCredentials?: true,
+
+  /** custom validator, default is `status >= 200 && status < 300` */
+  validator?: (status: number) => boolean,
+
+  /** custom adapter: you can replace default xhr adapter, `Asker.jsonp` is implemented by this way。
+   * it also can be used in mock, you can pass a data (except `undefined`), it will return a response 
+   * wrapped by `AskerResponse` object. Or you pass a function return a custom data
+  */
+  adapter?: string | number | boolean | { [key: string]: any } | any[] |
+    ((response: any, defaultResponse: AskerResponse) => Promise<any>) | 
+    (<T>(response: T, defaultResponse: AskerResponse) => Promise<T>)
+  ,
+  
+  /** hook chain change the `AskerConf` before the request  */
+  before?: (conf: AskerConf) => AskerConf | ((conf: AskerConf) => AskerConf)[],
+  
+  /** hook chain change your resopnse after the request */
+  after?: (response: any) => any
+
+  /** set default catcher */
+  catcher?: (e: { status: HttpStatus, message: string, response: any }) => any
+
+  /** called when xhr trigger `error` event */
+  onError?: (errType: string, xhr: XMLHttpRequest, conf: AskerConf) => any,
+
+  /** called when xhr trigger `abort` event */
+  onAbort?: (errType: string, xhr: XMLHttpRequest, conf: AskerConf) => any,
+
+  /** called when xhr trigger `timeout` event */
+  onTimeout?: (errType: string, xhr: XMLHttpRequest, conf: AskerConf) => any,
+
+  /** called when xhr trigger `upload.progress` event */
+  onUploadProgress?: (e: ProgressEvent, xhr: XMLHttpRequest, conf: AskerConf) => any,
+  
+  /** called when xhr trigger `progress` event */
+  onDownloadProgress?: (e: ProgressEvent, xhr: XMLHttpRequest, conf: AskerConf) => any
+
+  /** cancellion */
+  canceler?: Canceler
+
+  /** other custom props */
+  [key: string]: any
+}
+```
+
+### Change Log
+
+[github](https://github.com/coloration/asker/blob/master/CHANGELOG.md)
+

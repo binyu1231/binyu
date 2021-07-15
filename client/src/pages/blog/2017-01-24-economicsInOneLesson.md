@@ -4,6 +4,7 @@ date: 2017-01-24
 cover: https://xinghe-blog-bucket.oss-cn-beijing.aliyuncs.com/img/economicsInOneLesson.jpg
 ---
 
+[[toc]]
 
 ## Part 1
 

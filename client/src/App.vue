@@ -6,16 +6,15 @@ import { onMounted } from 'vue-demi'
 // you can use this to manipulate the document head in any components,
 // they will be rendered correctly in the html results with vite-ssg
 useHead({
-  title: 'Vitesse',
+  title: 'Binyu\'s Blog',
   meta: [
-    { name: 'description', content: 'Opinionated Vite Starter Template' },
+    { name: 'description', content: 'Record life, some web technologies' },
   ],
 })
 
 onMounted(() => {
   AOS.init({
     once: true,
-    disable: 'phone',
     duration: 600,
     easing: 'ease-out-sine',
   })

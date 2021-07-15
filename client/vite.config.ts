@@ -12,6 +12,8 @@ import VueI18n from '@intlify/vite-plugin-vue-i18n'
 import Prism from 'markdown-it-prism'
 // @ts-expect-error missing types
 import LinkAttributes from 'markdown-it-link-attributes'
+import MarkdownAnchorPlugin from 'markdown-it-anchor'
+import MarkdownTocPlugin from 'markdown-it-toc-done-right'
 
 export default defineConfig({
   resolve: {
@@ -46,6 +48,8 @@ export default defineConfig({
             rel: 'noopener',
           },
         })
+        md.use(MarkdownAnchorPlugin)
+        md.use(MarkdownTocPlugin, { level: 2 })
       },
     }),
 

@@ -1,15 +1,14 @@
 <script lang="ts" setup>
 const props = defineProps({
   post: {
-    default: () => ({ cover: '', title: '', desc: '', date: '', file: '' })
-  }
+    default: () => ({ cover: '', title: '', desc: '', date: '', file: '' }),
+  },
 })
 </script>
 <template>
   <section class="relative">
     <div class="relative max-w-6xl mx-auto px-4 sm:px-6">
       <div class="pt-32 pb-12 md:pt-40 md:pb-16">
-
         <!-- Featured article -->
         <div class="max-w-3xl" data-aos="fade-down">
           <article>
@@ -42,9 +41,7 @@ const props = defineProps({
             </header>
           </article>
         </div>
-
       </div>
     </div>
-
   </section>
 </template>

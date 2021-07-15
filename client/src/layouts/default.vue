@@ -43,7 +43,9 @@ watch(() => route.path, () => {
   <PageLayout :cover="current.cover">
     <!-- Page sections -->
     <BlogSingle :post="current">
-      <router-view />
+      <ArticleHelper>
+        <router-view />
+      </ArticleHelper>
     </BlogSingle>
     <RelatedPosts :next="next" :prev="prev" />
   </PageLayout>
