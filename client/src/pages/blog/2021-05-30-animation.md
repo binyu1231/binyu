@@ -5,6 +5,8 @@ cover: https://th.bing.com/th/id/R46f39e708485745b0ff98dac11563e62?rik=9CNY7pSy5
 desc: 持續追番中...
 ---
 
+[[toc]]
+
 ## 新番
 
 ### 哥斯拉·奇点

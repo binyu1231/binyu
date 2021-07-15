@@ -3,6 +3,7 @@
 
 declare module 'vue' {
   export interface GlobalComponents {
+    ArticleHelper: typeof import('./src/components/ArticleHelper.vue')['default']
     BlogList: typeof import('./src/components/BlogList.vue')['default']
     BlogSingle: typeof import('./src/components/BlogSingle.vue')['default']
     BxBxlCss3: typeof import('virtual:vite-icons/bx/bxl-css3')['default']

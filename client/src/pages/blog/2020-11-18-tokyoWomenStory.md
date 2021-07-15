@@ -5,6 +5,8 @@ desc: 我們為什麼要讀爛小說
 cover: https://xinghe-blog-bucket.oss-cn-beijing.aliyuncs.com/img/2020-11-18-tokyoWomenStory.jpg
 ---
 
+[[toc]]
+
 > 如同憋着气潜水，这本书需要我们忍着痛阅读。推理天王-东野圭吾推荐。
 
 我确实在忍痛阅读。

@@ -5,13 +5,16 @@ cover: https://xinghe-blog-bucket.oss-cn-beijing.aliyuncs.com/img/animation-2020
 desc: 2020年年末了，想盘盘今年看过的动画。 辛苦了！
 ---
 
+
 <!-- more -->
 
-5: 绝世好番
-4: 不容错过
-3: 打发时间
-2: 就那回事
-1: 喂不进去
+[[toc]]
+
+- 5: 绝世好番
+- 4: 不容错过
+- 3: 打发时间
+- 2: 就那回事
+- 1: 喂不进去
 
 ## TV
 

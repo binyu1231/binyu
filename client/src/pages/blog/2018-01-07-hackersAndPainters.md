@@ -4,6 +4,8 @@ date: 2018-01-07
 cover: https://xinghe-blog-bucket.oss-cn-beijing.aliyuncs.com/img/hackersAndPainters.jpg
 ---
 
+[[toc]]
+
 
 这是作者的一部博客文集，我觉得其中很多观点是我从没切换角度去思考过的，这里只是把这些观点散列在这，无论对错。
 
