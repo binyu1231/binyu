@@ -21,6 +21,7 @@ declare module 'vue' {
     CibFlask: typeof import('virtual:vite-icons/cib/flask')['default']
     CibSvg: typeof import('virtual:vite-icons/cib/svg')['default']
     Clients: typeof import('./src/components/Clients.vue')['default']
+    Comments: typeof import('./src/components/Comments.vue')['default']
     Cta: typeof import('./src/components/Cta.vue')['default']
     CtaContact: typeof import('./src/components/CtaContact.vue')['default']
     Dropdown: typeof import('./src/components/Dropdown.vue')['default']

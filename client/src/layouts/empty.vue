@@ -8,6 +8,7 @@
           </ArticleHelper>
         </div>
       </div>
+      <Comments />
     </section>
   </PageLayout>
 </template>

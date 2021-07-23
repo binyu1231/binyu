@@ -5,23 +5,24 @@ import { useRoute } from 'vue-router'
 import posts from '~/meta/posts.json'
 
 const current = ref({
-      title: '',
-      cover: '',
-      date: '',
-      desc: ''
-    })
+  title: '',
+  cover: '',
+  date: '',
+  desc: '',
+})
+
 const next = ref({
-      title: '',
-      cover: '',
-      date: '',
-      desc: ''
-    })
+  title: '',
+  cover: '',
+  date: '',
+  desc: '',
+})
 const prev = ref({
-      title: '',
-      cover: '',
-      date: '',
-      desc: ''
-    })
+  title: '',
+  cover: '',
+  date: '',
+  desc: '',
+})
 
 const route = useRoute()
 
@@ -48,5 +49,6 @@ watch(() => route.path, () => {
       </ArticleHelper>
     </BlogSingle>
     <RelatedPosts :next="next" :prev="prev" />
+    <Comments />
   </PageLayout>
 </template>
