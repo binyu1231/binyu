@@ -12,7 +12,7 @@ const writing = ref({
 })
 
 const api = new Asker({
-  baseUrl: 'http://b.coloration.top/comment',
+  baseUrl: 'https://b.coloration.top/comment',
   after: (res) => res.data,
 })
 
