@@ -27,7 +27,7 @@ const moreVisible = ref<boolean>(false)
           <header>
             <router-link class="block mb-4" :to="`/blog/${p.file}`">
               <figure class="pb-9/16">
-                <ReactiveBlock :ratio="0.7" class="bg-cover" :style="{ backgroundImage: `url(${p.cover})`}">
+                <ReactiveBlock :ratio="0.7" class="bg-cover bg-center" :style="{ backgroundImage: `url(${p.cover})`}">
                 </ReactiveBlock>
               </figure>
             </router-link>

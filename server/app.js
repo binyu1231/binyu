@@ -41,7 +41,7 @@ function readFile (name) {
       throw new ReferenceError('no file')
     }
   }
-  catch {
+  catch (e) {
     return null
   }
 }
