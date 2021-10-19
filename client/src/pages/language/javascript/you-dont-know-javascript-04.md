@@ -1,9 +1,17 @@
 ---
-title: 《你知道的JavaScript（上卷）》04 类型和不语法 - 读书笔记
+title: 《你知道的JavaScript（上卷）》04 类型 - 读书笔记
 date: 2020-11-25
 cover: https://xinghe-blog-bucket.oss-cn-beijing.aliyuncs.com/img/you-dont-know-javascript.jpg
 ---
 
+<route lang="yaml">
+meta:
+  layout: empty
+</route>
+
+[[toc]]
+
+# 04 类型
 
 ## 类型
 
@@ -20,6 +28,19 @@ JavaScript 内置类型
 7. 对象 `object`
 
 > 除了对象类型`object type` 其他都称为原始类型`primitive type`
+
+### 分类
+
+type 1
+
+- 对象类型 Object Type: `object`
+- 原始类型 Primitive Type: 其他
+
+type 2
+
+- 简单类型: `number`, `string`, `boolean`, `symbol`
+- 特殊类型: `null`, `undefined`
+- 复杂类型: `object`
 
 **typeof**
 
@@ -264,24 +285,28 @@ function foo(x) {
 - 它却主要用于私有或特殊属性。很多开发人员喜欢用它来替代有下划线（_）前缀的属性，而下划线前缀通常用于命名私有或特殊属性
 
 ``` js
-obj[Symbol.iterator] = function(){ /*..*/ };
+obj[Symbol.iterator] = function(){ /*..*/ }
 
 
-var mysym = Symbol( "my own symbol" );
-mysym;              // Symbol(my own symbol)
-mysym.toString();   // "Symbol(my own symbol)"
-typeof mysym;       // "symbol"
+var mysym = Symbol( "my own symbol" )
+mysym              // Symbol(my own symbol)
+mysym.toString()   // "Symbol(my own symbol)"
+typeof mysym       // "symbol"
 
-var a = { };
-a[mysym] = "foobar";
+var a = { }
+a[mysym] = "foobar"
 
-Object.getOwnPropertySymbols( a );
+Object.getOwnPropertySymbols(a)
 // [ Symbol(my own symbol) ]
 ```
 
-::: info
-字面量声明是 JavaScript 的特色和优势。JavaScript引擎会对其做很多优化
-:::
+**Note:** <small>字面量声明是 JavaScript 的特色和优势。JavaScript引擎会对其做很多优化</small>
+
+### 原生原型
+
+原生构造函数有自己的 .prototype 对象，如 Array.prototype、String.prototype 等。
+
+这些对象包含其对应子类型所特有的行为特征。
 
 ## 强制类型转换
 
@@ -336,90 +361,3 @@ false == {};           // false
 2 == [2];              // true -- 晕！
 
 ```
-
-
-## 表达式
-
-### 表达式的副作用
-
-**=**
-
-``` js
-if (str && (matches = str.match( /[aeiou]/g ))) {
-    return matches;
-}
-```
-
-**++**
-
-``` js
-var a = 3
-var b = a++
-var c = (a++, a)
-a // 5
-b // 3
-c // 5
-```
-
-**delete**
-
-``` js
-function deleteProperty (obj, propertyName) {
-    // true or false
-    return delete obj[propertyName]
-}
-```
-
-特殊情况 
-
-``` js
-[] + {} // "[object Object]" 可以理解为 '' + {} {} 被理解成空对象是一个值
-{} + [] // 0 可以理解为 {} 是一个空代码块不执行任何操作，而+[] 是对[]的强制类型转换
-```
-
-else if 不是 JavaScript 内置语法，只是我们利用了简便写法
-
-``` js
-if (true) { console.log('x')}
-if (true) console.log()
-
-if (a) {
-    doSomething(a)
-} else {
-    if (b) {
-        doSomething(b)
-    }
-    else {
-        doNothing()
-    }
-}
-
-if (a) doSomething(a)
-else if (b) doSomething(b)
-     else doNothing()
-```
-
-try finally 
-
-``` js
-function foo() {
-  try {
-    return 42;
-  }
-  finally {
-    console.log( "Hello" );
-  }
-
-  console.log( "never runs" );
-}
-
-console.log( foo() );
-// Hello
-// 42
-```
-
-::: info
-- finally 的代码会始终执行，
-- 如果 finally 中抛出异常 try 的返回值会被抛弃
-- finally 中的返回值会覆盖 try 中的返回值
-:::

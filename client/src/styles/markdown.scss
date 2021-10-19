@@ -24,11 +24,11 @@
 	}
 
 	p {
-		@apply mb-8 text-justify tracking-wide;
+		@apply mb-6 text-justify tracking-wide;
 	}
 
 	li {
-		@apply mb-4 text-justify tracking-wide;
+		@apply mb-3 text-justify tracking-wide;
 	}
 
 	b, strong {
@@ -36,11 +36,19 @@
 	}
 
 	ul, ol {
-		@apply mb-8 pl-4;
+		@apply mb-6;
+	}
+
+	ul ul, ul ol, ol ul, ol ol {
+		@apply pt-2;
 	}
 
 	ul {
-		list-style: disc;
+		@apply list-disc pl-4;
+	}
+
+	ol {
+		@apply list-zero-decimal pl-10;
 	}
 
 	i {
@@ -57,6 +65,26 @@
 
 	a {
 		@apply underline underline-dark-50 underline-offset-2;
+	}
+
+	table {
+		@apply w-full mb-6;
+
+		thead tr {
+			@apply border-b-2;
+		}
+		thead th {
+			@apply py-2;
+		}
+
+		tbody tr {
+			@apply border-b-1;
+		}
+
+		tbody td {
+			@apply py-1;
+		}
+
 	}
 
 	.dark {

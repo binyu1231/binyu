@@ -9,6 +9,8 @@ meta:
   layout: empty
 </route>
 
+# 03 对象与原型
+
 ## 对象
 
 JavaScript 中只有对象，没有类
@@ -47,12 +49,10 @@ myObj.key = value
 42.359.toFixed(2)       // '42.36'
 ```
 
-::: info
 - `null`, `undefined` 没有构造形式
 - `Date`, `Map`, `Set` 只有构造形式
 - `Object`, `Array`, `Function`, `RegExp` 文字形式也只是对象，不是字面量
 - `Error` 可以用构造形式创建，也可以配合 `throw`
-:::
 
 ### 内容
 

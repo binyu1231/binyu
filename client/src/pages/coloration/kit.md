@@ -267,6 +267,8 @@ curry from `formatNumber`
 
 ### FormatNumberEnum
 
+### softBind
+
 ## String
 
 ### stringLength

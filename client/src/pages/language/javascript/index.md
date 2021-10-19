@@ -10,7 +10,7 @@
 
 - [最佳实践](/lang-js/awesome.md)
 
-## 库的使用
+## 库
 
 - [dreamjs mock 数据](/lang-js/dreamjs.md)
 - [lodash](/lang-js/lodash.md)
@@ -20,7 +20,11 @@
 - [01.作用域与闭包](/language/javascript/you-dont-know-javascript-01)
 - [02.this](/language/javascript/you-dont-know-javascript-02)
 - [03.对象原型](/language/javascript/you-dont-know-javascript-03)
-- [04.类型和语法](/language/javascript/you-dont-know-javascript-04)
+- [04.类型](/language/javascript/you-dont-know-javascript-04)
+- [05.语法](/language/javascript/you-dont-know-javascript-05)
+- [06.异步](/language/javascript/you-dont-know-javascript-06)
+- [07.性能](/language/javascript/you-dont-know-javascript-07)
+- [08.现在与未来](/language/javascript/you-dont-know-javascript-08)
 
 ## 有趣的外链
 
