@@ -1,4 +1,18 @@
 <template>
+  <div>
+    <router-link to="/language/javascript">
+      <bx-bxl-javascript class="hover:text-gray-900" />
+    </router-link>
+    <bx-bxl-python class="hover:text-gray-900" />
+    <bx-bxl-css3 class="hover:text-gray-900" />
+    <cib-svg class="text-2xl hover:text-gray-900" />
+  </div>
+  <div>
+    <bx-bx-wind />
+    <simple-icons-iconify class="text-2xl" />
+    <bx-bxl-figma />
+    <span class="text-2xl">[af]</span>
+  </div>
   <aside
     class="relative mt-12 lg:mt-0 lg:w-64 lg:ml-16 lg:flex-shrink-0"
     data-aos="fade-down"
@@ -6,36 +20,21 @@
   >
     <!-- Popular posts -->
     <div class="mb-8">
-      <h4 class="h4 font-red-hat-display mb-5">
-        Popular Practices
-      </h4>
+      <h4 class="h4 font-red-hat-display mb-5">Popular Practices</h4>
       <ul class="-my-3">
         <li class="flex py-3 border-b border-gray-200 dark:border-gray-800">
-          <div class="order-count">
-            01
-          </div>
+          <div class="order-count">01</div>
           <article>
             <router-link class="hover:underline" to="/blog-post">
-              <h3 class="font-red-hat-display font-bold tracking-tight mb-1">
-                Languages
-              </h3>
+              <h3 class="font-red-hat-display font-bold tracking-tight mb-1">Languages</h3>
             </router-link>
-            <div class="text-gray-500 flex items-center text-3xl">
-              <router-link to="/language/javascript">
-                <bx-bxl-javascript class="hover:text-gray-900" />
-              </router-link>
-              <bx-bxl-python class="hover:text-gray-900" />
-              <bx-bxl-css3 class="hover:text-gray-900" />
-              <cib-svg class="text-2xl hover:text-gray-900" />
-            </div>
+            <div class="text-gray-500 flex items-center text-3xl"></div>
           </article>
         </li>
         <li class="flex py-3 border-b border-gray-200 dark:border-gray-800">
           <div
             class="h4 w-12 font-red-hat-display text-gray-400 dark:text-gray-600 flex-shrink-0 mt-1"
-          >
-            02
-          </div>
+          >02</div>
           <article>
             <router-link class="hover:underline" to="/blog-post">
               <h3 class="font-red-hat-display font-bold tracking-tight mb-1 flex items-center">
@@ -43,7 +42,7 @@
                 <eva-external-link-fill class="ml-2" />
               </h3>
             </router-link>
-            <div class="text-gray-500  flex items-center text-3xl">
+            <div class="text-gray-500 flex items-center text-3xl">
               <bx-bx-wind />
               <simple-icons-iconify class="text-2xl" />
               <bx-bxl-figma />
@@ -54,16 +53,12 @@
         <li class="flex py-3 border-b border-gray-200 dark:border-gray-800">
           <div
             class="h4 w-12 font-red-hat-display text-gray-400 dark:text-gray-600 flex-shrink-0 mt-1"
-          >
-            03
-          </div>
+          >03</div>
           <article>
             <router-link class="hover:underline" to="/blog-post">
-              <h3 class="font-red-hat-display font-bold tracking-tight mb-1">
-                Front-End
-              </h3>
+              <h3 class="font-red-hat-display font-bold tracking-tight mb-1">Front-End</h3>
             </router-link>
-            <div class="text-gray-500  flex items-center text-3xl">
+            <div class="text-gray-500 flex items-center text-3xl">
               <bx-bxl-vuejs />
               <bx-bxl-react />
               <file-icons-vite class="text-2xl" />
@@ -73,16 +68,12 @@
         <li class="flex py-3 border-b border-gray-200 dark:border-gray-800">
           <div
             class="h4 w-12 font-red-hat-display text-gray-400 dark:text-gray-600 flex-shrink-0 mt-1"
-          >
-            04
-          </div>
+          >04</div>
           <article>
             <router-link class="hover:underline" to="/blog-post">
-              <h3 class="font-red-hat-display font-bold tracking-tight mb-1">
-                Server End
-              </h3>
+              <h3 class="font-red-hat-display font-bold tracking-tight mb-1">Server End</h3>
             </router-link>
-            <div class="text-gray-500  flex items-center text-3xl">
+            <div class="text-gray-500 flex items-center text-3xl">
               <router-link to="/server-end/docker">
                 <fa-brands-docker class="hover:text-gray-900" />
               </router-link>
@@ -95,16 +86,12 @@
         <li class="flex py-3 border-b border-gray-200 dark:border-gray-800">
           <div
             class="h4 w-12 font-red-hat-display text-gray-400 dark:text-gray-600 flex-shrink-0 mt-1"
-          >
-            05
-          </div>
+          >05</div>
           <article>
             <router-link class="hover:underline" to="/blog-post">
-              <h3 class="font-red-hat-display font-bold tracking-tight mb-1">
-                CI CD
-              </h3>
+              <h3 class="font-red-hat-display font-bold tracking-tight mb-1">CI CD</h3>
             </router-link>
-            <div class="text-gray-500  flex items-center text-3xl">
+            <div class="text-gray-500 flex items-center text-3xl">
               <bx-bxl-github />
             </div>
           </article>

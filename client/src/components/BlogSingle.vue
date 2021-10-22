@@ -34,40 +34,7 @@ const props = defineProps({
                   data-aos-delay="150"
                 >{{ props.post.desc }}</p>
               </div>
-              <!-- Article meta -->
-              <div class="md:flex md:items-center md:justify-between mt-5">
-                <!-- Author meta -->
-                <div
-                  class="flex items-center justify-center"
-                  data-aos="fade-down"
-                  data-aos-delay="300"
-                >
-                  <a href="#0">
-                    <img
-                      class="rounded-full flex-shrink-0 mr-3"
-                      src="../images/news-author-01.jpg"
-                      width="32"
-                      height="32"
-                      alt="Author 04"
-                    />
-                  </a>
-                  <div>
-                    <span class="text-gray-600 dark:text-gray-400">By</span>
-                    <a
-                      class="font-medium text-gray-800 dark:text-gray-300 hover:underline"
-                      href="#0"
-                    >Binyu</a>
-                    <span class="text-gray-600 dark:text-gray-400">· {{ props.post.date }}</span>
-                  </div>
-                </div>
-              </div>
             </header>
-            <hr
-              class="w-5 h-px pt-px bg-gray-400 dark:bg-gray-500 border-0 mb-8"
-              data-aos="fade-down"
-              data-aos-delay="450"
-            />
-
             <!-- Article content -->
             <div
               class="text-lg text-gray-600 dark:text-gray-400"

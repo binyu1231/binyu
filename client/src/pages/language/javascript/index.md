@@ -1,3 +1,5 @@
+[[toc]]
+
 ## 语法
 
 - [正则表达式](/lang-js/regexp.md)

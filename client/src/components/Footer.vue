@@ -19,7 +19,6 @@
         <!-- Top area: Blocks -->
         <div class="grid md:grid-cols-12 gap-8 lg:gap-20 mb-8 md:mb-12">
 
-          <!-- 1st block -->
           <div class="md:col-span-2 lg:col-span-3">
             <!-- Logo -->
             <router-link class="inline-block" to="/" aria-label="Cruip">
@@ -39,11 +38,7 @@
               </svg>
             </router-link>
           </div>
-
-          <!-- 2nd, 3rd, 4th and 5th blocks -->
-          <div class="md:col-span-10 lg:col-span-9 grid grid-cols-2 md:grid-cols-4 gap-8">
-
-            <!-- 2nd block -->
+          <!-- <div class="md:col-span-10 lg:col-span-9 grid grid-cols-2 md:grid-cols-4 gap-8">
             <div class="text-sm">
               <h6 class="font-medium uppercase mb-2">Products</h6>
               <ul>
@@ -59,7 +54,6 @@
               </ul>
             </div>
 
-            <!-- 3rd block -->
             <div class="text-sm">
               <h6 class="font-medium uppercase mb-2">Resources</h6>
               <ul>
@@ -81,7 +75,6 @@
               </ul>
             </div>
 
-            <!-- 4th block -->
             <div class="text-sm">
               <h6 class="font-medium uppercase mb-2">Company</h6>
               <ul>
@@ -103,7 +96,6 @@
               </ul>
             </div>
 
-            <!-- 5th block -->
             <div class="text-sm">
               <h6 class="font-medium uppercase mb-2">Support</h6>
               <ul>
@@ -121,9 +113,7 @@
                 </li>
               </ul>
             </div>
-
-          </div>
-
+          </div> -->
         </div>
 
         <!-- Bottom area -->

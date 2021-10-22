@@ -41,11 +41,8 @@ const moreVisible = ref<boolean>(false)
             {{ p.desc }}
           </p>
           <footer class="flex items-center mt-4">
-            <a href="#0">
-              <img class="rounded-full flex-shrink-0 mr-3" src="../images/news-author-03.jpg" width="32" height="32" alt="Author 03" />
-            </a>
             <div class="text-sm text-gray-500">
-              By <a class="font-medium text-gray-800 dark:text-gray-400 hover:underline" href="#0">Binyu</a> · <span class="text-gray-500">{{ p.date }}</span>
+              <span class="text-gray-500">{{ p.date }}</span>
             </div>
           </footer>
         </article>
@@ -71,11 +68,8 @@ const moreVisible = ref<boolean>(false)
             {{ p.desc }}
           </p>
           <footer class="flex items-center mt-4">
-            <a href="#0">
-              <img class="rounded-full flex-shrink-0 mr-3" src="../images/news-author-03.jpg" width="32" height="32" alt="Author 03" />
-            </a>
             <div class="text-sm text-gray-500">
-              By <a class="font-medium text-gray-800 dark:text-gray-400 hover:underline" href="#0">Binyu</a> · <span class="text-gray-500">{{ p.date }}</span>
+              <span class="text-gray-500">{{ p.date }}</span>
             </div>
           </footer>
         </article>

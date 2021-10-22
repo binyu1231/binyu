@@ -9,12 +9,8 @@ const normals = posts.slice(1)
     <FeaturedPosts />
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
       <div class="pb-12 md:pb-20">
-        <div class="lg:flex lg:justify-between">
-          <!-- Main content -->
-          <BlogList :posts="normals" />
-          <!-- Sidebar -->
-          <PracticeList />
-        </div>
+        <!-- Main content -->
+        <BlogList :posts="normals" />
       </div>
     </div>
   </PageLayout>

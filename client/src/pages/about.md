@@ -1,27 +1,116 @@
 <route lang="yaml">
 meta:
-  layout: about
+  layout: empty
+  
 </route>
 
+# 王彬宇的个人简历
+
+> 我是一位前端开发工程师，拥有7年的前端开发经验。之前一直在北京工作
+
+我擅长使用 Vue, React 技术栈进行前端开发的工作，也可以使用 JavaScript, Python, Nginx 完成一些简单后端的工作。曾经也有过一些手机游戏开发(Unity3D, CSharp)和跨端应用(ReactNative)经验。有一些技术团队管理的经验，能良好的制定，分配以及完成自己和伙伴的工作内容。喜欢尝试新技术。
+> 
+
+
+# 联系方式
+
+github:  [https://github.com/114000](https://github.com/114000)
+
+blog: [https://www.binyu.me](https://www.binyu.me/)
+
 ---
-title: About
+
+# 工作经历
+
+## **前端架构师**
+
+产业知识图谱部*, 北京易创新科信息技术有限公司, 北京 – (Dec 2020 - Apr 2021)*
+
+负责技术调研与开发，团队内部管理
+
+数据大屏应用的架构开发。基于 vite/vue3 进行开发，开发UI控件辅助大屏图表的定位及布局，支持主题颜色切换。
+
+构建组件库。将大量的图表控件封装成组件便于二次开发，例如中国三级地图下钻组件，可以通过配置属性展现2d或3d，选取后会返回包含地理代码的JSON数据。组件库使用Storybook进行开发，隔离开发及项目，方便测试和移植。针对组件多层架构封装。第一层封装d3，echarts，原生dom，抹平js调用差异方便vue或react多种框架的接入。第二层vue wrapper 将vue组件的属性传递给js组件。第三层业务组件将频繁使用的复杂业务组件进行封装。
+
+CMS 系统管理开发。配合后端开发公司内部CMS。方便运营人员进行业务管理。
+
+报告系统开发。根据算法团队提供的数据，前端网页不仅要进行展示，还要可以生成pdf。由于前端对打印功能控制不足，所以选用node进行ppt的特殊处理。
+
+## 高级前端开发工程师
+
+前端组*, 悠易互通（北京）广告有限公司, 北京 – (Mar 2019 - Jul 2020)*
+
+独⽴负责⼀个 SaaS 平台的以及内部 BI 系统的前端研发⼯作。每两周迭代一次。需要对接产品以及业务需求, 设计业务模型。主要技术内容包含 React, Antd, Echarts, D3
+
+前端技术探索，设计和推动微前端及业务模块化落地，以及相关基础设施建设，组件库，业务模块通⽤性设计。主要技术包含 SingleSpa, Storybook, Webpack, NPM
+
+## 前端架构师
+
+技术部*, 北京灵⻜创游科技有限公司, 北京 – (May 2015 - Feb 2019)*
+
+负责团队内部管理，技术调研与开发。主要技术内容 Vue ReactNative Unity3D Cocos 2D
+
+公司发展主要分为三个阶段:
+
+国外旅⾏应用(2018)，负责前端整体架构, 后台系统分为客服系统,内容管理系统,订单系统三⼤部分. 基于 Vue 的模块化解决⽅案.通过组合和拆解业务模块. 可以⽣成不同的后台管理系统. 负责内容管理系统的内容⽣成功能的开发.减少运营⼈员⼿动编写线路内容的⼯作量. 负责移动端⽹⻚, ⼩程序的开发. 对接⽀付功能.
+
+棋牌游戏应用(2016)。客户端开发⼈员增加为⼗余⼈, 管理难度增加, 此阶段核⼼⼯作是帮助团队转型,学习以及⾼效⼯作. 将业务开发代码从 svn 迁移到 git 进⾏管理.这保证了我们基于主⼲的多个棋牌项⽬能够正常迭代. 与此同时使⽤ trello 进⾏业务设计管理, bug 追踪. 降低了沟通成本. 团队实⾏SCRUM,每周的⽝点评估是最重要的⼀步, 团队成员对业务的不同理解在此时进⾏沟通消化. 帮助团队提升开发效率. 组织团队进⾏学习与分享⼀周两次.最后每两个⼈⼀组负责2-4个具体地⽅棋牌业务,同时我们还⼀起进⾏核⼼代码的重构与升级. 此时我还负责基于 Unity3D 环境下游戏架构的维护与升级,  以及基于 lua 的热更新技术研发,基于 cocos2d-js ⽹⻚版棋牌的. 新技术以及新框架的引⼊需要反复和团队成员讨论与验证. 保证整体技术栈易于被接受, 曲线过渡平滑. 开发效率稳定.对晦涩的业务逻辑以及技术实现需要进⾏封装优化,⽐如引⼊游戏特效, 牌张摆放, 并每周分享实际⽤例供团队成员理解
+
+⼆⼿⻋应用(2015)，总体负责前端开发任务。包括⼆⼿⻋pc，移动端，评估师端，管理系统开发。此期间将原有AngularJS体系迁移到Vue. 减少学习成本，提⾼开发效率。带领团队使⽤ReactNative进⾏⼆⼿⻋拍卖app的研发。攻克socket Android SDK等难点
+
+## **前端开发工程师**
+
+UED*, 北京瑞金麟网络技术服务有限公司, 北京 – (Sep 2014 - May 2015)*
+
+负责运营业务系统的组件开发, 负责可配置表单中表单控件开发, 了解了模型设计对⾼阶抽象业务的重要性. 主要技术内容 AngularJS AppCan
+
 ---
 
+# 技能
 
-<div class="text-center">
-  <!-- You can use Vue components inside markdown -->
-  <carbon-dicom-overlay class="text-4xl -mb-6 m-auto" />
-  <h3>About</h3>
-</div>
+### JavaScript ⭐️⭐️⭐️⭐️⭐️
 
-[Vitesse](https://github.com/antfu/vitesse) is an opinionated [Vite](https://github.com/vitejs/vite) starter template made by [@antfu](https://github.com/antfu) for mocking apps swiftly. With **file-based routing**, **components auto importing**, **markdown support**, I18n, PWA and uses **WindiCSS** for UI.
+使用时间7年，熟练掌握原生JavaScript，在各种环境下可以使用兼容性好的方式完成业务工作。比如 React, Vue, Node, Cocos2D-JS
 
-```js
-// syntax highlighting example
-function vitesse() {
-  const foo = 'bar'
-  console.log(foo)
-}
-```
+### TypeScript ⭐️⭐️⭐️⭐️
 
-Check out the [GitHub repo](https://github.com/antfu/vitesse) for more details.
+使用时间3年，能在 Vue3 以及 React16 很好的完成项目开发。能完善编码过程中的各种类型推导，拒绝 AnyScript
+
+### Python ⭐️⭐️⭐️
+
+可以配合 Flask, Docker 开发简单服务，可以使用 Pillow, OpenCV 做一些图片处理业务。
+
+### C#, Lua, Dart, Java ⭐️⭐️
+
+在特定的环境中有过项目实践，如: Unity3D, Flutter, Android SDK(React Native)
+
+---
+
+# 文章和作品
+
+- 🛠️ [@coloration/asker 一个便于使用的前端http工具](https://www.binyu.me/coloration/asker)
+- 🛠️ [@coloration/kit 前端常用的工具库](https://www.binyu.me/coloration/kit)
+- 📄 [Puppeteer[node] 将网页转为 PDF](https://www.jianshu.com/p/0b9ca626c0d3)
+- 📄 [使用 Dreamjs 生成 JSON 伪数据](https://www.jianshu.com/p/38c2bc7f0343)
+- 📄 [Insomnia 一款网络请求测试工具](https://www.jianshu.com/p/89804e9aa8f6)
+- 📄 [Unity3D 与 Android 通信](https://www.jianshu.com/p/ef6bea059121)
+- ...
+
+---
+
+# 教育经历
+
+## 辽宁科技大学
+
+*(Sep 2010 - Jun 2014)*
+
+本科学位-电气工程及其自动化
+
+## 优达学城
+
+*(Mar 2019 - Sep 2019)*
+
+机器学习工程师
+
+
+power by Notion
