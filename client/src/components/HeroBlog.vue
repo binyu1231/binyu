@@ -29,11 +29,9 @@ const props = defineProps({
                 <!-- Author meta -->
                 <div class="flex items-center justify-center">
                   <a href="#0">
-                    <img class="rounded-full flex-shrink-0 mr-3" src="../images/news-author-01.jpg" width="32" height="32" alt="Author 04" />
+                    <img class="rounded-full flex-shrink-0 mr-3" src="https://xinghe-blog-bucket.oss-cn-beijing.aliyuncs.com/img/husky-avatar.jpg" width="32" height="32" alt="Author 04" />
                   </a>
                   <div>
-                    <span class="text-gray-600 dark:text-gray-400">By </span>
-                    <a class="font-medium text-gray-800 dark:text-gray-300 hover:underline" href="#0">Micheal Osman</a>
                     <span class="text-gray-600 dark:text-gray-400"> · {{ props.post.date }}</span>
                   </div>
                 </div>

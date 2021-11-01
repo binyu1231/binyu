@@ -119,7 +119,7 @@ function handleSubmit(e: Event) {
                   v-model="writing.mail"
                   type="text"
                   class="form-input w-full"
-                  placeholder="Enter your last name"
+                  placeholder="Enter your mail"
                   required
                 />
               </div>
