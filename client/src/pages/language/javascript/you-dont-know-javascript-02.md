@@ -176,15 +176,15 @@ if (!Function.prototype.softBind) {
   Function.prototype.softBind = function(obj) {
     const fn = this
     // 捕获所有 curried 参数
-    const curried = [].slice.call( arguments, 1 )
+    const curried = [].slice.call(arguments, 1)
     const bound = function() {
       return fn.apply(
         (!this || this === (window || global)) ?
             obj : this,
-        curried.concat.apply( curried, arguments )
+        curried.concat.apply(curried, arguments)
       ) 
     }
-    bound.prototype = Object.create( fn.prototype )
+    bound.prototype = Object.create(fn.prototype)
     return bound;
   }
 }

@@ -69,20 +69,22 @@ myObj.key = value
 #### 可计算属性名 ES6
 
 ``` js
-var prefix = "foo";
+var prefix = 'foo'
 
 var myObject = {
-    [prefix + "bar"]: "hello", 
-    [prefix + "baz"]: "world"
+  [prefix + 'bar']: 'hello', 
+  [prefix + 'baz']: 'world'
 };
 
-myObject["foobar"]; // hello
-myObject["foobaz"]; // world
+myObject['foobar'] // hello
+myObject['foobaz'] // world
 
 var myObject = {
-    [Symbol.Something]: "hello world"
+  [Symbol.Something]: 'hello world'
 }
 ```
+
+
 
 JavaScript 中对象的属性如果是一个函数，不应该被叫做方法。它并不保存在这个对象中，只是通过引用绑定在一起。无论是什么类型的属性都应该称为属性。
 
@@ -115,7 +117,7 @@ function anotherFunction() { /*..*/ }
 
 var anotherObject = { 
     c: true
-};
+}
 
 var anotherArray = [];
 
