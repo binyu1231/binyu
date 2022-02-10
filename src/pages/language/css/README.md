@@ -1,9 +1,9 @@
 
 - [Background](/lang-css/background.md)
 - [Flex](/lang-css/flex.md)
-
 - [CSS Tips](/lang-css/tip.md)
 - [Css Reset](/lang-css/reset.md)
+
 
 ## 有趣的外链
 
@@ -66,9 +66,8 @@
 - [State of CSS 2019 针对全世界开发者的 CSS 调查](https://stateofjs.typeform.com/to/TxDuh6)
 - [Flexbox 详解](https://github.com/veedrin/horseshoe/blob/master/flex/%E4%B8%80%E7%BB%B4%E5%B8%83%E5%B1%80%E6%A8%A1%E5%9E%8BFlex.md)
 - [Debucsser - 一个用于 CSS 的调试库，鼠标悬浮的时候，网页会显示区块的 CSS 信息。](https://github.com/lucagez/Debucsser)
-- [CSS 的 background-image 属性是反模式 - 作者提出，如果图像是内容一部分，就不应该设置成 CSS 的背景图像，而应该使用<picture>标签加上 CSS 的object-fit属性。](https://nystudio107.com/blog/the-css-background-image-property-as-an-anti-pattern)
-- [如何制作一个节能的网站？](https://css-tricks.com/delivering-wordpress-in-7kb/) 
-- [Web 排版资源 - 该网站针对英文排版，有一个小测试和游戏，讲解如何制作出阅读舒服的网站。"](https://betterwebtype.com/web-typography-resources) 
+- [如何制作一个节能的网站？](https://css-tricks.com/delivering-wordpress-in-7kb/)
+- [Web 排版资源 - 该网站针对英文排版，有一个小测试和游戏，讲解如何制作出阅读舒服的网站。](https://betterwebtype.com/web-typography-resources) 
 - [中国传统颜色手册](https://colors.ichuantong)
 - [wallace-cli 一个 CSS 样式表的命令行分析工具，显示有多少条规则、选择器，压缩前后的文件大小等等。](https://github.com/bartveneman/wallace)
 - [mjml - 复杂格式的电子邮件 HTML 源码很难写，因为各个邮件客户端支持的 CSS 属性不一样。mjml 是一个响应式电子邮件框架，定义了一套自己的语法，你用这套语法写邮件，然后编译成 HTML。](https://github.com/mjmlio/mjml)
