@@ -64,7 +64,7 @@ useEventListener(globalThis.document, 'keydown', function keyPress (event: Keybo
               </router-link>
             </li>
             <li>
-              <router-link to="/about" class="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100 px-5 py-2 flex items-center transition duration-150 ease-in-out">About</router-link>
+              <a target="_blank" href="https://enshrined-saga-d33.notion.site/8ccc7a31b35c48fc8f07aa5b3d4bf0a2" class="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100 px-5 py-2 flex items-center transition duration-150 ease-in-out">About</a>
             </li>
             <!--
              <li>

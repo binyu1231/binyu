@@ -13,7 +13,7 @@
           class="max-w-xs sm:max-w-none mx-auto md:max-w-none lg:max-w-none grid gap-4 md:gap-6 sm:grid-cols-2 md:grid-cols-3"
           data-aos-id-rellinks
         >
-          <router-link to="/coloration/kit">
+          <a target="_blank" href="//coloration.github.io/#/kit">
             <FeatureCard
               title="Kit"
               desc="常用的工具函数和浏览器功能扩展, 简化日常前端开发工作量"
@@ -29,9 +29,9 @@
                 />
               </svg>
             </FeatureCard>
-          </router-link>
+          </a>
 
-          <router-link to="/coloration/asker">
+          <a target="_blank" href="//coloration.github.io/#/asker">
             <FeatureCard
               title="Asker"
               desc="功能齐全的客户端HTTP工具，代码量小功能齐全"
@@ -47,20 +47,34 @@
                 />
               </svg>
             </FeatureCard>
-          </router-link>
-          <FeatureCard
-            title="Coming Soon!"
-            desc="更多有趣工具正在路上"
-            class="bg-gradient-to-tr from-indigo-500 to-indigo-400 dark:to-indigo-500 sm:col-span-2 md:col-auto"
-            data-aos-delay="300"
-          >
-            <svg class="w-8 h-8 mb-3" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-              <path
-                class="fill-current"
-                d="M11.697 9.254l-4.3-4.3a14.14 14.14 0 00-2.443 2.442l4.3 4.3a8.03 8.03 0 012.443-2.442zm1.932-.896a8.036 8.036 0 014.742 0l4.538-4.538a14.027 14.027 0 00-13.818 0l4.538 4.538zm6.674.896a8.03 8.03 0 012.443 2.443l4.3-4.3a14.14 14.14 0 00-2.443-2.443l-4.3 4.3zm3.339 4.375a8.036 8.036 0 010 4.742l4.538 4.538a14.027 14.027 0 000-13.818l-4.538 4.538zm-.896 6.674a8.029 8.029 0 01-2.443 2.443l4.3 4.3a14.14 14.14 0 002.443-2.443l-4.3-4.3zm-4.375 3.34a8.036 8.036 0 01-4.742 0L9.091 28.18a14.027 14.027 0 0013.818 0l-4.538-4.538zm-6.674-.897a8.029 8.029 0 01-2.443-2.443l-4.3 4.3a14.14 14.14 0 002.443 2.443l4.3-4.3zm-3.34-4.375a8.036 8.036 0 010-4.742L3.82 9.09a14.027 14.027 0 000 13.818l4.538-4.538zm18.956 8.943c-6.248 6.248-16.378 6.248-22.627 0-6.248-6.249-6.248-16.38 0-22.628 6.249-6.248 16.38-6.248 22.627 0 6.249 6.249 6.249 16.38 0 22.628zm-7.07-7.071a6 6 0 10-8.486-8.486 6 6 0 008.485 8.486z"
-              />
-            </svg>
-          </FeatureCard>
+          </a>
+
+          <a target="_blank" href="//coloration.github.io/island" class="h-full">
+            <FeatureCard
+              title="island"
+              desc="Vue UI component library with storybook"
+              class="bg-gradient-to-tr h-full from-indigo-500 to-indigo-400 dark:to-indigo-500 sm:col-span-2 md:col-auto"
+              data-aos-delay="300"
+            >
+              <clarity:vmw-app-line class="w-8 h-8 mb-3" />
+            </FeatureCard>
+          </a>
+
+          <a target="_blank" href="//coloration.github.io" class="h-full">
+            <FeatureCard
+              title="Coming Soon!"
+              desc="更多有趣工具正在路上, 前往 Coloration 主页"
+              class="bg-gradient-to-tr h-full from-indigo-500 to-indigo-400 dark:to-indigo-500 sm:col-span-2 md:col-auto"
+              data-aos-delay="300"
+            >
+              <svg class="w-8 h-8 mb-3" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  class="fill-current"
+                  d="M11.697 9.254l-4.3-4.3a14.14 14.14 0 00-2.443 2.442l4.3 4.3a8.03 8.03 0 012.443-2.442zm1.932-.896a8.036 8.036 0 014.742 0l4.538-4.538a14.027 14.027 0 00-13.818 0l4.538 4.538zm6.674.896a8.03 8.03 0 012.443 2.443l4.3-4.3a14.14 14.14 0 00-2.443-2.443l-4.3 4.3zm3.339 4.375a8.036 8.036 0 010 4.742l4.538 4.538a14.027 14.027 0 000-13.818l-4.538 4.538zm-.896 6.674a8.029 8.029 0 01-2.443 2.443l4.3 4.3a14.14 14.14 0 002.443-2.443l-4.3-4.3zm-4.375 3.34a8.036 8.036 0 01-4.742 0L9.091 28.18a14.027 14.027 0 0013.818 0l-4.538-4.538zm-6.674-.897a8.029 8.029 0 01-2.443-2.443l-4.3 4.3a14.14 14.14 0 002.443 2.443l4.3-4.3zm-3.34-4.375a8.036 8.036 0 010-4.742L3.82 9.09a14.027 14.027 0 000 13.818l4.538-4.538zm18.956 8.943c-6.248 6.248-16.378 6.248-22.627 0-6.248-6.249-6.248-16.38 0-22.628 6.249-6.248 16.38-6.248 22.627 0 6.249 6.249 6.249 16.38 0 22.628zm-7.07-7.071a6 6 0 10-8.486-8.486 6 6 0 008.485 8.486z"
+                />
+              </svg>
+            </FeatureCard>
+          </a>
         </div>
       </div>
     </div>

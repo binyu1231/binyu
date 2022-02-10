@@ -26,7 +26,7 @@ const moreVisible = ref<boolean>(false)
           v-for="p in props.posts.slice(0, 6)">
           <header>
             <router-link class="block mb-4" :to="`/blog/${p.file}`">
-              <figure class="pb-9/16">
+              <figure>
                 <ReactiveBlock :ratio="0.7" class="bg-cover bg-center" :style="{ backgroundImage: `url(${p.cover})`}">
                 </ReactiveBlock>
               </figure>

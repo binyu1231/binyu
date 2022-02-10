@@ -2,20 +2,20 @@
 
 ## 语法
 
-- [正则表达式](/lang-js/regexp.md)
-- [Promise](/lang-js/promise.md)
-- [模块与解构](/lang-js/module.md)
-- [类](/lang-js/class.md)
-- [DOM操作](/lang-js/dom.md)
+- [正则表达式](/language/javascript/regexp)
+- [Promise](/language/javascript/promise)
+- [模块与解构](/language/javascript/module)
+- [类](/language/javascript/class)
+- [DOM操作](/language/javascript/dom)
 
 ## 最佳实践
 
-- [最佳实践](/lang-js/awesome.md)
+- [最佳实践](/language/javascript/awesome)
 
 ## 库
 
-- [dreamjs mock 数据](/lang-js/dreamjs.md)
-- [lodash](/lang-js/lodash.md)
+- [dreamjs mock 数据](/language/javascript/dreamjs)
+- [lodash](/language/javascript/lodash)
 
 ## 你不知道的 JavaScript
 

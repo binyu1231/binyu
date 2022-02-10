@@ -58,7 +58,6 @@
               />
             </svg>
           </FeatureCard>
-
         </div>
       </div>
     </div>

@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-  import { onMounted } from '@vue/runtime-core'
+import { onMounted } from '@vue/runtime-core'
 import { useEventListener } from '@vueuse/core'
 import { ref } from 'vue-demi'
 

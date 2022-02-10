@@ -42,24 +42,33 @@ function handleSubmit(e: Event) {
       fetchComments()
     })
 }
+
+onMounted(() => {
+  // @ts-ignore
+  Waline({
+    el: '#waline',
+    serverURL: 'https://binyu-comment-2sfsttysp-114000.vercel.app/',
+  })
+})
 </script>
 <template>
   <aside>
     <div class="relative max-w-6xl mx-auto px-4 sm:px-6">
       <div class="pb-12 md:pb-20">
         <div class="max-w-3xl mx-auto">
-          <h4 class="h4 font-red-hat-display mb-8">Comments</h4>
+          <div id="waline"></div>
+          <!--
+
+            <h4 class="h4 font-red-hat-display mb-8">Comments</h4>
           <div class="mb-20" v-if="comments.length > 0">
             <div v-for="(cmt, i) in comments" :key="i">
               <article class="mb-2">
                 <div
                   class="flex pr-6 py-5 bg-white dark:bg-gray-800 divide-x divide-gray-200 dark:divide-gray-700 shadow"
                 >
-                  <!-- Category icon -->
                   <div class="flex items-center px-4 sm:px-8 font-semibold text-2xl">
                     #{{ i + 1 }}
                   </div>
-                  <!-- Content -->
                   <div class="pl-6 flex-1">
                     <p class="text-gray-600 dark:text-gray-400">{{ cmt.comment }}</p>
                     <footer class="text-sm flex items-center mt-3">
@@ -166,8 +175,48 @@ function handleSubmit(e: Event) {
               </div>
             </div>
           </form>
+          -->
         </div>
       </div>
     </div>
   </aside>
 </template>
+<style>
+#waline label {
+  @apply text-sm;
+}
+#waline .vpanel {
+  @apply rounded-none border-none;
+}
+
+#waline .vheader {
+  @apply border-solid border-b;
+}
+
+#waline-edit {
+  @apply px-3 box-border;
+}
+#waline-edit:active,
+#waline-edit:focus {
+  @apply bg-transparent;
+}
+
+#waline .vbtn {
+  @apply rounded-none px-6 ml-4 text-sm;
+}
+#waline .vbtn.primary {
+  @apply bg-teal-500 hover:bg-teal-400;
+}
+
+#waline .vcontent {
+  @apply rounded-none;
+}
+
+#waline svg {
+  @apply text-gray-800 hover:text-teal-500;
+}
+
+#waline .vpower {
+  opacity: 0;
+}
+</style>
