@@ -47,7 +47,12 @@ onMounted(() => {
   // @ts-ignore
   Waline({
     el: '#waline',
+    avatar: 'hide',
     serverURL: 'https://binyu-comment.vercel.app',
+    emoji: [
+      'https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/weibo',
+      'https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/bilibili',
+    ],
   })
 })
 </script>
