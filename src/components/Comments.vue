@@ -47,7 +47,7 @@ onMounted(() => {
   // @ts-ignore
   Waline({
     el: '#waline',
-    serverURL: 'https://binyu-comment-2sfsttysp-114000.vercel.app/',
+    serverURL: 'https://binyu-comment.vercel.app',
   })
 })
 </script>
