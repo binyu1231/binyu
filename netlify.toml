@@ -3,7 +3,7 @@
   NODE_VERSION = "14"
 
 [build]
-  base = "client/"
+  base = "/"
   publish = "dist/"
   command = "npm install && npm run gen && npm run build"
 
