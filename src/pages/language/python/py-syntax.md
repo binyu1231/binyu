@@ -1,5 +1,7 @@
 # Python syntax
 
+[[toc]]
+
 ## 导入
 
 ``` py

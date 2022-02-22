@@ -7,7 +7,9 @@ tag:
 - css
 ---
 
+<!--
 关于 css background 属性！关于颜色和渐变的方面的，再单独总结一篇 Color
+-->
 
 本篇主要参考了[w3c的规范](https://www.w3.org/TR/css-backgrounds/#backgrounds) /（[中文](http://www.ayqy.net/doc/css2-1/colors.html#background)）
 
@@ -442,7 +444,9 @@ background-color:      white;
 2. 如果 `<html>` 没有指定颜色，则会用 `<body>` 的背景色填充页面
 
 
+<!--
 #### 最后
 
 最近在看一本书（《CSS 揭秘》），里面介绍了样式表里很多细节的东西。这才发现自己每天太过关注于时髦事物，
 忽略了基础技能的深化。我想这并不利于职业发展，索性放弃一些东西
+-->

@@ -1,16 +1,24 @@
 ## 语法
 
-- [基本](/lang-py/py-syntax.md)
-- [OO](/lang-py/py-oo.md)
-- [API module](/lang-py/py-api-module.md)
+- [Syntax](/language/python/py-syntax)
+- [OO](/language/python/py-oo)
+- [API module](/language/python/py-api-module)
+- [data model](/language/python/py-data-model)
 
 ## 工程
 
-- [pip](/lang-py/pip.md)
-- [flask](/lang-py/flask.md)
+- [pip](/language/python/py-project-pip)
+- [flask](/language/python/py-project-flask)
 - [Github:python-flask-boilerplate](https://github.com/114000/python-flask-boilerplate)
 
+## Library
 
+- [Numpy](/language/python/py-lib-numpy)
+- [Matplotlib](/language/python/py-lib-matplotlib)
+- [Pillow](/language/python/py-lib-pillow)
+
+
+<!--
 ## eBook
 
 - [x] [编程小白的第一本Python入门书](https://www.ituring.com.cn/book/1863)
@@ -61,3 +69,5 @@
 - [camelot - 从 PDF 文件（非扫描）里面提取表格的 Python 库。](https://github.com/socialcopsdev/camelot)
 - [Librian 根据准备好的背景图片和剧本，自动生成 Galgame 游戏图景的工具](https://github.com/RimoChan/Librian)
 - [subsync 字幕对齐](https://github.com/smacke/subsync)
+
+-->

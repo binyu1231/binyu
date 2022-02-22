@@ -7,6 +7,8 @@ declare module 'vue' {
     BlogList: typeof import('./src/components/BlogList.vue')['default']
     BlogSingle: typeof import('./src/components/BlogSingle.vue')['default']
     BxBxlJavascript: typeof import('virtual:vite-icons/bx/bxl-javascript')['default']
+    BxBxlPython: typeof import('virtual:vite-icons/bx/bxl-python')['default']
+    BxBxlTailwindCss: typeof import('virtual:vite-icons/bx/bxl-tailwind-css')['default']
     Career: typeof import('./src/components/Career.vue')['default']
     Carousel: typeof import('./src/components/Carousel.vue')['default']
     'Clarity:vmwAppLine': typeof import('virtual:vite-icons/clarity/vmw-app-line')['default']

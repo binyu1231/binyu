@@ -1,10 +1,4 @@
----
-title: Python OO
-date: 2018-08-18
-tag:
-- python
-- oo
----
+[[toc]]
 
 ## class
 

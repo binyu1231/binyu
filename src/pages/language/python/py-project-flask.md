@@ -1,19 +1,29 @@
 # Flask - Python 服务端框架
 
-2020-11-01
+[[toc]]
 
 - [pip](lang-py/pip.md)
 
 ## Install
 
+``` bash
+# 新建目录
+$ mkdir <project>
+$ cd <project>
 
-- 新建目录 `$ mkdir <project>`
-- 创建虚拟环境 `<p>$ python -m venv <venvName>`
-- 激活虚拟环境
-  * linux `<p>$ source <venvName>/bin/activate`
-  * windows `<p>$ <venvName>\Scripts\activate`
-- 安装 flask `<venvName>$ pip install Flask`
+# 创建虚拟环境
+<p>$ python -m venv <venvName>
 
+# 激活虚拟环境
+## linux 
+<p>$ source <venvName>/bin/activate
+
+## windows
+<p>$ <venvName>\Scripts\activate
+
+## <p>$ <venvName>\Scripts\activate
+<venvName>$ pip install Flas
+```
 
 ## Startup
 
@@ -33,23 +43,33 @@ def user(name):
   return '<h1>Hello, {}!<h1>'.format(name)
 ```
 
-1. 
+#### 启动方法一
 
-- 设置App 入口文件 
-  - linux `<venvName>export FLASK_APP=app.py`
-  - windows: `<venvName>set FLASK_APP=app.py`
-- Simple Server `<venvName>$ flask run --reload --debugger`
-- 访问 `localhost:5000`
+``` bash
+# 设置App 入口文件
+## linux 
+<venvName>$ export FLASK_APP=app.py
+## windows
+<venvName>$ set FLASK_APP=app.py
 
-2.
+# Simple Server
+<venvName>$ flask run --reload --debugger
 
-- `<venvName>$ python main.py`
+# 访问 `localhost:5000`
+```
+
+#### 启动方法二
 
 ``` py
+# main.py
 from app import app
 
 if __name__ == "__main__":
   app.run(debug = True)
+```
+
+``` bash
+<venvName>$ python main.py
 ```
 
 

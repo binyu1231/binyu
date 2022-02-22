@@ -2,13 +2,19 @@
   <footer class="relative">
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
       <div class="py-12 md:py-16 border-t border-gray-200 dark:border-gray-800 -mt-px">
-
         <!-- Footer illustration -->
         <div class="pointer-events-none -z-1" aria-hidden="true">
           <svg class="absolute bottom-0 left-0 transform -translate-x-1/2 ml-24 dark:opacity-40" width="800" height="264" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="400" cy="400" r="400" fill="url(#footerglow_paint0_radial)" fill-opacity=".4" />
             <defs>
-              <radialGradient id="footerglow_paint0_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="rotate(90 0 400) scale(315.089)">
+              <radialGradient
+                id="footerglow_paint0_radial"
+                cx="0"
+                cy="0"
+                r="1"
+                gradientUnits="userSpaceOnUse"
+                gradientTransform="rotate(90 0 400) scale(315.089)"
+              >
                 <stop stop-color="#3ABAB4" />
                 <stop offset="1" stop-color="#3ABAB4" stop-opacity=".01" />
               </radialGradient>
@@ -18,17 +24,16 @@
 
         <!-- Top area: Blocks -->
         <div class="grid md:grid-cols-12 gap-8 lg:gap-20 mb-8 md:mb-12">
-
           <div class="md:col-span-2 lg:col-span-3">
             <!-- Logo -->
             <router-link class="inline-block" to="/" aria-label="Cruip">
               <svg class="w-8 h-8" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
                 <defs>
-                  <linearGradient x1="26%" y1="100%" x2="100%" y2="100%" id="flogo_a">
+                  <linearGradient id="flogo_a" x1="26%" y1="100%" x2="100%" y2="100%">
                     <stop stop-color="#3ABAB4" offset="0%" />
                     <stop stop-color="#7F9CF5" offset="100%" />
                   </linearGradient>
-                  <linearGradient x1="26%" y1="100%" x2="100%" y2="100%" id="flogo_b">
+                  <linearGradient id="flogo_b" x1="26%" y1="100%" x2="100%" y2="100%">
                     <stop stop-color="#3ABAB4" offset="0%" />
                     <stop stop-color="#3ABAB4" stop-opacity="0" offset="100%" />
                   </linearGradient>
@@ -118,10 +123,9 @@
 
         <!-- Bottom area -->
         <div class="md:flex md:items-center md:justify-between">
-
           <!-- Social links -->
           <ul class="flex mb-4 md:order-2 md:ml-4 md:mb-0">
-            <!-- 
+            <!--
             <li>
               <a class="flex justify-center items-center text-white bg-teal-500 dark:text-teal-500 dark:bg-gray-800 hover:underline hover:bg-teal-600 rounded-full transition duration-150 ease-in-out" href="#0" aria-label="Twitter">
                 <svg class="w-8 h-8 fill-current" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
@@ -174,10 +178,10 @@
           </div> -->
 
           <!-- Copyrights note -->
-          <div class="text-gray-600 dark:text-gray-400 text-sm mr-4">&copy; 2021 Binyu. Power by Appy & Vitesse.</div>
-
+          <div class="text-gray-600 dark:text-gray-400 text-sm mr-4">
+            &copy; 2022 Binyu. Power by Appy & Vitesse.
+          </div>
         </div>
-
       </div>
     </div>
   </footer>
@@ -185,6 +189,6 @@
 
 <script>
 export default {
-  name: 'Footer'
+  name: 'Footer',
 }
 </script>

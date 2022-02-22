@@ -30,6 +30,7 @@
 
 ## 有趣的外链
 
+<!--
 
 - [Eloquent JavaScript 3rd edition 中文版](http://github.com/wizardforcel/eloquent-js-3e-zh) 
 - [如何让不纯的函数变纯？ - 通过 JavaScript 代码解释函数式编程的一些基本概念。](https://jrsinclair.com/articles/2018/how-to-deal-with-dirty-side-effects-in-your-pure-functional-javascript/)
@@ -116,3 +117,5 @@
 - [tui.calendar - 一个号称所有功能都包括的网页日历库"](https://github.com/nhnent/tui.calendar)
 - [AssemblyScript](https://github.com/AssemblyScript/assemblyscript)
 - [webworker 综述](https://github.com/CntChen/cntchen.github.io/issues/19)
+
+-->

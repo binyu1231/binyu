@@ -39,5 +39,4 @@ const posts = metaInfos(path.resolve(__dirname, '../src/pages/blog'))
 
 fs.writeFileSync(path.resolve(__dirname, '../src/meta/posts.json'), JSON.stringify(posts, null, 2), 'utf-8')
 
-
 console.log(posts)

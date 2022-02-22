@@ -1,3 +1,5 @@
+[[toc]]
+
 ## type
 
 自定义 type 显示参考 OOP 魔术方法 `__repr__`
@@ -18,7 +20,7 @@ random.randrange(3, 6)
 
 
 
-### pickle
+## pickle
 
 ``` py
 # 保存均值和主成分数据

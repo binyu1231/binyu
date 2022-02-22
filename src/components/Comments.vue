@@ -1,47 +1,5 @@
 <script lang="ts" setup>
-import { useRoute } from 'vue-router'
-import { Asker } from '@coloration/asker'
-import { onMounted, ref } from 'vue-demi';
-
-const { name } = useRoute()
-const comments = ref([])
-const writing = ref({
-  name: '',
-  mail: '',
-  comment: '',
-})
-
-const api = new Asker({
-  baseUrl: 'https://b.coloration.top/comment',
-  after: (res) => res.data,
-})
-
-onMounted(() => {
-  fetchComments()
-})
-
-function fetchComments() {
-  api.get(`/${String(name)}`)
-    .then(res => {
-      comments.value = res
-      console.log(res)
-    })
-}
-
-function handleSubmit(e: Event) {
-  e.preventDefault()
-  console.log(writing.value)
-  api.post(`/${String(name)}`, writing.value)
-    .then(() => {
-      writing.value = {
-        name: '',
-        mail: '',
-        comment: '',
-      }
-
-      fetchComments()
-    })
-}
+import { onMounted } from 'vue-demi'
 
 onMounted(() => {
   // @ts-ignore
