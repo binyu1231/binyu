@@ -1,5 +1,6 @@
 <script lang="ts" setup>
-import { onMounted } from 'vue-demi'
+import { onMounted, ref } from 'vue-demi'
+const blockAdContent = ref('')
 
 onMounted(() => {
   // @ts-ignore
@@ -12,6 +13,10 @@ onMounted(() => {
       'https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/bilibili',
     ],
   })
+
+  const adDom = document.getElementById('blog-ad-bottom')
+  if (adDom)
+    blockAdContent.value = adDom.innerHTML
 })
 </script>
 <template>
@@ -19,6 +24,8 @@ onMounted(() => {
     <div class="relative max-w-6xl mx-auto px-4 sm:px-6">
       <div class="pb-12 md:pb-20">
         <div class="max-w-3xl mx-auto">
+          <div class="bg-gray-200 min-h-20 mb-10" v-html="blockAdContent">
+          </div>
           <div id="waline"></div>
           <!--
 

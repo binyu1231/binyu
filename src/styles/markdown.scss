@@ -1,34 +1,39 @@
 /* https://github.com/antfu/prism-theme-vars */
 
 .mk {
+	font-family: Arial, Helvetica, 'PingFang SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 	@apply text-base;
 	h1 {
+		font-family: 'Microsoft Yahei', 'PingFang SC';
 		@apply mb-8 text-gray-900 dark:text-gray-100
 			font-extrabold text-4xl tracking-tight
 			md:text-5xl outline-none text-shadow;
 	}
 
 	h2 {
+		font-family: 'Microsoft Yahei', 'PingFang SC';
 		@apply h3 font-red-hat-display mb-6 text-gray-900 dark:text-gray-100
 		outline-none text-shadow;
 	}
 
 	h3 {
+		font-family: 'Microsoft Yahei', 'PingFang SC';
 		@apply h4 font-red-hat-display mb-4 text-gray-900 dark:text-gray-100
 		outline-none text-shadow;
 	}
 
 	h4 {
+		font-family: 'Microsoft Yahei', 'PingFang SC';
 		@apply font-semibold text-lg mb-4 text-gray-900 dark:text-gray-100
 		outline-none text-shadow;
 	}
 
 	p {
-		@apply mb-6 text-justify tracking-wide;
+		@apply mb-6 tracking-normal;
 	}
 
 	li {
-		@apply mb-3 text-justify tracking-wide;
+		@apply mb-3 tracking-normal;
 	}
 
 	b, strong {
@@ -48,7 +53,7 @@
 	}
 
 	ol {
-		@apply list-zero-decimal pl-10;
+		@apply list-zero-decimal pl-7;
 	}
 
 	i {
@@ -298,7 +303,7 @@ pre[class*="language-"] ::selection {
 .token.string,
 .token.char,
 .token.inserted {
-	color: #f1fa8c;
+	color: #a6920e;
 }
 
 .token.entity,
@@ -306,7 +311,7 @@ pre[class*="language-"] ::selection {
 .language-css .token.string,
 .style .token.string,
 .token.variable {
-	color: #f8f8f2;
+	color: #c4ab00;
 }
 
 .token.atrule,

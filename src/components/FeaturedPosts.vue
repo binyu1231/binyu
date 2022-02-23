@@ -1,10 +1,19 @@
+<script lang="ts" setup>
+import { onMounted, ref } from 'vue'
+
+const blockAdContent = ref('')
+
+onMounted(() => {
+  const adDom = document.getElementById('blog-ad-block')
+  if (adDom)
+    blockAdContent.value = adDom.innerHTML
+})
+</script>
 <template>
   <section>
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
       <div class="pb-12 md:pb-16">
-
         <div class="grid gap-4 sm:gap-6 sm:grid-cols-2 lg:grid-cols-4" data-aos-id-featposts>
-
           <!-- 1st article -->
           <article class="relative group px-6 py-4 sm:py-8" data-aos="fade-up" data-aos-anchor="[data-aos-id-featposts]" data-aos-delay="100">
             <figure>
@@ -21,7 +30,9 @@
                 </router-link>
               </header>
               <footer>
-                <div class="text-sm opacity-80">Independent development</div>
+                <div class="text-sm opacity-80">
+                  Independent development
+                </div>
               </footer>
             </div>
           </article>
@@ -41,9 +52,26 @@
                 </router-link>
               </header>
               <footer>
-                <div class="text-sm opacity-80">Better Practice</div>
+                <div class="text-sm opacity-80">
+                  Better Practice
+                </div>
               </footer>
             </div>
+          </article>
+          <article
+            class="relative"
+            data-aos="fade-up"
+            data-aos-anchor="[data-aos-id-featposts]"
+            data-aos-delay="200"
+          >
+          </article>
+          <article
+            class="relative bg-gray-50 dark:bg-gray-700"
+            data-aos="fade-up"
+            data-aos-anchor="[data-aos-id-featposts]"
+            data-aos-delay="200"
+            v-html="blockAdContent"
+          >
           </article>
 
           <!-- 3rd article -->
@@ -85,16 +113,8 @@
               </footer>
             </div>
           </article> -->
-
         </div>
-
       </div>
     </div>
   </section>
 </template>
-
-<script>
-export default {
-  name: 'FeaturedPosts',
-}
-</script>

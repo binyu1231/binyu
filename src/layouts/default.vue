@@ -1,28 +1,24 @@
 <script lang="ts" setup>
-import { watch } from '@vue/runtime-core'
-import { ref } from 'vue-demi'
+import { ref, onMounted, watch } from 'vue-demi'
 import { useRoute } from 'vue-router'
 import posts from '~/meta/posts.json'
 
-const current = ref({
+type PostContent = {
+  title: string
+  cover: string
+  date: string
+  desc: string
+}
+
+const current = ref<PostContent>({
   title: '',
   cover: '',
   date: '',
   desc: '',
 })
 
-const next = ref({
-  title: '',
-  cover: '',
-  date: '',
-  desc: '',
-})
-const prev = ref({
-  title: '',
-  cover: '',
-  date: '',
-  desc: '',
-})
+const next = ref<PostContent | null>(null)
+const prev = ref<PostContent | null>(null)
 
 const route = useRoute()
 
@@ -48,7 +44,10 @@ watch(() => route.path, () => {
         <router-view />
       </ArticleHelper>
     </BlogSingle>
-    <RelatedPosts :next="next" :prev="prev" />
+    <div v-if="next || prev">
+      <RelatedPosts :next="next!" :prev="prev!" />
+    </div>
+
     <Comments />
   </PageLayout>
 </template>

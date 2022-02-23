@@ -10,8 +10,61 @@
   <meta name="theme-color" content="#ffffff">
   <script src="//cdn.jsdelivr.net/npm/@waline/client"></script>
 </head>
+
 <body class="font-inter antialiased bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-100 tracking-tight">
   <div id="app"></div>
+  <div id="blog-ad-block" style="display: none;">
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7479088543794946"
+      crossorigin="anonymous"
+    ></script>
+    <!-- 博客首页贴片广告 -->
+    <ins
+      class="adsbygoogle"
+      style="display:block"
+      data-ad-client="ca-pub-7479088543794946"
+      data-ad-slot="8497000173"
+      data-ad-format="auto"
+      data-full-width-responsive="true"
+    ></ins>
+    <script>
+      (window.adsbygoogle = window.adsbygoogle || []).push({})
+    </script>
+  </div>
+  <div id="blog-ad-bottom" style="display: none;">
+    <script 
+      async 
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7479088543794946"
+      crossorigin="anonymous"></script>
+    <!-- 博客文章底部广告 -->
+    <ins class="adsbygoogle"
+      style="display:block"
+      data-ad-client="ca-pub-7479088543794946"
+      data-ad-slot="5208491859"
+      data-ad-format="auto"
+      data-full-width-responsive="true"></ins>
+    <script>
+      (window.adsbygoogle = window.adsbygoogle || []).push({})
+    </script>
+  </div>
+  <div id="blog-ad-aside" style="display: none;">
+    <script 
+      async 
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7479088543794946"
+      crossorigin="anonymous"></script>
+    <!-- 博客侧边栏广告 -->
+    <ins class="adsbygoogle"
+      style="display:block"
+      data-ad-client="ca-pub-7479088543794946"
+      data-ad-slot="8127310995"
+      data-ad-format="auto"
+      data-full-width-responsive="true"></ins>
+    <script>
+      (window.adsbygoogle = window.adsbygoogle || []).push({})
+    </script>
+  </div>
+
   <script>
     (function() {
       const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
@@ -21,5 +74,7 @@
     })()
   </script>
   <script type="module" src="/src/main.ts"></script>
+
+
 </body>
 </html>
