@@ -15,7 +15,7 @@ onMounted(() => {
       <div class="pb-12 md:pb-16">
         <div class="grid gap-4 sm:gap-6 sm:grid-cols-2 lg:grid-cols-4" data-aos-id-featposts>
           <!-- 1st article -->
-          <article class="relative group px-6 py-4 sm:py-8" data-aos="fade-up" data-aos-anchor="[data-aos-id-featposts]" data-aos-delay="100">
+          <article class="relative group px-6 py-4 md:h-30 lg:h-38 h-26 sm:py-8" data-aos="fade-up" data-aos-anchor="[data-aos-id-featposts]" data-aos-delay="100">
             <figure>
               <img class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-75 transition duration-700 ease-out" src="../images/related-post-03.jpg" width="258" height="154" alt="Related post 03" />
               <div class="absolute inset-0 bg-teal-500 opacity-75 group-hover:opacity-50 transition duration-700 ease-out" aria-hidden="true"></div>
@@ -38,7 +38,7 @@ onMounted(() => {
           </article>
 
           <!-- 2nd article -->
-          <article class="relative group px-6 py-4 sm:py-8" data-aos="fade-up" data-aos-anchor="[data-aos-id-featposts]" data-aos-delay="200">
+          <article class="relative group px-6 py-4 md:h-30 lg:h-38 h-26 sm:py-8" data-aos="fade-up" data-aos-anchor="[data-aos-id-featposts]" data-aos-delay="200">
             <figure>
               <img class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-75 transition duration-700 ease-out" src="../images/related-post-05.jpg" width="258" height="154" alt="Related post 04" />
               <div class="absolute inset-0 bg-purple-500 opacity-75 group-hover:opacity-50 transition duration-700 ease-out" aria-hidden="true"></div>
@@ -66,7 +66,7 @@ onMounted(() => {
           >
           </article>
           <article
-            class="relative bg-gray-50 dark:bg-gray-700"
+            class="relative bg-gray-50 dark:bg-gray-700 md:h-30 lg:h-38 h-26 overflow-auto"
             data-aos="fade-up"
             data-aos-anchor="[data-aos-id-featposts]"
             data-aos-delay="200"
