@@ -70,8 +70,11 @@ onMounted(() => {
             data-aos="fade-up"
             data-aos-anchor="[data-aos-id-featposts]"
             data-aos-delay="200"
-            v-html="blockAdContent"
           >
+            <GoogleAd
+              slot-id="8497000173"
+              client-id="ca-pub-7479088543794946"
+            />
           </article>
 
           <!-- 3rd article -->

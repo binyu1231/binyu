@@ -24,6 +24,7 @@ declare module 'vue' {
     FeaturesBlocks: typeof import('./src/components/FeaturesBlocks.vue')['default']
     FeaturesGallery: typeof import('./src/components/FeaturesGallery.vue')['default']
     Footer: typeof import('./src/components/Footer.vue')['default']
+    GoogleAd: typeof import('./src/components/GoogleAd.vue')['default']
     Header: typeof import('./src/components/Header.vue')['default']
     HeaderImage: typeof import('./src/components/HeaderImage.vue')['default']
     HelpList: typeof import('./src/components/HelpList.vue')['default']

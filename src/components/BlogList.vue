@@ -59,6 +59,12 @@ onMounted(() => {
         </article>
       </div>
 
+      <div class="bg-gray-100 my-10 dark:bg-gray-700">
+        <GoogleAd
+          slot-id="5208491859"
+          client-id="ca-pub-7479088543794946"
+        />
+      </div>
       <!-- Load more button -->
       <div class="flex justify-center md:mt-16">
         <a
@@ -83,7 +89,7 @@ onMounted(() => {
           <header>
             <router-link class="block mb-4" :to="`/blog/${p.file}`">
               <figure>
-                <ReactiveBlock :ratio="0.7" class="bg-cover bg-center" :style="{ backgroundImage: `url(${p.cover})`}">
+                <ReactiveBlock :ratio="0.7" class="bg-cover bg-center bg-gray-100 dark:bg-gray-700" :style="{ backgroundImage: `url(${p.cover})`}">
                 </ReactiveBlock>
               </figure>
             </router-link>

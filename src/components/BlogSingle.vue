@@ -5,12 +5,11 @@ const props = defineProps({
       title: '',
       cover: '',
       date: '',
-      desc: ''
-    })
+      desc: '',
+    }),
 
-  }
+  },
 })
-
 
 </script>
 <template>
@@ -27,12 +26,16 @@ const props = defineProps({
                   class="h1 font-red-hat-display mb-4"
                   :class="{ '-m-6': props.post.title.startsWith('《') }"
                   data-aos="fade-down"
-                >{{ props.post.title }}</h1>
+                >
+                  {{ props.post.title }}
+                </h1>
                 <p
                   class="text-xl text-gray-600 dark:text-gray-400"
                   data-aos="fade-down"
                   data-aos-delay="150"
-                >{{ props.post.desc }}</p>
+                >
+                  {{ props.post.desc }}
+                </p>
               </div>
             </header>
             <!-- Article content -->
@@ -49,4 +52,3 @@ const props = defineProps({
     </div>
   </section>
 </template>
-
