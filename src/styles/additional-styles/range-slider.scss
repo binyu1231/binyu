@@ -6,9 +6,7 @@ input[type=range] {
     background: #ccc;
     border-radius: 3px;
     height: 6px;
-    margin-top: ($range-thumb-size - 6px) / 2;
-    margin-bottom: ($range-thumb-size - 6px) / 2;
-    --thumb-size: #{$range-thumb-size};  
+
 
     &::-webkit-slider-thumb {
         appearance: none;

@@ -65,17 +65,6 @@ onMounted(() => {
             data-aos-delay="200"
           >
           </article>
-          <article
-            class="relative bg-gray-50 dark:bg-gray-700 md:h-30 lg:h-38 h-26 overflow-auto"
-            data-aos="fade-up"
-            data-aos-anchor="[data-aos-id-featposts]"
-            data-aos-delay="200"
-          >
-            <GoogleAd
-              slot-id="8497000173"
-              client-id="ca-pub-7479088543794946"
-            />
-          </article>
 
           <!-- 3rd article -->
           <!-- <article class="relative group px-6 py-4 sm:py-8" data-aos="fade-up" data-aos-anchor="[data-aos-id-featposts]" data-aos-delay="300">

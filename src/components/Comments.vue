@@ -2,7 +2,9 @@
 import { onMounted } from 'vue-demi'
 onMounted(() => {
   // @ts-ignore
-  Waline({
+  if (!window.Waline) return
+  // @ts-ignore
+  window.Waline({
     el: '#waline',
     avatar: 'hide',
     serverURL: 'https://binyu-comment.vercel.app',

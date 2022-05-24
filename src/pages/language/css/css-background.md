@@ -7,6 +7,7 @@ tag:
 - css
 ---
 
+[[toc]]
 <!--
 关于 css background 属性！关于颜色和渐变的方面的，再单独总结一篇 Color
 -->
@@ -14,7 +15,6 @@ tag:
 本篇主要参考了[w3c的规范](https://www.w3.org/TR/css-backgrounds/#backgrounds) /（[中文](http://www.ayqy.net/doc/css2-1/colors.html#background)）
 
 <!-- more -->
-[[toc]]
 
 ---
 ## background-image
