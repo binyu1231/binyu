@@ -11,7 +11,7 @@ date: 2019-01-01
 
 ### normal
 
-``` c++
+``` cpp
 #include <cmath>      // C math function
 #include <iostream>
 #include <climits>    // 关于整型的限制信息

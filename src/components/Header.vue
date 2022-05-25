@@ -7,19 +7,18 @@ const mobileNavOpen = ref(false)
 const mobileNav = ref<HTMLElement | null>(null)
 const hamburger = ref<HTMLButtonElement | null>(null)
 
-useEventListener(globalThis.document, 'click', function clickOutside (e: MouseEvent) {
+useEventListener(globalThis.document, 'click', (e: MouseEvent) => {
   if (
-    !mobileNavOpen.value 
-    || mobileNav.value?.contains(e.target as Node) 
+    !mobileNavOpen.value
+    || mobileNav.value?.contains(e.target as Node)
     || hamburger.value?.contains(e.target as Node)) return
 
   mobileNavOpen.value = false
-  
 })
 
-useEventListener(globalThis.document, 'keydown', function keyPress (event: KeyboardEvent) {
+useEventListener(globalThis.document, 'keydown', (event: KeyboardEvent) => {
   if (!mobileNavOpen.value || event.code !== '27') return
-      mobileNavOpen.value = false
+  mobileNavOpen.value = false
 })
 
 </script>
@@ -27,18 +26,17 @@ useEventListener(globalThis.document, 'keydown', function keyPress (event: Keybo
   <header class="absolute w-full z-30">
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
       <div class="flex items-center justify-between h-20">
-
         <!-- Site branding -->
         <div class="flex-shrink-0 mr-5">
           <!-- Logo -->
           <router-link to="/" class="flex items-center" aria-label="Cruip">
             <svg class="w-8 h-8" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
               <defs>
-                <linearGradient x1="26%" y1="100%" x2="100%" y2="100%" id="logo_a">
+                <linearGradient id="logo_a" x1="26%" y1="100%" x2="100%" y2="100%">
                   <stop stop-color="#3ABAB4" offset="0%" />
                   <stop stop-color="#7F9CF5" offset="100%" />
                 </linearGradient>
-                <linearGradient x1="26%" y1="100%" x2="100%" y2="100%" id="logo_b">
+                <linearGradient id="logo_b" x1="26%" y1="100%" x2="100%" y2="100%">
                   <stop stop-color="#3ABAB4" offset="0%" />
                   <stop stop-color="#3ABAB4" stop-opacity="0" offset="100%" />
                 </linearGradient>
@@ -47,19 +45,21 @@ useEventListener(globalThis.document, 'keydown', function keyPress (event: Keybo
               <path d="M32 16c0 8.837-7.163 16-16 16S0 24.837 0 16h8a8 8 0 1016 0h8z" fill="url(#logo_b)" />
             </svg>
 
-            <h1 class="text-2xl font-semibold ml-4">Binyu.me</h1>
+            <h1 class="text-2xl font-semibold ml-4">
+              Binyu.me
+            </h1>
           </router-link>
         </div>
 
         <!-- Desktop navigation -->
         <nav class="hidden md:flex md:flex-grow">
-
           <!-- Desktop menu links -->
           <ul class="flex flex-grow flex-wrap items-center font-medium">
             <li>
-              <router-link 
-                to="/" 
-                class="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100 px-5 py-2 flex items-center transition duration-150 ease-in-out">
+              <router-link
+                to="/"
+                class="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100 px-5 py-2 flex items-center transition duration-150 ease-in-out"
+              >
                 Home
               </router-link>
             </li>
@@ -83,13 +83,14 @@ useEventListener(globalThis.document, 'keydown', function keyPress (event: Keybo
 
           <!-- Desktop lights switch -->
           <div class="form-switch focus-within:outline-blue flex flex-col justify-center ml-3">
-            <input 
-              type="checkbox" 
-              name="light-switch" 
-              id="light-switch-desktop" 
-              :checked="isDark" 
+            <input
+              id="light-switch-desktop"
+              type="checkbox"
+              name="light-switch"
+              :checked="isDark"
+              class="light-switch sr-only"
               @change="(e) => toggleDark()"
-              class="light-switch sr-only" />
+            />
             <label class="relative" for="light-switch-desktop">
               <span class="relative bg-gradient-to-t from-gray-100 to-white dark:from-gray-800 dark:to-gray-700 shadow-sm z-10" aria-hidden="true"></span>
               <svg class="absolute inset-0" width="44" height="24" viewBox="0 0 44 24" xmlns="http://www.w3.org/2000/svg">
@@ -107,16 +108,15 @@ useEventListener(globalThis.document, 'keydown', function keyPress (event: Keybo
 
         <!-- Mobile menu -->
         <div class="inline-flex md:hidden">
-
           <!-- Mobile lights switch -->
           <div class="form-switch focus-within:outline-blue flex flex-col justify-center mr-6 -mt-0.5">
-            <input 
-              type="checkbox" 
-              name="light-switch" 
-              id="light-switch-mobile" 
-              :checked="isDark" 
+            <input
+              id="light-switch-mobile"
+              type="checkbox"
+              name="light-switch"
+              :checked="isDark"
+              class="light-switch sr-only"
               @change="(e) => toggleDark()"
-              class="light-switch sr-only" 
             />
             <label class="relative" for="light-switch-mobile">
               <span class="relative bg-gradient-to-t from-gray-100 to-white dark:from-gray-800 dark:to-gray-700 shadow-sm z-10" aria-hidden="true"></span>
@@ -130,10 +130,17 @@ useEventListener(globalThis.document, 'keydown', function keyPress (event: Keybo
               </svg>
               <span class="sr-only">Switch to light / dark version</span>
             </label>
-          </div>          
+          </div>
 
           <!-- Hamburger button -->
-          <button class="hamburger" ref="hamburger" :class="{ active: mobileNavOpen }" aria-controls="mobile-nav" :aria-expanded="mobileNavOpen" @click="mobileNavOpen = !mobileNavOpen">
+          <button
+            ref="hamburger"
+            class="hamburger"
+            :class="{ active: mobileNavOpen }"
+            aria-controls="mobile-nav"
+            :aria-expanded="mobileNavOpen"
+            @click="mobileNavOpen = !mobileNavOpen"
+          >
             <span class="sr-only">Menu</span>
             <svg class="w-6 h-6 fill-current text-gray-900 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100 transition duration-150 ease-in-out" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <rect y="4" width="24" height="2" rx="1" />
@@ -156,11 +163,11 @@ useEventListener(globalThis.document, 'keydown', function keyPress (event: Keybo
                 <!-- Logo -->
                 <svg class="w-8 h-8" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
                   <defs>
-                    <linearGradient x1="26%" y1="100%" x2="100%" y2="100%" id="menulogo_a">
+                    <linearGradient id="menulogo_a" x1="26%" y1="100%" x2="100%" y2="100%">
                       <stop stop-color="#3ABAB4" offset="0%" />
                       <stop stop-color="#7F9CF5" offset="100%" />
                     </linearGradient>
-                    <linearGradient x1="26%" y1="100%" x2="100%" y2="100%" id="menulogo_b">
+                    <linearGradient id="menulogo_b" x1="26%" y1="100%" x2="100%" y2="100%">
                       <stop stop-color="#3ABAB4" offset="0%" />
                       <stop stop-color="#3ABAB4" stop-opacity="0" offset="100%" />
                     </linearGradient>
@@ -171,22 +178,32 @@ useEventListener(globalThis.document, 'keydown', function keyPress (event: Keybo
                 <!-- Links -->
                 <ul>
                   <li>
-                    <router-link to="/about" class="flex text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100 py-2">About</router-link>
+                    <router-link to="/about" class="flex text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100 py-2">
+                      About
+                    </router-link>
                   </li>
                   <li>
-                    <router-link to="/blog" class="flex text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100 py-2">Blog</router-link>
+                    <router-link to="/blog" class="flex text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100 py-2">
+                      Blog
+                    </router-link>
                   </li>
                   <li>
-                    <router-link to="/testimonials" class="flex text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100 py-2">Testimonials</router-link>
+                    <router-link to="/testimonials" class="flex text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100 py-2">
+                      Testimonials
+                    </router-link>
                   </li>
                   <li class="py-2 my-2 border-t border-b border-gray-200 dark:border-gray-800">
                     <span class="flex text-gray-600 dark:text-gray-400 py-2">Resources</span>
                     <ul class="pl-4">
                       <li>
-                        <router-link to="/help" class="text-sm flex font-medium text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 py-2">Help center</router-link>
+                        <router-link to="/help" class="text-sm flex font-medium text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 py-2">
+                          Help center
+                        </router-link>
                       </li>
                       <li>
-                        <router-link to="/404" class="text-sm flex font-medium text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 py-2">404</router-link>
+                        <router-link to="/404" class="text-sm flex font-medium text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 py-2">
+                          404
+                        </router-link>
                       </li>
                     </ul>
                   </li>
@@ -194,9 +211,7 @@ useEventListener(globalThis.document, 'keydown', function keyPress (event: Keybo
               </div>
             </nav>
           </transition>
-
         </div>
-
       </div>
     </div>
   </header>

@@ -157,6 +157,17 @@ export default [
           },
         ],
       },
+      {
+        name: 'Vue',
+        children: [
+          {
+            name: 'Practice',
+            children: [
+              { name: 'Taro Startup', value: '/framework/vue/taro-startup' },
+            ],
+          },
+        ],
+      },
     ],
   },
   {

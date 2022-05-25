@@ -1,16 +1,15 @@
 <script lang="ts" setup>
 import { onMounted } from 'vue-demi'
+import { init } from '@waline/client'
 onMounted(() => {
   // @ts-ignore
-  if (!window.Waline) return
-  // @ts-ignore
-  window.Waline({
+  init({
     el: '#waline',
-    avatar: 'hide',
-    serverURL: 'https://binyu-comment.vercel.app',
+    serverURL: 'https://binyu-comment.wl-ercel.app',
     emoji: [
-      'https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/weibo',
-      'https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/bilibili',
+      'https://unpkg.com/@waline/emojis@1.0.1/weibo',
+      'https://unpkg.com/@waline/emojis@1.0.1/bilibili',
+      'https://unpkg.com/@waline/emojis@1.0.1/qq',
     ],
   })
 })
@@ -155,11 +154,11 @@ onMounted(() => {
 #waline label {
   @apply text-sm;
 }
-#waline .vpanel {
+#waline .wl-panel {
   @apply rounded-none border-none;
 }
 
-#waline .vheader {
+#waline .wl-header {
   @apply border-solid border-b;
 }
 
@@ -171,14 +170,14 @@ onMounted(() => {
   @apply bg-transparent;
 }
 
-#waline .vbtn {
+#waline .wl-btn {
   @apply rounded-none px-6 ml-4 text-sm;
 }
-#waline .vbtn.primary {
+#waline .wl-btn.primary {
   @apply bg-teal-500 hover:bg-teal-400;
 }
 
-#waline .vcontent {
+#waline .wl-content {
   @apply rounded-none;
 }
 
@@ -186,7 +185,7 @@ onMounted(() => {
   @apply text-gray-800 hover:text-teal-500;
 }
 
-#waline .vpower {
+#waline .wl-power {
   opacity: 0;
 }
 </style>

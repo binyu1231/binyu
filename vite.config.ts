@@ -14,6 +14,7 @@ import Prism from 'markdown-it-prism'
 import LinkAttributes from 'markdown-it-link-attributes'
 import MarkdownAnchorPlugin from 'markdown-it-anchor'
 import MarkdownTocPlugin from 'markdown-it-toc-done-right'
+import Inspect from 'vite-plugin-inspect'
 
 export default defineConfig({
   resolve: {
@@ -24,6 +25,7 @@ export default defineConfig({
   plugins: [
     Vue({
       include: [/\.vue$/, /\.md$/],
+      reactivityTransform: true,
     }),
 
     // https://github.com/hannoeru/vite-plugin-pages
@@ -114,6 +116,9 @@ export default defineConfig({
     VueI18n({
       include: [path.resolve(__dirname, 'locales/**')],
     }),
+
+    // Then visit localhost:3000/__inspect/ to inspect the modules.
+    Inspect(), // only applies in dev mode
   ],
   // https://github.com/antfu/vite-ssg
   ssgOptions: {
