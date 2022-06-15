@@ -21,6 +21,7 @@ export default [
               { name: '技巧', value: '/language/javascript/awesome' },
               { name: 'dreamjs', value: '/language/javascript/dreamjs' },
               { name: 'lodash', value: '/language/javascript/lodash' },
+              { name: 'TypeScript 类型挑战 (一) Easy', value: '/language/typescript/type-challenges-easy' },
             ],
           },
           {
@@ -160,6 +161,12 @@ export default [
       {
         name: 'Vue',
         children: [
+          {
+            name: 'Features',
+            children: [
+              { name: 'Vue 3.2', value: '/framework/vue/vue-3-2-feature' },
+            ],
+          },
           {
             name: 'Practice',
             children: [
