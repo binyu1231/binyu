@@ -21,7 +21,8 @@ export default [
               { name: '技巧', value: '/language/javascript/awesome' },
               { name: 'dreamjs', value: '/language/javascript/dreamjs' },
               { name: 'lodash', value: '/language/javascript/lodash' },
-              { name: 'TypeScript 类型挑战 (一) Easy', value: '/language/typescript/type-challenges-easy' },
+              { name: 'TypeScript 类型挑战 Easy', value: '/language/typescript/type-challenges-easy' },
+              { name: 'TypeScript 类型挑战 Medium', value: '/language/typescript/type-challenges-medium' },
             ],
           },
           {
