@@ -166,6 +166,7 @@ export default [
             name: 'Features',
             children: [
               { name: 'Vue 3.2', value: '/framework/vue/vue-3-2-feature' },
+              { name: 'how to setup', value: '/framework/vue/how-to-setup' },
             ],
           },
           {

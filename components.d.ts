@@ -7,7 +7,6 @@ declare module 'vue' {
     BlogList: typeof import('./src/components/BlogList.vue')['default']
     BlogSingle: typeof import('./src/components/BlogSingle.vue')['default']
     Career: typeof import('./src/components/Career.vue')['default']
-    'Clarity:vmwAppLine': typeof import('virtual:vite-icons/clarity/vmw-app-line')['default']
     Clients: typeof import('./src/components/Clients.vue')['default']
     Comments: typeof import('./src/components/Comments.vue')['default']
     Cta: typeof import('./src/components/Cta.vue')['default']
