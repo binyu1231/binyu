@@ -80,7 +80,28 @@ const props = withDefaults(
 
 ### use emits
 
-```
+
+1. setup option
+
+``` ts
+// vue2
+export default defineComponent({
+  setup(_props, context) {
+    context.emit('change'/*,  */)
+  }
+})
+
+export default defineComponent({
+  emit: ['change'],
+  // or
+  emit: {
+    change: null,
+    delete: (payload) => {
+      // what is payload
+      // how to check?
+    }
+  }
+})
 ```
 
 
