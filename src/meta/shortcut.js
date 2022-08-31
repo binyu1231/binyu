@@ -148,18 +148,6 @@ export default [
     name: 'Framework',
     children: [
       {
-        name: 'Docker',
-        children: [
-          {
-            name: 'Basic',
-            children: [
-              { name: '镜像与容器', value: '/framework/docker/command' },
-              { name: 'Docker Compose', value: '/framework/docker/compose' },
-            ],
-          },
-        ],
-      },
-      {
         name: 'Vue',
         children: [
           {
@@ -173,6 +161,29 @@ export default [
             name: 'Practice',
             children: [
               { name: 'Taro Startup', value: '/framework/vue/taro-startup' },
+            ],
+          },
+        ],
+      },
+      {
+        name: 'Docker',
+        children: [
+          {
+            name: 'Basic',
+            children: [
+              { name: '镜像与容器', value: '/framework/docker/command' },
+              { name: 'Docker Compose', value: '/framework/docker/compose' },
+            ],
+          },
+        ],
+      },
+      {
+        name: 'Git',
+        children: [
+          {
+            name: 'Basic',
+            children: [
+              { name: 'Git Commit Message', value: '/framework/git/commit-message' },
             ],
           },
         ],

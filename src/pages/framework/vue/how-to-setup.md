@@ -52,23 +52,18 @@ export default defineComponent({
 // <script setup>
 import { defineProps } from 'vue'
 
+// <script setup>
+const props = defineProps(['disabled'])
+
+// <script setup> with default value
 const props = defineProps({
   disabled: { type: Boolean, default: false },
 })
 
-watch(
-  () => props.disabled, 
-  (newVal) => /* todo */, 
-  { immediate: true }
-)
-```
-
-3. setup flag with ts
-
-``` ts
 // <script setup lang="ts">
-import { defineProps, watch, withDefaults } from 'vue'
+const props = defineProps<{ disabled?: boolean }>()
 
+// <script setup lang="ts"> with default value
 const props = withDefaults(
   // Note: 
   // disabled? === required: false
@@ -76,17 +71,72 @@ const props = withDefaults(
   defineProps<{ disabled?: boolean }>(),
   { disabled: true },
 )
+
+// use
+watch(
+  () => props.disabled, 
+  (newVal) => /* todo */, 
+  { immediate: true }
+)
 ```
 
 ### use emits
 
+1. setup option
+
+``` ts
+// vue2
+export default defineComponent({
+  setup(_props, context) {
+    context.emit('change'/*,  */)
+  }
+})
+
+export default defineComponent({
+  emit: ['change'],
+  // or
+  emit: {
+    change: null,
+    delete: (payload) => {
+      // TODO: what is payload
+      // TODO: how to check?
+    }
+  }
+})
 ```
+
+2. setup flag 
+
+``` ts
+// <script setup>
+const emits = defineEmits(['close', 'increase'])
+
+// <script setup lang="ts">
+const emits = defineEmits<{
+  (e: 'close') :void,
+  (e: 'increase', num: number) : void
+}>()
+// TODO: how to check??
+
+
+// use
+function handleClose () {
+	// ... codes
+	emits('close')
+}
+
+function handleAdd (n: number) {
+	// ... codes
+	emits('increase', n)
+}
 ```
 
 
 ### define name
 
-```
+
+``` ts
+// TODO: 
 ```
 
 ### use context
@@ -99,7 +149,23 @@ const instance = getCurrentInstance()
 
 ### use vuex in vue2
 
+1. setup option OR setup flag
+
+``` ts
+// <script setup>
+const instance = getCurrentInstance()
+instance?.proxy.$store
 ```
+
+2. useStore
+
+``` ts
+export function useStore() {
+  return getCurrentInstance().proxy.$router
+}
+
+// use
+const store = useStore()
 ```
 
 ### use vue-router in vue2
@@ -107,8 +173,7 @@ const instance = getCurrentInstance()
 1. setup option OR setup flag
 
 ``` ts
-import { getCurrentInstance } from 'vue'
-
+// <script setup>
 const instance = getCurrentInstance()
 instance?.proxy.$router.push('/about')
 ```
@@ -116,8 +181,6 @@ instance?.proxy.$router.push('/about')
 2. useRouter
 
 ``` ts
-import { getCurrentInstance } from 'vue'
-
 export function useRouter () {
   return getCurrentInstance().proxy.$router
 }
