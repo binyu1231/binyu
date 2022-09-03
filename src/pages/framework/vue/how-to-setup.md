@@ -64,6 +64,7 @@ const props = defineProps({
 const props = defineProps<{ disabled?: boolean }>()
 
 // <script setup lang="ts"> with default value
+// 1.
 const props = withDefaults(
   // Note: 
   // disabled? === required: false
@@ -71,6 +72,13 @@ const props = withDefaults(
   defineProps<{ disabled?: boolean }>(),
   { disabled: true },
 )
+
+// 2
+import { PropType } from 'vue'
+
+const props = defineProps({
+  disabled: { type: Boolean as PropType<boolean>, default: false },
+})
 
 // use
 watch(
@@ -134,9 +142,8 @@ function handleAdd (n: number) {
 
 ### define name
 
-
-``` ts
-// TODO: 
+``` html
+<script setup name="i-button">
 ```
 
 ### use context
