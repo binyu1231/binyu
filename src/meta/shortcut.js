@@ -160,9 +160,12 @@ export default [
           {
             name: 'Practice',
             children: [
-              { name: 'how to setup', value: '/framework/vue/how-to-setup' },
               { name: 'Taro Startup', value: '/framework/vue/taro-startup' },
+              { name: 'how to setup', value: '/framework/vue/how-to-setup' },
               { name: 'Scope', value: '/framework/vue/scope' },
+              { name: 'Plugin', value: '/framework/vue/plugin' },
+              { name: 'Slot', value: '/framework/vue/slot' },
+              { name: 'Composition', value: '/framework/vue/composition' },
             ],
           },
         ],

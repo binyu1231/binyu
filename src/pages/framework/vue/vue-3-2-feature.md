@@ -2,12 +2,9 @@
 
 # Vue 3.2 
 
-## 概述
+## 命名
 
 3.2 命名 Quintessential Quintuplets - <五等分的花嫁>
-
-
-
 
 ## SFC 新特性
 
@@ -26,11 +23,8 @@
 
 
 
-
-
-
-
 ### 动态CSS `<style> v-bind<style>`
+
 
 ## WebComponent
 
@@ -43,7 +37,6 @@
 ## Effect Scope API
 
 解决问题: 不同组件使用同一个组合API时, 因互相持有相同变量, 而无法解耦的情况.
-
 
 #### `effectScope()`
 #### `getCurrentScope()`

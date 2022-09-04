@@ -1,4 +1,6 @@
-### 使用局部变量
+[[toc]]
+
+### 使用组件提供局部变量
 
 ``` html
 <div class="list">
@@ -16,6 +18,8 @@
   </scope-toggle>
 </div>
 ```
+
+使用 `slots.default` 创建无DOM组件
 
 ``` js
 import { defineComponent, reactive, ref } from 'vue'
@@ -41,4 +45,13 @@ export default defineComponent({
   }
 })
 ```
+
+
+### 防止 composition scope 冲突
+
+#### `effectScope()`
+#### `getCurrentScope()`
+#### `onScopeDispose()`
+
+
 

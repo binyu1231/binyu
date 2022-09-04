@@ -6,6 +6,23 @@ tag:
 ---
 
 
+16. 使用粘黏定位时, 所有父级的 overflow 都不可以设置为 `visible(默认)` 以外的值
+
+``` html
+<body>
+  <!-- 
+    enabled: overflow: visible;
+    disabled: overflow: auto;
+   -->
+  <div class="lang-list">
+    <!-- position: sticky; top: 0 -->
+    <div class="fix-nav" />
+  </div>
+<body>
+```
+
+ex: [杀了个回马枪，还是说说position:sticky吧 四.](https://www.zhangxinxu.com/wordpress/2018/12/css-position-sticky/)
+
 15.跟随系统使用暗模式 (Safari 12.1)
 
 ``` css
