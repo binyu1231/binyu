@@ -1,8 +1,6 @@
 ---
-title: C#6.0 in a Nutshell
-date: 2017-05-15
-tag:
-- csharp
+title: Nutshell
+index: Language.CSharp.Syntax
 ---
 
 ## chapter 1.Introducing C# and the .NET Framework

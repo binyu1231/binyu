@@ -1,12 +1,11 @@
 ---
-title: LINQ (Language Integrated Query)
-date: 2017-06-05
-tag:
-- csharp
-- functional
-
+title: LINQ 
+index: Language.CSharp.Syntax
 ---
-# 
+
+[[toc]]
+
+> LINQ (Language Integrated Query)
 
 > ns: System.Linq;
 

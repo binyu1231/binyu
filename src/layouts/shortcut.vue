@@ -1,8 +1,10 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue'
+import { useRoute } from 'vue-router'
 import source from '../meta/shortcut'
+const route = useRoute()
 const dlb = (n: number) => Number(n) < 10 ? `0${n}` : `${n}`
-const currType = ref(source[0].name)
+const currType = ref(route.hash.replace('#', '') || source[0].name)
 
 const filterSource = computed(() => {
   return source.filter((s: any) => s.name === currType.value)

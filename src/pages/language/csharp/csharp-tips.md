@@ -1,9 +1,6 @@
 ---
-title: csharp tips
-date: 2017-05-10
-tag:
-- csharp
-
+title: LINQ 
+index: Language.CSharp.Practice
 ---
 
 #### 6.为数组的每一项赋相同初值

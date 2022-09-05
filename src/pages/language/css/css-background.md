@@ -1,10 +1,6 @@
 ---
-# layout: post
-title:  Background
-date: 2018-06-29
-sidebar: auto
-tag:
-- css
+title: Background
+index: Language.CSS.Syntax
 ---
 
 [[toc]]

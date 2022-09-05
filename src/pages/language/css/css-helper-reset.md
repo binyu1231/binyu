@@ -1,19 +1,9 @@
 ---
-layout: post
-title: 初始化CSS
-date: 2016-06-21
-thumbnailImage: https://hd.unsplash.com/photo-1467348733814-f93fc480bec6
-coverImage: https://hd.unsplash.com/photo-1467348733814-f93fc480bec6
-categories: 前端
-tag:
-- CSS
+title: Reset
+index: Language.CSS.Practice
 ---
-css 初始化参考
-<!-- more -->
 
-<!-- toc -->
-
----
+[[toc]]
 
 ## 基本初始化
 
