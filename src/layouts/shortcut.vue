@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue'
 import { useRoute } from 'vue-router'
-import source from '../meta/shortcut'
+import source from '../meta/shortcut.json'
+
 const route = useRoute()
 const dlb = (n: number) => Number(n) < 10 ? `0${n}` : `${n}`
 const currType = ref(route.hash.replace('#', '') || source[0].name)
@@ -9,13 +10,14 @@ const currType = ref(route.hash.replace('#', '') || source[0].name)
 const filterSource = computed(() => {
   return source.filter((s: any) => s.name === currType.value)
 })
+
 </script>
 <template>
   <PageLayout
     cover="https://xinghe-blog-bucket.oss-cn-beijing.aliyuncs.com/img/blog-coloration-cover.jpg"
   >
     <div class="relative max-w-6xl mx-auto px-4 sm:px-6">
-      <div class="py-12 md:py-20">
+      <div class="py-20">
         <!-- Section header -->
         <ul class="flex">
           <li
