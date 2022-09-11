@@ -1,9 +1,6 @@
 ---
 title: 使用 Dreamjs 生成 JSON 数据
-date: 2018-07-10
-tag:
-- jslib
-
+index: Language.JavaScript.Practice
 ---
 
 [[toc]]

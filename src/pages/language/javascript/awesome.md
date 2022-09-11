@@ -1,5 +1,6 @@
 ---
-title: js 编程实践
+title: Awesome
+index: Language.JavaScript.Practice
 ---
 
 
@@ -15,7 +16,7 @@ return functionA()
 .then(functionC)
 .then(functionD)
 .catch((err) => logger.error(err))
-.then(alwaysExecuteThisFunction)
+.finally(alwaysExecuteThisFunction)
 ```
 
 #### using async/await 

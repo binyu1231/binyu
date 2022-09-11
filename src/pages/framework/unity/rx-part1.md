@@ -1,19 +1,11 @@
 ---
-layout: post
 title: "[译] ReactiveX 与 Unity3D <一>"
-date: 2017-08-26
-categories: Unity3D
-tag:
-  - Unity3D
-  - csharp
+index: Framework.Unity.Extend
 ---
 
 [原文链接](http://ornithoptergames.com/reactiverx-in-unity3d-part-1/)
 
-- 第一篇
-- [第二篇](http://coloration.cc/2017/09/01/unity_csharp-ReactiveXandUnity3D-part2/)
-- [第二篇附加篇](http://coloration.cc/2017/09/02/unity_csharp-ReactiveXandUnity3D-part2.2/)
-- [第三篇](http://coloration.cc/2017/09/11/unity_csharp-ReactiveXandUnity3D-part3/)
+[[toc]]
 
 **耦合性强的代码令人头痛**。一定是有某种自然力量，像重力那样，拽着代码的尾巴，将他们纠缠在一起，难以阅读，脆弱又混乱。正如你写的那样。而且由于一些原因这种情况在游戏开发中更为常见。除非你自觉的抵制它，否则你的游戏最终会达到临界值，进一步塌陷成一个黑洞。（为什么这样说，是我最近读了挺多的科幻小说）
 

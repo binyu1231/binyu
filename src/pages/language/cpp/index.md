@@ -1,6 +1,6 @@
 ---
 title: Syntax
-index: language.C++.Syntax
+index: language.CPP.Syntax
 ---
 
 ### install

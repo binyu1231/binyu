@@ -1,24 +1,10 @@
 ---
-layout: post
-title: Javascript DOM 操作
-desc: 一些DOM相关的API 都在这里啦！⁄(⁄ ⁄•⁄ω⁄•⁄ ⁄)⁄
-date: 2015-09-07
-categories: 前端
-tags:
-- Javascript
-- API
-
-thumbnailImage: https://hd.unsplash.com/photo-1441986380878-c4248f5b8b5b
-coverImage: https://hd.unsplash.com/photo-1441986380878-c4248f5b8b5b
+title: DOM 操作
+index: Language.JavaScript.Practice
 ---
 
-<!-- # Javascript DOM 操作 -->
 
-这篇文章贴的是一些是针对Javascript DOM操作原生的常用API的总结。然后推荐一下[廖雪峰](http://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000)先生的Javascript教程，涵盖了ES6的新特性。
-
-<!-- more -->
-
-<!-- toc -->
+[[toc]]
 
 ---
 

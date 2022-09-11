@@ -1,5 +1,5 @@
 ---
-title: LINQ 
+title: Tips 
 index: Language.CSharp.Practice
 ---
 

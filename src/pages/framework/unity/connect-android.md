@@ -1,9 +1,6 @@
 ---
-title: Unity3D 与 Android 通信
-date: 2017-07-10
-tag:
-- android
-- unity3d
+title: 与 Android 通信
+index: Framework.Unity.Practice
 ---
 
 这篇文章主要记述**Android Studio 打出 jar 包供 Unity 使用的过程**，主要参考的链接就是这篇[《unity-与Android交互(unity5、android studio)》](http://www.voidcn.com/blog/yangxuan0261/article/p-6186822.html)

@@ -1,5 +1,6 @@
 ---
 title: Antd(React) tips
+index: Framework.React.Practice
 ---
 
 ### Antd Table 白色空隙

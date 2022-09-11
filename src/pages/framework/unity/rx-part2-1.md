@@ -1,20 +1,11 @@
 ---
-layout: post
 title: "[译] ReactiveX 与 Unity3D <二.1>"
-date: 2017-09-01
-categories: Unity3D
-tag:
-  - Unity3D
-  - csharp
+index: Framework.Unity.Extend
 ---
 
 [原文链接](http://ornithoptergames.com/reactivex-and-unity3d-part-2/)
 
-- [第一篇](http://coloration.cc/2017/08/26/unity_csharp-ReactiveXandUnity3D-part1/)
-- 第二篇
-- [第二篇附加篇](http://coloration.cc/2017/09/02/unity_csharp-ReactiveXandUnity3D-part2.2/)
-- [第三篇](http://coloration.cc/2017/09/11/unity_csharp-ReactiveXandUnity3D-part3/)
-
+[[toc]]
 
 这是三部曲的第二篇。使用 ReactiveX 实现 Unity 标准资源包中的第一人称控制器，是这个系列文章的主要内容。
 
@@ -88,7 +79,7 @@ inputs.Movement
 
 其中一个选择是介绍一个新概念：Subject。在 ReactiveX 中，Subject 结合了 Observer 和 Observable ， 但你**不能**将它理解成是一个 “可读写的 Observable”。 那它就与响应式属性没有什么区别了。Subject 没有像响应式属性那样定义一个“当前值”。 你只能通过订阅 Subject 来得到它改变后传给你的通知，但你不能拿到它的当前值。所以你可以将它理解成阉割版的响应式属性。而且你在任何情况下都应该选择能使代码正常运行而功能添加又最少的选项。在实践中需要根据如何使用信号来进行决策。
 
-那我们在 PlayerController 脚本中添加一个  Subject<Vector3> 字段，因为这是属于**我们自己的**信号（译注：“我们”指 PlayerController， 相对于 Inputs而言），那就需要在 Awake 中初始化它。 
+那我们在 `PlayerController` 脚本中添加一个 `Subject<Vector3>` 字段，因为这是属于**我们自己的**信号（译注：“我们”指 PlayerController， 相对于 Inputs而言），那就需要在 Awake 中初始化它。 
 
 ```csharp
 walked = new Subject<Vector3>().AddTo(this);
