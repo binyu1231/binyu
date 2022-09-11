@@ -1,8 +1,6 @@
 ---
 title: Unity Tips
-date: 2016-10-10
-tag:
-- unity3d
+index: Framework.Unity.Practice
 ---
 
 - 淡入效果要设置初值，防止闪烁

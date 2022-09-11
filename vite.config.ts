@@ -16,6 +16,8 @@ import MarkdownAnchorPlugin from 'markdown-it-anchor'
 import MarkdownTocPlugin from 'markdown-it-toc-done-right'
 import Inspect from 'vite-plugin-inspect'
 
+import PreHandlePlugin from './scripts/preHandlePlugin'
+
 export default defineConfig({
   resolve: {
     alias: {
@@ -43,6 +45,7 @@ export default defineConfig({
       markdownItSetup(md) {
         // https://prismjs.com/
         md.use(Prism)
+        md.use(PreHandlePlugin)
         md.use(LinkAttributes, {
           pattern: /^https?:\/\//,
           attrs: {

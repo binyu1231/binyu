@@ -1,8 +1,6 @@
 ---
-title: Unity3D 实用技能 - 图片字体
-date: 2017-10-28
-tag:
-- unity3d
+title: 图片字体
+index: Framework.Unity.Practice
 ---
 
 ## Bitmap字体（图片字体）

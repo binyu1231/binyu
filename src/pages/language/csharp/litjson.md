@@ -1,14 +1,12 @@
 ---
-layout: post
-title: "Unity (C#) 使用 LitJson 处理 JSON 数据"
-date: 2016-10-24
-categories: Unity3D
-tag:
-  - Unity3D
-  - csharp
+title: LitJson
+index: Language.CSharp.Practice
 ---
 
+[[toc]]
+
 ## 相关链接
+
 1. [dll 文件，点击即下载](https://github.com/lbv/litjson/releases/download/v0.9.0/LitJson.dll)
 2. [LitJson 官网](http://lbv.github.io/litjson/)
 

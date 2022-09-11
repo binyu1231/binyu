@@ -1,6 +1,6 @@
 ---
-title: cpp
-date: 2019-01-01
+title: Syntax
+index: language.CPP.Syntax
 ---
 
 ### install

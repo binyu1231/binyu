@@ -1,9 +1,6 @@
 ---
 title: 广播消息
-date: 2016-10-27
-updated: true
-tag:
-- unity3d
+index: Framework.Unity.Practice
 ---
 
 

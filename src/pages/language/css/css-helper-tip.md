@@ -1,8 +1,6 @@
 ---
-title:  tips
-date: 2018-09-16
-tag:
-- css
+title: Tips
+index: Language.CSS.Practice
 ---
 
 

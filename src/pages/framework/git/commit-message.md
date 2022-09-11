@@ -1,3 +1,9 @@
+---
+title: Commit Message
+index: Framework.Git.Practice
+---
+
+[[toc]]
 
 ### commit 规范
 

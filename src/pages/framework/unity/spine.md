@@ -1,9 +1,6 @@
 ---
-title: 将Spine动画导入unity3D
-date: 2017-05-11
-tag:
-- unity3d
-
+title: 导入pine动画
+index: Framework.Unity.Practice
 ---
 
 [Spine 官方指引](http://zh.esotericsoftware.com/spine-unity)
