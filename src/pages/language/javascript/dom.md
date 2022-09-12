@@ -3,168 +3,347 @@ title: DOM 操作
 index: Language.JavaScript.Practice
 ---
 
+
+[[toc]]
+
 ---
 
-## 1.  获取元素
+## 获取元素
 
-### 1.1 通过属性获取元素
+### 通过对象的属性值获取元素
 
-``` js
-document.body
+#### html
+`document.documentElement`
 
-document.documentElement 
-```  
-
-body,html只能从document下被获取到 
-
-```
-[SelectElement].options
+``` javascript
+// e.g.
+document.documentElement.style.fontSize = '24px'
 ```
 
-获取某个select下的一组options
+#### body
+
+`document.body`
+
+``` javascript
+// e.g.
+document.body.scrollTop = 0
 
 ```
-[FormName]
 
-[FormName][InputName]
+*注意*：我们只能从 `document`下得到 `body`,`html` 元素
+
+<!-- more -->
+
+#### 表单元素
+
+HTML 中 `form` 元素的 `name` 属性的值在 JS 中就代表了它自己，并不需要书写额外的代码，而这个 `form`
+包含的表单也可以用同样的方式得到。
+
+`[FormName]`
+
+`[FormName][InputName]`
+
+`[SelectElement].options`
+
+> html
+
+``` html
+<form action="http://www.baidu.com/" class="testForm" name="myform">
+  <input type="text" name="username" placeholder="请输入用户名">
+  <input type="radio" name="sex" value="male">
+  <input type="radio" name="sex" value="female">
+
+  <select name="myselect">
+    <option value="bj">北京</option>
+    <option value="nj">南京</option>
+    <option value="dj">东京</option>
+  </select>
+
+  <div name="danger"></div>
+</form>
+
 ```
 
-获取一个name="formName"的form元素, 还获取啥! 这就是变量名直接用就行啦
+> javascript
 
-有一点需要注意，在使用最后一种方式获取元素时，如果被定位的表单元素为一则返回一个元素(不是数组)，如果表单元素为多个则返回一组元素
+``` javascript
+myform
+// object : form
 
+myform.action
+// => string : 'http://www.baidu.com/'
 
-### 1.2 通过方法获取元素
+myform.class
+// => error : undefined
 
-``` js
-document.getElementById()
+myform.className
+// => string : 'testForm'
+
+myform.username.placeholder
+// => string : '请输入用户名'
+
+myform.sex
+// => array: [input, input]
+
+myform.inputs
+// => error : undefined
+
+myform.myselect.options
+// => array : [option, option, option]
+
+myform.danger
+// => error : undefined
+
 ```
 
-该方法只能从document下获取id属性为对应参数的单个元素
+*注意*：在获取表单元素时，如果被定位的表单元素为一则返回一个元素(不是数组)，
+如果表单元素为多个则返回一组元素
 
-``` js
-document.getElementsByName()
+### 通过对象的方法获取元素
+
+#### `document.getElementById(Id)`
+
+*参数*
+
+| 参数 | 形式 | 详细 |
+|:---|:---:|:---|
+|Id| `string` |你想要查找HTML中 `Id` 属性对应的元素|
+
+*返回*
+
+它返回一个与传入Id匹配的元素。当我们的页面中有多个相同id的元素时（这不是一个好的习惯），
+它也仅仅只返回它查询到的第一个元素。
+
+> html
+
+``` html
+
+<h4 id="imh4">test</h4>
+```
+> javascript
+
+``` javascript
+document.getElementById('imh4').innerHTML
+// => test
 ```
 
-该方法只能从document下获取name属性为对应参数的一组元素
+*注意*：`getElementById` 仅为 `document` 的专有方法
 
-``` js
-[Element].getElementsByTagName()
+#### `document.getElementsByName(name)`
+
+通过标签的 `name` 获取一组元素
+
+*参数*
+
+| 参数 | 形式 | 详细 |
+|:----|:---:|:----|
+|name|`string`|你想要查找HTML中`name`属性对应的元素|
+
+*返回*
+`array` - 返回一个包含对象的数组
+
+> html
+
+``` html
+<form action="http://www.baidu.com/" class="testForm" name="myform"></form>
+
+<div name="danger"></div>
 ```
 
-获取标签名为对应参数的一组元素
+> javascript
 
-``` js
-[Element].getElementsByClassName()
+``` javascript
+document.getElementsByName('myform')
+// => array : [form]
+
+document.getElementsByName('danger')
+// => array : [div]
+
+document.getElementsByName('none')
+// => array : []
+
 ```
 
-返回class属性中包含对应参数的一组元素 IE8+ 
-
-``` js
-[Element].querySelector()
-```
-
-返回一个元素 IE8+ 用法类似JQuery 
-
-``` js
-[Element].querySelectorAll()
-```
-
- 返回一组元素 IE8+ 用法类似JQuery 
+*注意*：`getElementsByName` 仅为 `document` 的专有方法
 
 
-通过class获取元素的封装函数，为了兼容IE8以下浏览器
-话说这年头还有用自己封的函数解决兼容问题么，大jquery不是力抗泰山了么 =。= ，不想看就别看了。
+#### `[Element].getElementsByTagName(tag)`
 
-``` js
+通过标签名获取一组元素
+
+*参数*
+
+| 参数 | 形式 | 详细 |
+|:----|:---:|:----|
+|tag|`string`|你想要查找HTML标签对应的元素|
+
+*返回*
+`array` - 返回一个包含获取到的对象的数组
+
+
+#### `[Element].getElementsByClassName(class)`
+
+通过标签的 `class`属性的值获取一组元素
+
+*参数*
+
+| 参数 | 形式 | 详细 |
+|:----|:---:|:----|
+|tag|`string`|你想要查找HTML中 `class`属性对应的元素|
+
+*返回*
+`array` - 返回一个包含获取到的对象的数组
+
+*注意*： 兼容IE8+
+
+#### `[Element].querySelector(selector)`
+
+用法类似JQuery
+
+*参数*
+
+| 参数 | 形式 | 详细 |
+|:----|:---:|:----|
+|tag|`string`|你想要查找HTML中 `class`属性对应的元素|
+
+*返回*
+`object` - 返回一个获取到的对象
+
+*注意*： 兼容IE8+
+
+#### `[Element].querySelectorAll(selector)`
+
+用法类似JQuery
+
+*参数*
+
+| 参数 | 形式 | 详细 |
+|:----|:---:|:----|
+|selector|`string`|你想要查找HTML中 `class`属性对应的元素|
+
+*返回*
+`array` - 返回一个包含获取到的对象的数组
+
+*注意*：兼容IE8+
+
+
+*tip* - 通过class获取元素的封装函数，为了兼容IE8以下浏览器
+
+> javascript
+
+``` javascript
 function getByClass(parent, classStr) {
-    
-    if(parent.getElementsByClassName) {
-        
-        return parent.getElementsByClassName(classStr)
-    
-    }
-    else {
-        var arr = []
-        var elements = parent.getElementsByTagName('*')
-        var hasClass = false
 
-        for(var i = 0; i<elements.length; i++) {
+  if(parent.getElementsByClassName)
+    return parent.getElementsByClassName(classStr)
+  else {
+    var arr = []
+    var elements = parent.getElementsByTagName('*')
+    var hasClass = false
 
-            var tmp = element[i].class.split(/\s+/)
-            
-            for(var j = 0; j<tmp.length; j++) {
-               if(classStr === tmp[i]) hasClass = true 
-           }
-           
-           if(hasClass) arr.push(element[i])
-        }
+    for(var i = 0; i<elements.length; i++) {
+
+      var tmp = element[i].class.split(/\s+/)
+
+      for(var j = 0; j<tmp.length; j++) {
+        if(classStr === tmp[i]) hasClass = true
+      }
+
+      if(hasClass) arr.push(element[i])
     }
-    
-    return arr
+  }
+
+  return arr
 }
+
+// use
+
+getByClass(document, 'danger')
+
+// => array : [div]
+
 ```
 
 ---
+## 创建元素
 
-## 2. 创建元素
+### 通过属性创建元素
 
-### 2.1 通过属性创建元素 
+#### `[element].innerHTML`
 
-``` js
-[element].innerHTML
+> javascript
 
+``` javascript
 // eg:
 div.innerHTML = '<h1>Hello</h1>'
 ```
-该属性被赋予的值会直接渲染到页面上，对单标签元素无效
-### 2.2 通过方法创建元素 
 
-``` js
-document.createElement()
-```
-只有document元素可以使用该方法，参数是你想创建的标签名。不过我们还需要调用 *[element].appendChild(createElement)* 方法将创建好的元素插入到DOM🌲中
+*注意*：该属性被赋予的值会直接渲染到页面上并覆盖原本的内容，对单标签元素无效
+
+### 通过方法创建元素
+
+#### `document.createElement(tag)`
+
+*参数*
+
+| 参数 | 形式 | 详细 |
+|:----|:---:|:----|
+|tag|`string`|想要创建元素的标签|
+
+*返回*
+`array` - 返回一个创建好的对象
+
+
+*注意*：只有document元素可以使用该方法。如果想插入到页面中，我们还需要调用
+`[element].appendChild(createElement)`方法将它插入到DOM🌲中 （它也是JSONP的实现方式）
 
 ---
+## 元素的属性
+### 一般属性
 
-## 3. 元素的属性
+一般的属性值我们都可以通过 `.` 运算和 `[]` 运算来获取到活修改，例如
 
-### 3.1 一般属性
-
-一般的属性值我们都可以通过 **.** 运算和 **[]** 运算来获取到，例如
+> html
 
 ``` html
-<html>
-    <a id="link" href="http://www.jianshu.com/"></a>
-</html>
+<a id="link" href="http://www.jianshu.com/"></a>
+<input type="text" name="myTxtInput" value="1">
+```
+> javascript
 
-<script>
-    document.getElementById('link').href
-    // => "http://www.jianshu.com/"
-</script>
+``` javascript
+document.getElementById('link').href
+// => string: 'http://www.jianshu.com/'
+
+document.getElementsByName('myTxtInput').value = '2'
+// '1' => string : '2'
 ```
 
-我们还可以通过一些方法来操作自定义属性，当然他们对一般属性也是有效的
+也可以通过一些 **方法** 来操作 **自定义属性** ，当然他们对一般属性也是有效的
 
-``` js
+> javascript
+
+``` javascript
 [Element].getAttribute([attributeName])
 [Element].setAttribute([attributeName],[attributeValue])
-[Element].removeAttribute([attributeName]) 
+[Element].removeAttribute([attributeName])
+```
+需要说明的有以下特殊的几个
+
+### [Element].className
+className实际上就是标签的class属性，我们可以通过直接修改他的值来改变class
+
+> javascript
+
+``` javascript
+div.className = 'col-xs-6 col-md-4'
 ```
 
-需要说明的有特殊的几个
+也可以通过 `[element].classList` 进行操作，兼容IE10+
 
-### 3.2 [Element].className
+> javascript
 
-className实际上就是元素的class，我们可以通过直接修改他的值来改变class
-
-``` js
-div.className = 'col-xs-6 col-md-4'
-``` 
-
-也可以通过**[element].classList**返回的类数组进行操作，这个属性只在ie10以上的浏览器才被支持
-
-``` js
+``` javascript
 div.classList
 // => ['col-xs-6', 'col-md-4']
 
@@ -178,24 +357,40 @@ div.classList.contains('col-xs-6')
 // => true
 ```
 
-### 3.3 [Element].style
+### [Element].style
 
-通常我们会得到一个名为 **CSSStyleDeclaration** 的对象，最基础最直接的DOM操作是通过修改它来完成的
+我们会得到一个名为 `CSSStyleDeclaration` 的对象，最基础最直接的DOM操作是通过修改它来完成的
 
-```javascript
+> javascript
+
+``` javascript
 div.style.color  = 'orange'
+div.style.left = '100px'
 ```
 
-就这样，当我们使用 **CSSStyleDeclaration** 这个对象的时候，还有一个神奇的功能，我们在行内设置的样式会被添加到这个对象中并附上索引值，如
+就这样，当我们使用 `CSSStyleDeclaration` 这个对象的时候，我们在行内设置的样式会被添加到这个对象
+中并附上索引值，如
+
+> html
 
 ``` html
-<html>
-    <div style="width: 100px; color: red">
-</html>
-<script>
-
-</script>
+<div style="width: 100px; color: red">
 ```
 
-这个对象里面的属性值大概变态多到300+，囊括了所有的样式在内，有的我也不知道有个鸟用，大家闲着蛋疼可以撸撸文档
+> javascript
 
+``` javascript
+var div = document.getElementsByTagName('div')[0]
+div.style.left = '100px'
+
+div.style[0]
+// => string : 'width'
+div.style[1]
+// => string : 'color'
+div.style[2]
+// => string : 'left'
+
+```
+
+这个对象里面的属性值大概变态多到300+，囊括了所有的样式在内，有的我也不知道有个鸟用，大家有空
+一定要撸撸文档:stuck_out_tongue_closed_eyes:

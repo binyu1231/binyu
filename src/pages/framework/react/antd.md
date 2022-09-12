@@ -1,5 +1,5 @@
 ---
-title: Antd(React) tips
+title: React Antd tips
 index: Framework.React.Practice
 ---
 

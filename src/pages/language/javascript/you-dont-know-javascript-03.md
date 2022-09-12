@@ -1,15 +1,9 @@
 ---
-title: 《你不知道的JavaScript（上卷）》03 对象原型- 读书笔记
-date: 2020-11-23
-cover: https://xinghe-blog-bucket.oss-cn-beijing.aliyuncs.com/img/you-dont-know-javascript.jpg
+title: 《你不知道的JavaScript》03 对象与原型
+index: Language.JavaScript.Snytax
 ---
 
-<route lang="yaml">
-meta:
-  layout: empty
-</route>
-
-# 03 对象与原型
+[[toc]]
 
 ## 对象
 
@@ -59,6 +53,7 @@ myObj.key = value
 存储在对象容器内部的是这些属性的名称，它们就像指针（从技术角度来说就是引用）一样，指向这些值真正的存储位置。
 
 #### 访问内容
+
 - `.a` 属性访问
 - `['a']` 键访问
 

@@ -1,3 +1,8 @@
+---
+title: OO
+index: Language.Python.Snytax
+---
+
 [[toc]]
 
 ## class

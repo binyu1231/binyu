@@ -1,6 +1,9 @@
-[[toc]]
+---
+title: Taro Vue3 Startup
+index: Framework.Vue.Practice
+---
 
-# Taro Vue3 Startup
+[[toc]]
 
 ## Install
 

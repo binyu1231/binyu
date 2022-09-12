@@ -1,4 +1,9 @@
-[[toc]]
+---
+title: Scope
+index: Framework.Vue.Syntax
+---
+
+### 使用局部变量
 
 ### 使用组件提供局部变量
 
@@ -19,9 +24,7 @@
 </div>
 ```
 
-使用 `slots.default` 创建无DOM组件
-
-``` js
+``` ts
 import { defineComponent, reactive, ref } from 'vue'
 
 export default defineComponent({

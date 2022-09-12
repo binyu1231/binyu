@@ -1,6 +1,11 @@
+---
+title: Setup
+index: Framework.Vue.Syntax
+---
+
 [[toc]]
 
-### Start Up
+## Start Up
 
 1. setup option
 
@@ -27,7 +32,7 @@ function handleClick () {}
 </script>
 ```
 
-### use props
+## use props
 
 1. setup option
 
@@ -88,7 +93,7 @@ watch(
 )
 ```
 
-### use emits
+## use emits
 
 1. setup option
 
@@ -140,13 +145,13 @@ function handleAdd (n: number) {
 ```
 
 
-### define name
+## define name
 
 ``` html
 <script setup name="i-button">
 ```
 
-### use context
+## use context
 
 ``` ts
 import { getCurrentInstance } from 'vue'
@@ -154,7 +159,7 @@ import { getCurrentInstance } from 'vue'
 const instance = getCurrentInstance()
 ```
 
-### use vuex in vue2
+## use vuex in vue2
 
 1. setup option OR setup flag
 
@@ -175,7 +180,7 @@ export function useStore() {
 const store = useStore()
 ```
 
-### use vue-router in vue2
+## use vue-router in vue2
 
 1. setup option OR setup flag
 

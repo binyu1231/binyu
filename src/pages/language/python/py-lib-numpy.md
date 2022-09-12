@@ -1,3 +1,8 @@
+---
+title: NumPy
+index: Language.Python.Library
+---
+
 [[toc]]
 
 NumPy 是 Python 科学计算的基础包之一。它的功能包括多维数组、高级数学函数（比如线性代数运算和傅里叶变换），以及伪随机数生成器。

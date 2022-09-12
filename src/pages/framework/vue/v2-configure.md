@@ -1,5 +1,6 @@
 ---
-title: Vue 项目配置
+title: Vue2 项目配置
+index: Framework.Vue.Practice
 ---
 
 ### Vue 配置 Tailwindcss & Purgecss

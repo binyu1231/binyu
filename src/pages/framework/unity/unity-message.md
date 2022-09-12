@@ -12,7 +12,7 @@ Unity 中广播消息的方法有三个，**SendMessage**、**BroadcastMessage**
 
 先假设有这样一个游戏对象结构，Root 上挂载了 n 个组件。他子级的游戏对象都挂载 1 个组件。所有组件都含有一个名为 `Foo` 的方法。
 
-```
+``` bash
 - Root<Root, AnotherRoot, Roots, LastRoot, ... n ...>
 
     - Middle0<Middle>

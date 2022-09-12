@@ -1,17 +1,9 @@
 ---
-title: 《你知道的JavaScript（上卷）》05 语法 - 读书笔记
-date: 2020-11-25
-cover: https://xinghe-blog-bucket.oss-cn-beijing.aliyuncs.com/img/you-dont-know-javascript.jpg
+title: 《你不知道的JavaScript》05 语法
+index: Language.JavaScript.Snytax
 ---
 
-<route lang="yaml">
-meta:
-  layout: empty
-</route>
-
 [[toc]]
-
-# 05 语法
 
 ## 语法
 

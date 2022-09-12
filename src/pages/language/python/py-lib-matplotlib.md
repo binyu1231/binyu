@@ -1,4 +1,7 @@
-[[toc]]
+---
+title: Matplotlib
+index: Language.Python.Library
+---
 
 matplotlib 是 Python 主要的科学绘图库，其功能为生成可发布的可视化内容，如折线图、直方图、散点图等。将数据及各种分析可视化，可以让你产生深刻的理解，而我们将用 matplotlib 完成所有的可视化内容。
 

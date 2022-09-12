@@ -1,9 +1,9 @@
 ---
-title: Vue-Element
-date: 2018-09-02
-
-
+title: Vue2 配置 Element UI
+index: Framework.Vue.Practice
 ---
+
+[[toc]]
 
 ## 在 Vue 项目中配置一个 Element 组件库
 

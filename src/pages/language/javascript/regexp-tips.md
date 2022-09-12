@@ -1,3 +1,8 @@
+---
+title: Regexp Tips
+index: Language.JavaScript.Practice
+---
+
 ``` js
 /<a href="(.*?)" class="">.*?<span class="title">(.*?)<\/span>.*?<\/a>/igs
 

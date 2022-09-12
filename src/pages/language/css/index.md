@@ -1,14 +1,3 @@
-## Syntax
-
-- [Background](/language/css/css-background)
-- [Flex](/language/css/css-flex)
-
-## Helper 
-
-- [CSS Reset](/language/css/css-helper-reset)
-- [CSS Tips](/language/css/css-helper-tip)
-
-
 <!--
 
 - [CSS 打印样式10分钟教程](https://www.paperplane.app/blog/print-css-basics/)
