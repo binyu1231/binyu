@@ -1,18 +1,9 @@
 ---
-title: 《你不知道的JavaScript（上卷）》02 this 读书笔记
-date: 2020-11-20
-cover: https://xinghe-blog-bucket.oss-cn-beijing.aliyuncs.com/img/you-dont-know-javascript.jpg
+title: 《你不知道的JavaScript》01 作用域与闭包
+index: Language.JavaScript.Snytax
 ---
 
-<route lang="yaml">
-meta:
-  layout: empty
-</route>
-
 [[toc]]
-
-
-# 01作用域与闭包
 
 ![](https://xinghe-blog-bucket.oss-cn-beijing.aliyuncs.com/img/you-dont-know-javascript.jpg)
 

@@ -1,10 +1,9 @@
 ---
 title: 正则表达式
-date: 2016-09-25
-tag: 
-- javascript
-
+index: Language.JavaScript.Snytax
 ---
+
+[[toc]]
 
 描述字符模式的对象
 
@@ -33,7 +32,7 @@ tag:
 
 **不**匹配可见字符，只用来指定匹配发生的位置
 
-```
+``` bash
 TypeScript 
 CoffeeScript 
 Scripting 
@@ -51,7 +50,7 @@ ActionScriptEditor
 
 ### 断言
 
-- `(?=foo) ` 零宽正向先行断言：之后的字符要与其匹配，但不包含这些字符
+- `(?=foo)` 零宽正向先行断言：之后的字符要与其匹配，但不包含这些字符
 
   eg:
   `/\d+(?=px)/` 只匹配后面是px的数字，但匹配结果并不包含 px
@@ -59,8 +58,10 @@ ActionScriptEditor
   `3px 6em 12px` => `3 12`
 
 - `(?!foo)` 零宽反向先行断言，之后的字符不与其匹配
+
   eg1:  `/\d+(?!px)(?!\d)/`只匹配不是以 px 结尾的数字
   `3px 6em 12px` => `6`
+
   eg2: `/\d+(?!px)/` 
   `3px 6em 12px` => `6 1`
   

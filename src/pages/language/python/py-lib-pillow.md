@@ -1,3 +1,8 @@
+---
+title: Pillow
+index: Language.Python.Library
+---
+
 [[toc]]
 
 ### 打开图片

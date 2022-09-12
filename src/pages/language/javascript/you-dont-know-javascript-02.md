@@ -1,16 +1,9 @@
 ---
-title: 《你不知道的JavaScript（上卷）》02 this 读书笔记
-date: 2020-11-20
-cover: https://xinghe-blog-bucket.oss-cn-beijing.aliyuncs.com/img/you-dont-know-javascript.jpg
+title: 《你不知道的JavaScript》02 this
+index: Language.JavaScript.Snytax
 ---
 
-<route lang="yaml">
-meta:
-  layout: empty
-</route>
-
-
-# 02 this
+[[toc]]
 
 > 当一个函数被调用时，会创建一个活动记录（有时候也称为执行上下文）。这个记录会包含函数在哪里被调用（调用栈）、函数的调用方式、传入的参数等信息。this就是这个记录的一个属性，会在函数执行的过程中用到。
 

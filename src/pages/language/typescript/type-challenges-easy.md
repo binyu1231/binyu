@@ -1,11 +1,13 @@
-# TypeScript 类型挑战 (一) Easy
+---
+title: TypeScript 类型挑战 (一) Easy
+index: Language.TypeScript.Practice
+---
+ 
 
 [[toc]]
 
 - 项目地址 [Github](https://github.com/type-challenges/type-challenges) 
 - 项目描述: 高质量的类型可以帮助提高项目的可维护性，同时避免潜在的错误。
-
-[[toc]]
 
 
 ### 优势

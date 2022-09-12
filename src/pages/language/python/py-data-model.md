@@ -1,3 +1,8 @@
+---
+title: Data Model
+index: Language.Python.Snytax
+---
+
 [[toc]]
 
 ## 跟运算符无关的特殊方法

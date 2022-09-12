@@ -1,4 +1,7 @@
-# Python syntax
+---
+title: Syntax
+index: Language.Python.Syntax
+---
 
 [[toc]]
 

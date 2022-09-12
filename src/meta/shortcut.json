@@ -83,7 +83,7 @@
             "name": "Practice",
             "children": [
               {
-                "name": "Antd(React) tips",
+                "name": "React Antd tips",
                 "value": "framework/react/antd"
               }
             ]
@@ -105,7 +105,7 @@
                 "value": "framework/unity/connect-android"
               },
               {
-                "name": "导入pine动画",
+                "name": "导入 Spine 动画",
                 "value": "framework/unity/spine"
               },
               {
@@ -145,8 +145,29 @@
         "name": "Vue",
         "children": [
           {
+            "name": "Syntax",
+            "children": [
+              {
+                "name": "Scope",
+                "value": "framework/vue/scope"
+              },
+              {
+                "name": "Setup",
+                "value": "framework/vue/setup"
+              },
+              {
+                "name": "Vue 3.2",
+                "value": "framework/vue/v3-2-feature"
+              }
+            ]
+          },
+          {
             "name": "Practice",
             "children": [
+              {
+                "name": "Taro Vue3 Startup",
+                "value": "framework/vue/taro-startup"
+              },
               {
                 "name": "Tips",
                 "value": "framework/vue/tips"
@@ -154,6 +175,14 @@
               {
                 "name": "Transition",
                 "value": "framework/vue/transition"
+              },
+              {
+                "name": "Vue2 项目配置",
+                "value": "framework/vue/v2-configure"
+              },
+              {
+                "name": "Vue2 配置 Element UI",
+                "value": "framework/vue/v2-element-ui"
               }
             ]
           }
@@ -255,8 +284,160 @@
                 "value": "language/javascript/dreamjs"
               },
               {
-                "name": "DOM 操作",
-                "value": "language/javascript/fe-allinone-javascript-dom"
+                "name": "Regexp Tips",
+                "value": "language/javascript/regexp-tips"
+              }
+            ]
+          },
+          {
+            "name": "Snytax",
+            "children": [
+              {
+                "name": "正则表达式",
+                "value": "language/javascript/regexp"
+              },
+              {
+                "name": "《你不知道的JavaScript》01 作用域与闭包",
+                "value": "language/javascript/you-dont-know-javascript-01"
+              },
+              {
+                "name": "《你不知道的JavaScript》02 this",
+                "value": "language/javascript/you-dont-know-javascript-02"
+              },
+              {
+                "name": "《你不知道的JavaScript》03 对象与原型",
+                "value": "language/javascript/you-dont-know-javascript-03"
+              },
+              {
+                "name": "《你不知道的JavaScript》04 类型",
+                "value": "language/javascript/you-dont-know-javascript-04"
+              },
+              {
+                "name": "《你不知道的JavaScript》05 语法",
+                "value": "language/javascript/you-dont-know-javascript-05"
+              },
+              {
+                "name": "《你不知道的JavaScript》06 异步",
+                "value": "language/javascript/you-dont-know-javascript-06"
+              },
+              {
+                "name": "《你不知道的JavaScript》07 性能",
+                "value": "language/javascript/you-dont-know-javascript-07"
+              },
+              {
+                "name": "《你不知道的JavaScript》08 现在与未来",
+                "value": "language/javascript/you-dont-know-javascript-08"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Python",
+        "children": [
+          {
+            "name": "Snytax",
+            "children": [
+              {
+                "name": "API Module",
+                "value": "language/python/py-api-module"
+              },
+              {
+                "name": "Data Model",
+                "value": "language/python/py-data-model"
+              },
+              {
+                "name": "OO",
+                "value": "language/python/py-oo"
+              }
+            ]
+          },
+          {
+            "name": "Library",
+            "children": [
+              {
+                "name": "Matplotlib",
+                "value": "language/python/py-lib-matplotlib"
+              },
+              {
+                "name": "NumPy",
+                "value": "language/python/py-lib-numpy"
+              },
+              {
+                "name": "Pillow",
+                "value": "language/python/py-lib-pillow"
+              },
+              {
+                "name": "Flask",
+                "value": "language/python/py-project-flask"
+              }
+            ]
+          },
+          {
+            "name": "Practice",
+            "children": [
+              {
+                "name": "Flask",
+                "value": "language/python/py-project-pip"
+              }
+            ]
+          },
+          {
+            "name": "Syntax",
+            "children": [
+              {
+                "name": "Syntax",
+                "value": "language/python/py-syntax"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Rust",
+        "children": [
+          {
+            "name": "Links",
+            "children": [
+              {
+                "name": "Rust",
+                "value": "language/rust/README"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "SQL",
+        "children": [
+          {
+            "name": "Library",
+            "children": [
+              {
+                "name": "GraphQL",
+                "value": "language/sql/graphql"
+              },
+              {
+                "name": "SQLite",
+                "value": "language/sql/sqlite"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "TypeScript",
+        "children": [
+          {
+            "name": "Practice",
+            "children": [
+              {
+                "name": "TypeScript 类型挑战 (一) Easy",
+                "value": "language/typescript/type-challenges-easy"
+              },
+              {
+                "name": "TypeScript 类型挑战 (二) Medium",
+                "value": "language/typescript/type-challenges-medium"
               }
             ]
           }
@@ -266,6 +447,37 @@
   },
   {
     "name": "Thought",
-    "children": []
+    "children": [
+      {
+        "name": "Design Pattern",
+        "children": [
+          {
+            "name": "Practice",
+            "children": [
+              {
+                "name": "设计原则",
+                "value": "thought/design-pattern/01-index"
+              },
+              {
+                "name": "创建型",
+                "value": "thought/design-pattern/02-creational"
+              },
+              {
+                "name": "结构型",
+                "value": "thought/design-pattern/03-structural"
+              },
+              {
+                "name": "行为型",
+                "value": "thought/design-pattern/04-behavioral"
+              },
+              {
+                "name": "其他模式",
+                "value": "thought/design-pattern/05-other"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   }
 ]

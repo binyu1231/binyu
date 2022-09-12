@@ -68,6 +68,7 @@ Observable.Create<T>(observer => {
   return diposable;
 });
 ```
+
 这么看来真的是很开放的形式，实例给了你很大的自由度去实现各种行为的信号。你可以在里面使用其他的 Observable，你可以加载网站或者获取文件资源，你更可以什么都不做。这一切都取决于你。这里我会略过细节。但这对于要创建 Observable 的你来说是十分重要的。[*Intro to Rx* 是进一步了解这些东西的很棒的资源，包含了所有的细节](http://www.introtorx.com/Content/v1.0.10621.0/04_CreatingObservableSequences.html#CreationOfObservables) ，甚至还是用 C# 描述的。方便极了!
 重点来了。锁存器 Observable 会在内部订阅我们的数据，并锁住信号，同样保持锁的状态。在我们开始写代码之前，先看看下面的状态图。
 
@@ -116,7 +117,7 @@ public static IObservable<bool> Latch(
 你可能会质疑两个异步进程访问值的正确性。你的想法是对的，但是我觉得此处潜在的竞争条件造成的影响是可以忽略不记的(the same hand-waving I did over the run input, if you recall).
 
 
-根据 Latch 的定义，我们终于可以把所有东西都放在一起来创建一个 IObservable<MoveInputs>：
+根据 Latch 的定义，我们终于可以把所有东西都放在一起来创建一个 `IObservable<MoveInputs>`：
 
 ```csharp
 Jump = this.UpdateAsObservable().Where(_ => Input.GetButtonDown("Jump"));
@@ -134,7 +135,7 @@ MoveInputs = Movement.Zip(jumpLatch, (m, j) => new MoveInputs(m, j));
 
 没有为玩家提供音效简直就是一种伤害！不过感谢迄今为止所做的工作，这使得一切变得简单了。我们这里使用一个简单的 Unity 脚本，PlayerAudio，来配置 AudioClips 和 AudioSource，然后像下面这样订阅就可以了。
 
-```charp
+```csharp
 player.Jumped
   .Subscribe(_ => audioSource.PlayOneShot(jump))
   .AddTo(this);

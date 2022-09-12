@@ -3,9 +3,9 @@ title: "[译] ReactiveX 与 Unity3D <一>"
 index: Framework.Unity.Extend
 ---
 
-[原文链接](http://ornithoptergames.com/reactiverx-in-unity3d-part-1/)
-
 [[toc]]
+
+[原文链接](http://ornithoptergames.com/reactiverx-in-unity3d-part-1)
 
 **耦合性强的代码令人头痛**。一定是有某种自然力量，像重力那样，拽着代码的尾巴，将他们纠缠在一起，难以阅读，脆弱又混乱。正如你写的那样。而且由于一些原因这种情况在游戏开发中更为常见。除非你自觉的抵制它，否则你的游戏最终会达到临界值，进一步塌陷成一个黑洞。（为什么这样说，是我最近读了挺多的科幻小说）
 
@@ -15,8 +15,8 @@ index: Framework.Unity.Extend
 
 ## 工具
 
-从基础层面上来看，可以说 **ReactiveX** 很像事件处理。好吧，即便这样那也像用使用了涡轮增压来做事件处理。除了能触发和处理事件，我们还可以向处理一等公民(译注: 例如数字变量)那样处理事件队列。他们甚至有属于自己的名字：IObservable<T>。
-并且我们还可以通过很多种方式将他们变形，延时，过滤，组合或者为其自定义行为。他们将会拥有你从前使用的事件处理的功能更为强大。（如果你想看，ReactiveX 可以提供一个[详尽的介绍](http://reactivex.io/intro.html)）
+从基础层面上来看，可以说 **ReactiveX** 很像事件处理。好吧，即便这样那也像用使用了涡轮增压来做事件处理。除了能触发和处理事件，我们还可以向处理一等公民(译注: 例如数字变量)那样处理事件队列。他们甚至有属于自己的名字：`IObservable<T>`。
+并且我们还可以通过很多种方式将他们变形，延时，过滤，组合或者为其自定义行为。他们将会拥有你从前使用的事件处理的功能更为强大。如果你想看，ReactiveX 可以提供一个[详尽的介绍](http://reactivex.io/intro.html)
 
 我能感受到你的怀疑。所有这些响应式功能的天书难道不是为 Web 开发者和大数据大佬准备的吗？
 
@@ -34,7 +34,7 @@ index: Framework.Unity.Extend
 6. 按 Space 键跳跃
 7. 播放脚步声，跳跃声和落在地上的声音
 
-你不需要对 Unity 的 `FirstPersonController ` 代码很熟悉。我们不会 100 % 实现它的所有功能。但是我们会尽量接近它。在此之后，我相信你会认同 Observable 是更简洁，更容易理解，也更容易修改的方式。
+你不需要对 Unity 的 `FirstPersonController` 代码很熟悉。我们不会 100 % 实现它的所有功能。但是我们会尽量接近它。在此之后，我相信你会认同 Observable 是更简洁，更容易理解，也更容易修改的方式。
 
 那么让我们开始吧！为了能流畅的进行下去，我假设你已经对 Unity 的基础比较熟悉了。这个系列被分为了三个部分。这一部分我们实现两个基本的效果和鼠标视角。
 
@@ -66,9 +66,10 @@ public class ClassicPlayerController : MonoBehaviour {
   }
 }
 ```
+
 显然，这样已经让我们的代码变得紧耦合了。为什么玩家控制器必须要知道如何读取输入? 如果我们想要改变输入的方式。输入信号可能来自跳舞毯，VR头盔，Twitch命令，有感情的AI。我们不可能为这些输入的每一种都实现一个 PlayerController。即便你知道你的游戏始终只用键盘控制输入，那你也应该从现在起避免造成不必要的耦合。
 
-另一种方案，我们将移动输入设想成一个信号：按下 W 键，代表信号说“前进”。我们的控制器不知道信号是怎么做的，只是在接收到信号时实现动作。信号就是 Observable，例如移动（movement，一个2D向量），它就可以表示成 IObservable<Vector2>。最后,玩家控制器订阅（Subscribe）这个 Observable 就会创建一个观察者（Observer），观察者每当Observable 处理了一个新的 Vector2 矢量时都会对订阅者发出通知。
+另一种方案，我们将移动输入设想成一个信号：按下 W 键，代表信号说“前进”。我们的控制器不知道信号是怎么做的，只是在接收到信号时实现动作。信号就是 Observable，例如移动（movement，一个2D向量），它就可以表示成 `IObservable<Vector2>`。最后,玩家控制器订阅（Subscribe）这个 Observable 就会创建一个观察者（Observer），观察者每当Observable 处理了一个新的 Vector2 矢量时都会对订阅者发出通知。
 
 所以。我们可以为输入创建一个单独的脚本来专注分离：
 
@@ -90,9 +91,10 @@ public class Inputs : MonoBehaviour {
   }
 }
 ```
+
 首先我们声明一个 movement 变量作为公开属性，然后再在 Awake 时对它进行初始化。Observables 的一大好处就是你不能从外部注入变量。当你创建完一个 Observable 之后，你唯一能做的就只有从订阅中拿到它的输出值。这听起来令人沮丧，但是对于编写低耦合的代码却是一个非常棒的特性。在已经存在的 Observable上变换出新的 Observable 是最常见的创建 Observable 方式。这里使用“变换”这个词不太恰当，因为原来的Observable 仍然还在 - 他们是不可变的 - 我们只能创建一个新的。
 
-我们什么时候需要读取输入信号？Fixed Update（不是 Update，因为我们知道移动涉及到了物理系统）。UniRx 提供了一个可以在每次Fixed Update 时 “tick” 一次的 Observable, 你可以通过调用 `this.FixedUpdateAsObservable()` 获取它（ns: UnityRx.Trigger）。返回值是一个 IObservable<Unit>，没有更详细的解释。`Unit` 告诉我们信号中没有有效的信息数据。事实上信号得触发就代表了这个信号的全部了。在 Observable 上我们调用了一个名为 `Select` 的方法。这个方法会在每次输入之后会返回一个新的 Observable，输出的值由我们传入的函数决定。此例中，这个函数读取行走的 x y轴数据，然后返回一个归一化的矢量。所以此时的 Movement 是一个每次 Fixed Update 时根据键盘操作输出一个矢量的 Observable。（译注:Observable 只有在被订阅之后才有实际的调用效果，是惰性的）
+我们什么时候需要读取输入信号？Fixed Update（不是 Update，因为我们知道移动涉及到了物理系统）。UniRx 提供了一个可以在每次Fixed Update 时 “tick” 一次的 Observable, 你可以通过调用 `this.FixedUpdateAsObservable()` 获取它（ns: UnityRx.Trigger）。返回值是一个 `IObservable<Unit>`，没有更详细的解释。`Unit` 告诉我们信号中没有有效的信息数据。事实上信号得触发就代表了这个信号的全部了。在 Observable 上我们调用了一个名为 `Select` 的方法。这个方法会在每次输入之后会返回一个新的 Observable，输出的值由我们传入的函数决定。此例中，这个函数读取行走的 x y轴数据，然后返回一个归一化的矢量。所以此时的 Movement 是一个每次 Fixed Update 时根据键盘操作输出一个矢量的 Observable。（译注:Observable 只有在被订阅之后才有实际的调用效果，是惰性的）
 
 我们该怎么使用它呢？ 在另一个脚本中。我们订阅这个变量并且将移动设置给角色
 

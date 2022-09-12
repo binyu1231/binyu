@@ -1,8 +1,3 @@
-- [Docker Startup](/server-end/docker/docker)
-- [Dockerfile](/server-end/docker/dockerfile)
-- [Docker Compose](/server-end/docker/docker-compose)
-- [Kubernetes](/server-end/docker/kubernetes)
-
 - [docker-slim - 一个 Docker 镜像文件的瘦身工具，据称最好情况下，可以让镜像文件体积缩小为原来的30分之一。](https://github.com/docker-slim/docker-slim)
 - [如何将 Web 应用做成 Docker？](https://itnext.io/dockerizing-modern-web-apps-cd9667eebf44)
 - [一篇简短扼要的教程，如何使用 Docker Compose 很方便地安装 PostgreSQL。](https://www.brock.sh/docker-compose-postgresql/)

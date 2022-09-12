@@ -1,3 +1,8 @@
+---
+title: Flask
+index: Language.Python.Practice
+---
+
 # pip
 
 - 查看版本 `pip -V`

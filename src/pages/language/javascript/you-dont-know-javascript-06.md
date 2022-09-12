@@ -1,14 +1,6 @@
 ---
-title: 《你知道的JavaScript（上卷）》06 异步 - 读书笔记
-date: 2020-11-25
-cover: https://xinghe-blog-bucket.oss-cn-beijing.aliyuncs.com/img/you-dont-know-javascript.jpg
+title: 《你不知道的JavaScript》06 异步
+index: Language.JavaScript.Snytax
 ---
 
-<route lang="yaml">
-meta:
-  layout: empty
-</route>
-
 [[toc]]
-
-# 06 异步

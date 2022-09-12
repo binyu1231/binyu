@@ -1,12 +1,11 @@
 ---
 title: Vue 3.2
+index: Framework.Vue.Syntax
 ---
 
 ## 概述
 
 3.2 命名 Quintessential Quintuplets - <五等分的花嫁>
-
-
 
 
 ## SFC 新特性
@@ -26,11 +25,9 @@ title: Vue 3.2
 
 
 
+### 动态CSS 
 
-
-
-
-### 动态CSS `<style> v-bind<style>`
+`<style>v-bind<style>`
 
 ## WebComponent
 

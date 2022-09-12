@@ -1,3 +1,8 @@
+---
+title: API Module
+index: Language.Python.Snytax
+---
+
 [[toc]]
 
 ## type

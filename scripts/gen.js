@@ -65,7 +65,7 @@ function genShortcutJSON() {
         const formatInfos = metaInfos(`${dirPath}/${sdir}`, 'utf-8')
           .filter(pageInfo => pageInfo.index)
           .map((p) => {
-            p.path = `${p.index.replace(/\.\w+$/, '')}.${p.file}`.toLocaleLowerCase().replace(/\./g, '/')
+            p.path = `${dir}/${sdir}/${p.file}`
             p.levels = p.index.split('.')
             p.parent = sdir
             return p

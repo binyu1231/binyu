@@ -1,17 +1,9 @@
 ---
-title: 《你知道的JavaScript（上卷）》04 类型 - 读书笔记
-date: 2020-11-25
-cover: https://xinghe-blog-bucket.oss-cn-beijing.aliyuncs.com/img/you-dont-know-javascript.jpg
+title: 《你不知道的JavaScript》04 类型
+index: Language.JavaScript.Snytax
 ---
 
-<route lang="yaml">
-meta:
-  layout: empty
-</route>
-
 [[toc]]
-
-# 04 类型
 
 ## 类型
 
@@ -165,7 +157,7 @@ const dothing = () => void doSomething()
 - 简单值是值传递，复合值是引用传递
 :::
 
-## 原生函数
+### 原生函数
 
 常见的原生函数(native function) 也称内建函数(built-in function)
 

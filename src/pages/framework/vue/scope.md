@@ -1,3 +1,8 @@
+---
+title: Scope
+index: Framework.Vue.Syntax
+---
+
 ### 使用局部变量
 
 ``` html
@@ -17,7 +22,7 @@
 </div>
 ```
 
-``` js
+``` ts
 import { defineComponent, reactive, ref } from 'vue'
 
 export default defineComponent({

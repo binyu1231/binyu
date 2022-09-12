@@ -1,4 +1,7 @@
-# TypeScript 类型挑战 (二) Medium
+---
+title: TypeScript 类型挑战 (二) Medium
+index: Language.TypeScript.Practice
+---
 
 [[toc]]
   

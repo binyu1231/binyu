@@ -1,6 +1,6 @@
 ---
 title: GraphQL
-date: 2019-01-01
+index: Language.SQL.Library
 ---
 
 

@@ -1,6 +1,6 @@
 ---
-title: SQL & CL
-date: 2019-01-01
+title: SQLite
+index: Language.SQL.Library
 
 ---
 

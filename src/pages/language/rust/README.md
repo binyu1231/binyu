@@ -1,6 +1,6 @@
 ---
 title: Rust
-date: 2019-01-01
+index: Language.Rust.Links
 ---
 
 - [Rust 初学者指南：初识 Rust（中文）](https://www.ibm.com/developerworks/cn/opensource/os-know-rust/index.html)
