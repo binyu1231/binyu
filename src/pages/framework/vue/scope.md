@@ -5,6 +5,8 @@ index: Framework.Vue.Syntax
 
 ### 使用局部变量
 
+### 使用组件提供局部变量
+
 ``` html
 <div class="list">
   <scope-toggle
@@ -46,4 +48,13 @@ export default defineComponent({
   }
 })
 ```
+
+
+### 防止 composition scope 冲突
+
+#### `effectScope()`
+#### `getCurrentScope()`
+#### `onScopeDispose()`
+
+
 

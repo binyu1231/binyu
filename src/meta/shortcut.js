@@ -131,6 +131,7 @@ export default [
           {
             name: 'Syntax',
             children: [
+              { name: '查询', value: '/language/sql/read' },
             ],
           },
           {
@@ -154,13 +155,17 @@ export default [
             name: 'Features',
             children: [
               { name: 'Vue 3.2', value: '/framework/vue/vue-3-2-feature' },
-              { name: 'how to setup', value: '/framework/vue/how-to-setup' },
             ],
           },
           {
             name: 'Practice',
             children: [
               { name: 'Taro Startup', value: '/framework/vue/taro-startup' },
+              { name: 'how to setup', value: '/framework/vue/how-to-setup' },
+              { name: 'Scope', value: '/framework/vue/scope' },
+              { name: 'Plugin', value: '/framework/vue/plugin' },
+              { name: 'Slot', value: '/framework/vue/slot' },
+              { name: 'Composition', value: '/framework/vue/composition' },
             ],
           },
         ],
@@ -182,6 +187,11 @@ export default [
         children: [
           {
             name: 'Basic',
+            children: [
+            ],
+          },
+          {
+            name: 'Practice',
             children: [
               { name: 'Git Commit Message', value: '/framework/git/commit-message' },
             ],

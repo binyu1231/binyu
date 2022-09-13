@@ -3,6 +3,8 @@ title: Vue 3.2
 index: Framework.Vue.Syntax
 ---
 
+[[toc]]
+
 ## 概述
 
 3.2 命名 Quintessential Quintuplets - <五等分的花嫁>
