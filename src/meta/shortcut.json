@@ -411,6 +411,27 @@
         "name": "SQL",
         "children": [
           {
+            "name": "Syntax",
+            "children": [
+              {
+                "name": "插入、更新和删除",
+                "value": "language/sql/CUD"
+              },
+              {
+                "name": "查询",
+                "value": "language/sql/read"
+              },
+              {
+                "name": "排序",
+                "value": "language/sql/sort"
+              },
+              {
+                "name": "数值处理",
+                "value": "language/sql/value"
+              }
+            ]
+          },
+          {
             "name": "Library",
             "children": [
               {
@@ -433,11 +454,15 @@
             "children": [
               {
                 "name": "TypeScript 类型挑战 (一) Easy",
-                "value": "language/typescript/type-challenges-easy"
+                "value": "language/typescript/type-challenges-01-easy"
               },
               {
                 "name": "TypeScript 类型挑战 (二) Medium",
-                "value": "language/typescript/type-challenges-medium"
+                "value": "language/typescript/type-challenges-02-medium"
+              },
+              {
+                "name": "TypeScript 类型挑战 (三) Hard",
+                "value": "language/typescript/type-challenges-03-hard"
               }
             ]
           }
