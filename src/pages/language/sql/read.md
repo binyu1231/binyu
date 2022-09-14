@@ -1,3 +1,8 @@
+---
+title: 查询
+index: Language.SQL.Syntax
+---
+
 [[toc]]
 
 ## 行检索 after from(where, limit, order by, group by)
