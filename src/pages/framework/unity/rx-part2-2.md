@@ -3,9 +3,9 @@ title: "[译] ReactiveX 与 Unity3D <二.2>"
 index: Framework.Unity.Extend
 ---
 
-[原文链接](http://ornithoptergames.com/reactivex-and-unity3d-part-2b/)
-
 [[toc]]
+
+[原文链接](http://ornithoptergames.com/reactivex-and-unity3d-part-2b/)
 
 我想为这个系列之前的一篇文章做一些补充。此前我们添加了一个按住 Shift 可以奔跑的效果。有些游戏则是使用 Shift 键来切换走跑状态的。通过我们的 Observable 控制器可以非常简单的完成修改。
 

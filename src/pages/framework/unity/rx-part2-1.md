@@ -3,9 +3,9 @@ title: "[译] ReactiveX 与 Unity3D <二.1>"
 index: Framework.Unity.Extend
 ---
 
-[原文链接](http://ornithoptergames.com/reactivex-and-unity3d-part-2/)
-
 [[toc]]
+
+[原文链接](http://ornithoptergames.com/reactivex-and-unity3d-part-2/)
 
 这是三部曲的第二篇。使用 ReactiveX 实现 Unity 标准资源包中的第一人称控制器，是这个系列文章的主要内容。
 

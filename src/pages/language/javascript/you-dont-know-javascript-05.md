@@ -14,8 +14,13 @@ index: Language.JavaScript.Snytax
 **=**
 
 ``` js
-if (str && (matches = str.match( /[aeiou]/g ))) {
-    return matches;
+function vowels(str) {
+    var matches;
+
+    // 提取所有元音字母
+    if (str && (matches = str.match( /[aeiou]/g ))) {
+        return matches;
+    }
 }
 ```
 
@@ -35,6 +40,7 @@ c // 5
 ``` js
 function deleteProperty (obj, propertyName) {
     // true or false
+    // 其副作用是属性被从对象中删除
     return delete obj[propertyName]
 }
 ```
@@ -42,8 +48,8 @@ function deleteProperty (obj, propertyName) {
 特殊情况 
 
 ``` js
-[] + {} // "[object Object]" 可以理解为 '' + {} {} 被理解成空对象是一个值
-{} + [] // 0 可以理解为 {} 是一个空代码块不执行任何操作，而+[] 是对[]的强制类型转换
+[] + {} // "[object Object]"    可以理解为 '' + {} {} 被理解成空对象是一个值
+{} + [] // 0    可以理解为 {} 是一个空代码块不执行任何操作，而+[] 是对[]的强制类型转换
 ```
 
 else if 不是 JavaScript 内置语法，只是我们利用了简便写法
@@ -73,25 +79,24 @@ try finally
 ``` js
 function foo() {
   try {
-    return 42;
+    return 42
   }
   finally {
-    console.log( "Hello" );
+    console.log( "Hello" )
   }
 
-  console.log( "never runs" );
+  console.log( "never runs" )
 }
 
-console.log( foo() );
+console.log(foo())
 // Hello
 // 42
 ```
 
-::: info
+Notes: 
 - finally 的代码会始终执行，
 - 如果 finally 中抛出异常 try 的返回值会被抛弃
 - finally 中的返回值会覆盖 try 中的返回值
-:::
 
 
 #### 上下文规则

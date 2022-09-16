@@ -1,10 +1,9 @@
 ---
 title: 微信小程序 tips
-date: 2018-06-08
-tag:
-- wechat
+index: Framework.Dumpster.Practice
 
 ---
+
 > 记录一些小程序开发时可能的问题
 
 1. 小程序 wx.request 需要接口支持HTTPS，开发时可以选择不校验域名 右上角`详情`按钮 - `不校验合法域名、web-view（业务域名）、TLS 版本以及 HTTPS 证书` 选项，但是不支持真机调试

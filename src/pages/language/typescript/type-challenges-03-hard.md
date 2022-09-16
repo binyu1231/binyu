@@ -81,4 +81,5 @@ const five = curriedAdd(2)(3)
 答案
 
 ``` ts
+declare function Currying(fn: any): any
 ```

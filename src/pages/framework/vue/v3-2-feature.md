@@ -12,9 +12,11 @@ index: Framework.Vue.Syntax
 
 ## SFC 新特性
 
-
 ### v-memo
 
+新的组件缓存策略 
+
+- document: <https://cn.vuejs.org/api/built-in-directives.html#v-memo>
 
 
 ### `<script setup>` 语法糖
@@ -26,10 +28,58 @@ index: Framework.Vue.Syntax
 2. 除 setup 外选项的语法补充
 
 
-
 ### 动态CSS 
 
 `<style>v-bind<style>`
+
+``` html
+<template>
+  <div class="text">hello</div>
+</template>
+
+<script>
+export default {
+  data() {
+    return { color: 'red' }
+  }
+}
+</script>
+
+<style>
+.text { color: v-bind(color); }
+</style>
+```
+
+``` html
+<script setup>
+const theme = { color: 'red' }
+</script>
+
+<template>
+  <p>hello</p>
+</template>
+
+<style scoped>
+p { color: v-bind('theme.color'); }
+</style>
+```
+
+render
+
+``` html
+<p style="--d4948df9-theme_color:red;">hello</p>
+
+<style>
+p {
+  color: var(--d4948df9-theme_color);
+}
+</style>
+```
+
+Note: css自定义变量会在组件根元素上设置，并非本元素
+
+
+- document: <https://cn.vuejs.org/api/sfc-css-features.html#v-bind-in-css>
 
 ## WebComponent
 
