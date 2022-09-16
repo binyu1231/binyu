@@ -8,7 +8,7 @@ index: Language.JavaScript.Practice
 
 避免陷入回调地狱
 
-#### using promise
+### using promise
 
 ```js
 return functionA()
@@ -19,7 +19,7 @@ return functionA()
 .finally(alwaysExecuteThisFunction)
 ```
 
-#### using async/await 
+### using async/await 
 
 ``` js
 async function executeAsyncTask () {
@@ -37,7 +37,7 @@ async function executeAsyncTask () {
 }
 ```
 
-#### convert callback to promise
+### convert callback to promise
 
 1. node 环境可以快速转换
 
@@ -63,6 +63,64 @@ const growTreesPromise = (...args) => {
       resolve({location, size})
     })
   })
+}
+```
+
+### 循环 Promise 
+
+``` ts
+
+// 同时进行
+const promises = Array.from({ length: 4 }).map(async (_, i) => {
+  return await (new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(i)
+    }, 500 - i * 100)
+  }))
+})
+
+Promise.all(promises)
+  .then((res) => {
+    globalThis.console.log('final', res)
+  })
+
+// 依次执行
+const res: number[] = []
+
+Array.from({ length: 4 }).reduce(async (last: Promise<any>, _, i) => {
+  await last
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(i)
+      res.push(i)
+    }, 500 - i * 100)
+  })
+}, Promise.resolve())
+  .then(() => {
+    globalThis.console.log('final', res)
+  })
+
+```
+
+### 用 finally 处理状态
+
+```ts
+loading = true
+
+request.get()
+.then(doSomething)
+.catch(doError)
+.finally(() => loading = false)
+
+try {
+  const res = await request.get()
+  doSomething(res)
+}
+catch (e) {
+  doError(e)
+}
+finally {
+  loading = false
 }
 ```
 

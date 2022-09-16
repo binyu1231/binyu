@@ -3,14 +3,9 @@ title: "[译] ReactiveX 与 Unity3D <三>"
 index: Framework.Unity.Extend
 ---
 
-[原文链接](http://ornithoptergames.com/reactivex-and-unity3d-part-3/)
-
-- [第一篇](http://coloration.cc/2017/08/26/unity_csharp-ReactiveXandUnity3D-part1/)
-- [第二篇](http://coloration.cc/2017/09/01/unity_csharp-ReactiveXandUnity3D-part2/)
-- [第二篇附加篇](http://coloration.cc/2017/09/02/unity_csharp-ReactiveXandUnity3D-part2.2/)
-- 第三篇
-
 [[toc]]
+
+[原文链接](http://ornithoptergames.com/reactivex-and-unity3d-part-3/)
 
 本系列的最后一篇文章。我们将会为玩家控制器添加跳跃功能及其声音的播放。效果如下(译注：youtube):
 

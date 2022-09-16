@@ -49,11 +49,22 @@ select top 5 * from emp -- SQL Server
 ```
 
 
-### 翻页查询
+### 分页查询
 
 ``` sql
+
+-- 无总数
+-- MySQL
 select * 
-from emp limit 5 offset 5 -- MySQL
+from emp limit 5 offset 10 
+
+-- 有总数
+-- MySQL
+select SQL_CALC_FOUND_ROWS *
+from emp
+limit 5, 10
+
+select FOUND_ROWS as total
 ```
 
 
