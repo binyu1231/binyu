@@ -49,6 +49,20 @@
         ]
       },
       {
+        "name": "Dumpster",
+        "children": [
+          {
+            "name": "Practice",
+            "children": [
+              {
+                "name": "微信小程序 tips",
+                "value": "framework/dumpster/wechat-miniprogram"
+              }
+            ]
+          }
+        ]
+      },
+      {
         "name": "Git",
         "children": [
           {
@@ -57,6 +71,24 @@
               {
                 "name": "Commit Message",
                 "value": "framework/git/commit-message"
+              },
+              {
+                "name": "Tips",
+                "value": "framework/git/tips"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Linux",
+        "children": [
+          {
+            "name": "Command",
+            "children": [
+              {
+                "name": "SSH",
+                "value": "framework/linux/ssh"
               }
             ]
           }
@@ -414,20 +446,20 @@
             "name": "Syntax",
             "children": [
               {
-                "name": "插入、更新和删除",
-                "value": "language/sql/CUD"
-              },
-              {
                 "name": "查询",
-                "value": "language/sql/read"
+                "value": "language/sql/01-read"
               },
               {
                 "name": "排序",
-                "value": "language/sql/sort"
+                "value": "language/sql/02-sort"
+              },
+              {
+                "name": "插入、更新和删除",
+                "value": "language/sql/04-CUD"
               },
               {
                 "name": "数值处理",
-                "value": "language/sql/value"
+                "value": "language/sql/07-value"
               }
             ]
           },

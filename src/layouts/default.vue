@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { ref, onMounted, watch } from 'vue-demi'
+import { ref, watch } from 'vue-demi'
 import { useRoute } from 'vue-router'
 import posts from '~/meta/posts.json'
 
@@ -29,9 +29,9 @@ watch(() => route.path, () => {
 
   if (currentIdx < 0) return
 
-  prev.value = currentIdx > 0 ? posts[currentIdx - 1] : null
-  next.value = currentIdx < posts.length - 1 ? posts[currentIdx + 1] : null
-  current.value = posts[currentIdx]
+  prev.value = currentIdx > 0 ? posts[currentIdx - 1] as PostContent : null
+  next.value = currentIdx < posts.length - 1 ? posts[currentIdx + 1] as PostContent : null
+  current.value = posts[currentIdx] as PostContent
   globalThis.scrollTo({ top: 0 })
 }, { immediate: true })
 

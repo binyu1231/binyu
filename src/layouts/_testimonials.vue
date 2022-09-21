@@ -1,12 +1,10 @@
 <template>
   <div class="flex flex-col min-h-screen overflow-hidden">
-
     <!-- Site header -->
     <Header />
 
     <!-- Page content -->
     <main class="flex-grow">
-
       <!-- Page sections -->
       <HeroTestimonials />
       <Clients />
@@ -14,12 +12,9 @@
       <TestimonialsCarousel />
       <TestimonialsCircles />
       <Cta />
-
     </main>
-
     <!-- Site footer -->
     <Footer />
-
   </div>
 </template>
 
@@ -35,5 +30,5 @@
 
 export default {
   name: 'Testimonials',
-};
+}
 </script>
