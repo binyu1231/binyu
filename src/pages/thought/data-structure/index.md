@@ -51,6 +51,12 @@ class MyArray<T = any> {
 		this.array.splice(i, 1)
 		return this.array
 	}
+
+	// O(1)
+	deleteTail() {
+		this.array.pop()
+		return this.array
+	}
 	
 }
 ```
