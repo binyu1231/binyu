@@ -66,5 +66,81 @@ let row = vec![
 ```
 
 
+## String
+
+Rust 中的字符串是一个对象（一个Vector<u8>的封装），我们通常理解的字符串字面量(`"demo"`) 在Rust中被称为`字符串slice`
+
+CRUD
+
+``` rust
+/// Create
+let s = String::new();
+
+let mut s = String::from("some char");
+let s2 = "foo";
+/// Update
+s.push_str(s2); // 此方法不会获取所有权
+s.push('A');    // 接受单独的字符
+
+let s1 = String::from("Hello, ");
+let s2 = String::from("world!");
+let s3 = s1 + &s2; 
+// s1被移动了无法使用，s2可以
+// &s2的类型由&String 强制转换(deref coercion)为 &str
+// 可以理解为 把 &s2 变成了 &s2[..]
+
+let s = format!("{}-{}-{}", "1949", "10", "01");
 
 
+/// Read
+let firstChar = "नमस्ते".chars().nth(); // Some('न') O(n)
+let length = "नमस्ते".chars().count(); // 6 O(n) 注意count 会转移所有权
+let length = "नमस्ते".bytes().count(); // 18 O(n)
+
+
+for c in "नमस्ते".chars() {
+    println!("{}", c);
+}
+
+```
+
+## HashMap
+
+
+CRUD
+
+``` rust
+use std::collections:HashMap;
+
+/// Create
+let mut scores = HashMap::new();
+
+/// Update
+scores.insert(String::from("Blue"), 10);
+scores.insert(String::from("Yellow"), 50);
+
+/// Read
+let team_name = String::from("Blue");
+let score = scores.get(&team_name); // 注意引用
+
+println!("Blue team score: {:?}", score); // Some(10)
+
+scores.insert("Blue", 10);
+scores.insert("Yellow", 50);
+
+let score = scores.get("Blue");
+
+println!("Blue team score: {:?}", score); // Some(10)
+
+for (key, value) in &scores {
+    println!("{}: {}", key, value);
+}
+
+/// update
+// 覆盖更新
+scores.insert(String::from("Blue"), 10);
+scores.insert(String::from("Blue"), 25);
+
+// 没有值时更新
+scores.entry(String::from("Yellow")).or_insert(50);
+```
