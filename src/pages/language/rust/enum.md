@@ -3,6 +3,8 @@ title: 枚举 enum
 index: Language.Rust.Syntax
 ---
 
+[[toc]]
+
 ## 定义与使用
 
 ``` rust

@@ -3,6 +3,8 @@ title: 代码组织与模块
 index: Language.Rust.Syntax
 ---
 
+[[toc]]
+
 模块系统
 - 包 Packages: Cargo 的一个功能，它允许你构建、测试和分享 crate。
 - Crates: 一个模块的树形结构，它形成了库或二进制项目。
