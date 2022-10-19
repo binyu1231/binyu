@@ -5,6 +5,8 @@ index: Language.Rust.Syntax
 
 - `std::collection` doc: <https://doc.rust-lang.org/std/collections/index.html>
 
+[[toc]]
+
 ## Vector
 
 ### CRUD

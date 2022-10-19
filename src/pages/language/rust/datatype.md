@@ -3,6 +3,8 @@ title: 数据类型 data type
 index: Language.Rust.Syntax
 ---
 
+[[toc]]
+
 ## 标量 scalar
 
 - 整型

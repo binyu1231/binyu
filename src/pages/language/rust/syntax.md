@@ -3,6 +3,8 @@ title: Syntax
 index: Language.Rust.Syntax
 ---
 
+[[toc]]
+
 ## 变量
 
 ``` rust

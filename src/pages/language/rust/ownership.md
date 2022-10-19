@@ -3,6 +3,8 @@ title: 所有权 ownership
 index: Language.Rust.Syntax
 ---
 
+[[toc]]
+
 管理内存的几种方式
 
 - GC 运行时扫描内存

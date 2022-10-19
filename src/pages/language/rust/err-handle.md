@@ -3,6 +3,8 @@ title: 错误处理
 index: Language.Rust.Syntax
 ---
 
+[[toc]]
+
 错误类型
 
 - 可恢复的 recoverable
