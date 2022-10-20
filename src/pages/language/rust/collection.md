@@ -106,6 +106,15 @@ for c in "नमस्ते".chars() {
 
 ```
 
+多行字符串slice表示 
+
+``` rust
+"\
+abc
+def
+"
+```
+
 ## HashMap
 
 
