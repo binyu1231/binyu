@@ -30,10 +30,43 @@ const FOO_BAZ: u32 = 12; // 常量必须注明类型
 ``` rust
 // abc
 /* def */
-
-/// 三个斜线换行时 vscode 会自动补充下一行的注释
-///
+ 
 ```
+
+### 文档注释 documentation comments
+
+他们会生成 HTML 文档。这些 HTML 展示公有 API 文档注释的内容, 使用 [cargo](./cargo) 命令查看生成的文档
+
+- `# Example` 创建名为 `Example` 的标题
+- Panics: 这个函数可能会 panic! 的场景。并不希望程序崩溃的函数调用者应该确保他们不会在这些情况下调用此函数。
+- Errors：如果这个函数返回 Result，此部分描述可能会出现何种错误以及什么情况会造成这些错误，这有助于调用者编写代码来采用不同的方式处理不同的错误。
+- Safety：如果这个函数使用 unsafe 代码（这会在第十九章讨论），这一部分应该会涉及到期望函数调用者支持的确保 unsafe 块中代码正常工作的不变条件（invariants）。
+
+``` rust
+/// Adds one to the number given.
+///
+/// # Examples
+///
+/// ```
+/// let arg = 5;
+/// let answer = my_crate::add_one(arg);
+///
+/// assert_eq!(6, answer);
+/// ```
+pub fn add_one(x: i32) -> i32 {
+    x + 1
+}
+```
+
+以 `//!` 开头的注释后面不会接代码，编译后会出现在文档的顶部。所以一般用在项目说明，即 `/src/lib.rs` 的头部。
+
+``` rust
+//! # My Crate
+//!
+//! `my_crate` is a collection of utilities to make performing certain
+//! calculations more convenient.
+```
+
 
 ## 控制流
 

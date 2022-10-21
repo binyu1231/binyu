@@ -147,6 +147,13 @@ for (key, value) in &scores {
     println!("{}: {}", key, value);
 }
 
+match score {
+    Some(v) => *v,
+    None => {
+        
+    }
+}
+
 /// update
 // 覆盖更新
 scores.insert(String::from("Blue"), 10);

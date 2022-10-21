@@ -252,6 +252,11 @@ impl<T: Display> ToString for T {
 blanket implementation 会出现在 trait 文档的 “Implementers” 部分。
 
 
+### trait 关联类型
+
+
+
+
 ## 生命周期 lifetime
 
 ### 生命周期注解语法 
