@@ -29,11 +29,17 @@ $ cargo new --lib <library_name>
 # 在不生成二进制文件的情况下构建项目来检查错误
 <project_name>$ cargo check
 
-# 更新以来
+# 更新依赖
 <project_name>$ cargo update
 
 # 构建所有安装包crate的文档 以查看trait
 <project_name>$ cargo doc --open
+
+
+## 查看 cargo 的命令
+## 自定义 cargo 命令在环境变量中定义 cargo-something
+## 即可 cargo something 调用。同时也可使用下方命令查到
+<project_name>$ cargo --list
 ```
 
 ## 测试
@@ -67,10 +73,6 @@ $ cargo test -- --ignored
 ## 文件名 tests/integration_test.rs
 $ cargo test --test integration_test 
 
-## 查看 cargo 的命令
-## 自定义 cargo 命令在环境变量中定义 cargo-something
-## 即可 cargo something 调用。同时也可使用下方命令查到
-$ cargo --list
 
 ```
 
