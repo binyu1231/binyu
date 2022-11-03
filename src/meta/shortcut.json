@@ -109,6 +109,20 @@
         ]
       },
       {
+        "name": "Node",
+        "children": [
+          {
+            "name": "Syntax",
+            "children": [
+              {
+                "name": "npm",
+                "value": "framework/node/npm"
+              }
+            ]
+          }
+        ]
+      },
+      {
         "name": "React",
         "children": [
           {
@@ -207,6 +221,10 @@
               {
                 "name": "Transition",
                 "value": "framework/vue/transition"
+              },
+              {
+                "name": "TypeScript in Vue3",
+                "value": "framework/vue/ts-in-vue3"
               },
               {
                 "name": "Vue2 项目配置",
@@ -428,6 +446,76 @@
       {
         "name": "Rust",
         "children": [
+          {
+            "name": "Practice",
+            "children": [
+              {
+                "name": "Cargo (Rust 包管理)",
+                "value": "language/rust/cargo"
+              }
+            ]
+          },
+          {
+            "name": "Syntax",
+            "children": [
+              {
+                "name": "闭包 closure, 迭代器 iterator",
+                "value": "language/rust/closure-iterator"
+              },
+              {
+                "name": "Collection",
+                "value": "language/rust/collection"
+              },
+              {
+                "name": "并发编程 concurrent",
+                "value": "language/rust/concurrent"
+              },
+              {
+                "name": "数据类型 data type",
+                "value": "language/rust/datatype"
+              },
+              {
+                "name": "枚举 enum",
+                "value": "language/rust/enum"
+              },
+              {
+                "name": "错误处理",
+                "value": "language/rust/err-handle"
+              },
+              {
+                "name": "泛型 Generic, 注解 Trait, 生命周期 Lifetime",
+                "value": "language/rust/generic-trait-lifetime"
+              },
+              {
+                "name": "代码组织与模块",
+                "value": "language/rust/module"
+              },
+              {
+                "name": "OOP",
+                "value": "language/rust/oop"
+              },
+              {
+                "name": "所有权 ownership",
+                "value": "language/rust/ownership"
+              },
+              {
+                "name": "智能指针 smart pointer",
+                "value": "language/rust/pointer"
+              },
+              {
+                "name": "结构体 struct",
+                "value": "language/rust/struct"
+              },
+              {
+                "name": "Syntax",
+                "value": "language/rust/syntax"
+              },
+              {
+                "name": "测试",
+                "value": "language/rust/test"
+              }
+            ]
+          },
           {
             "name": "Links",
             "children": [

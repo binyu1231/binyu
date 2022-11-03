@@ -123,33 +123,9 @@ mod tests {
 
 ## 并行或连续的运行测试 
 
+查看 [cargo](./cargo) 
 
 
-``` rust
-// 控制线程数1 不要使用任何并行机制
-$ cargo test -- --test-threads=1 
-
-// 显示成功通过测试的 println!，默认只在失败时显示函数内部的println!内容
-$ cargo test -- --show-output
-
-// 通过指定名称运行单个测试
-$ cargo test foo
-
-// 通过指定部分名称运行多个测试
-$ cargo test ba // 运行 bar baz
-
-// 忽略某些测试
-/// 1.添加注解
-[#ignore]
-/// 2.1 运行
-$ cargo test
-/// 2.2 cmd 只运行 ignore 的测试用例，
-$ cargo test -- --ignored
-
-
-// 指定集成测试文件
-$ cargo test --test integration_test // 文件名 tests/integration_test.rs
-```
 
 ## 测试的组织结构
 

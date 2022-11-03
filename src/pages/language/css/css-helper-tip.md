@@ -3,6 +3,16 @@ title: Tips
 index: Language.CSS.Practice
 ---
 
+17. 设置图片的长宽比 <https://caniuse.com/?search=aspect-ratio>
+
+``` css
+img {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  object-fit: cover; // 防止图片被拉伸
+}
+```
+
 
 16. 使用粘黏定位时, 所有父级的 overflow 都不可以设置为 `visible(默认)` 以外的值
 

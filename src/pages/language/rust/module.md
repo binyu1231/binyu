@@ -55,6 +55,10 @@ Crate 的形式
 - 声明快捷方式 `use`
     - `use crate::garden::vegetables::Asparagus;` 后该作用域可直接使用 Asparagus 类型
 
+- 重导出模块(re-export) 
+    - `pub use self::foo::bar::PrimaryColor`
+    - `use art::PrimaryColor`
+
 **Demo**
 
 ``` bash

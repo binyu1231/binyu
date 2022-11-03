@@ -70,7 +70,7 @@ let row = vec![
 
 ## String
 
-Rust 中的字符串是一个对象（一个Vector<u8>的封装），我们通常理解的字符串字面量(`"demo"`) 在Rust中被称为`字符串slice`
+Rust 中的字符串是一个对象（一个Vector`<u8>`的封装），我们通常理解的字符串字面量(`"demo"`) 在Rust中被称为`字符串slice`
 
 CRUD
 
@@ -145,6 +145,13 @@ println!("Blue team score: {:?}", score); // Some(10)
 
 for (key, value) in &scores {
     println!("{}: {}", key, value);
+}
+
+match score {
+    Some(v) => *v,
+    None => {
+        
+    }
 }
 
 /// update
