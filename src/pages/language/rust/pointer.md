@@ -114,7 +114,7 @@ Rust 在发现类型和 trait 实现满足三种情况时会进行 Deref 强制�
 
 Drop Trait 允许我们在值要离开作用域时执行一些代码
 
-例如，当 Box<T> 被丢弃时会释放 box 指向的堆空间。
+例如，当 `Box<T>` 被丢弃时会释放 box 指向的堆空间。
 
 ``` rust
 impl Drop for CustomSmartPointer {
@@ -124,7 +124,7 @@ impl Drop for CustomSmartPointer {
 }
 ```
 
-### 通过 std::mem::drop 提早丢弃值
+### 通过 `std::mem::drop` 提早丢弃值
 
 Drop Trait 的drop方法不能显式调用。
 
