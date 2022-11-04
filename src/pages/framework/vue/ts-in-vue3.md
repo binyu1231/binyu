@@ -557,7 +557,7 @@ Setup flag 将 setup 作用域范围提升到 script 标签
 
 <v-click>
 
-```html {all|2,7,8,13,14,15|3-4,10,13}
+```html
 <script setup>
 import { ComponentA, ComponentB, ComponentC } from '@/components'
 import { productStatusOptions } from '@/types'

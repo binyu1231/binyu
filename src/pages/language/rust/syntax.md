@@ -27,6 +27,57 @@ const FOO_BAZ: u32 = 12; // 常量必须注明类型
 
 ```
 
+### 类型别名 
+
+``` rust
+type Kilometers = i32;
+let x: i32 = 5;
+let y: Kilometers = 5;
+x + y;
+```
+
+### `!` Never Type
+
+``` rust
+let guess: u32 = match guess.trim().parse() {
+    Ok(num) => num,
+    // continue 的类型是 !
+    Err(_) => continue, 
+};
+
+match self {
+    Some(val) => val,
+    // panic 的表达式的值也是 !
+    None => panic!("called `Option::unwrap()` on a `None` value"),
+}
+
+// loop 中没有 break 时的表达式的值也是 !
+// 因为运行到 break 程序会终止
+loop {
+    
+}
+```
+
+### 动态大小类型 DST
+
+DST(dynamically sized types), unsized types
+
+``` rust
+// rust 不允许直接声明动态大小类型
+let s1: str = "Hello there!";
+
+// 必须将其置于指针中，让指针始终拥有动态大小类型的位置和长度两个信息
+let s1: &str = "Hello here!";
+
+Box<str>
+Rc<str>
+
+// 另一个动态大小类型是 trait
+
+&dyn Trait
+Box<dyn Trait>
+Rc<dyn Trait>
+```
 
 ## 注释
 
@@ -116,7 +167,7 @@ for (i, &item) in bytes.iter().enumerate() {
 
 只有数字和 `char` 可以使用范围表达式。 因为编译器在编译时检查范围不为空。`char`和数字是仅有的可以判断范围是否为空的类型
 
-``` rs
+``` rust
 // start..=end
 1..=100 // 包含100
 1..4 // 不包含4
@@ -142,35 +193,6 @@ match numbers {
 
 match number {
     (_, second, .., last) { /* skip */ }
-}
-```
-
-
-## 函数 fn
-
-``` rust
-fn foo(x: 32) {}
-fn bar() -> i32 {
-    5
-}
-fn bar() -> i32 {
-    return 5;
-}
-
-bar(); // 5;
-
-// 不能通过编译，需要删除分号
-fn baz() -> i32 {
-    5;
-}
-
-```
-
-### 函数参数模式
-
-``` rust
-fn print_coordinates(&(x, y): &(i32, i32)) {
-
 }
 ```
 
