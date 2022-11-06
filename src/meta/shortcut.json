@@ -459,10 +459,6 @@
             "name": "Syntax",
             "children": [
               {
-                "name": "闭包 closure, 迭代器 iterator",
-                "value": "language/rust/closure-iterator"
-              },
-              {
                 "name": "Collection",
                 "value": "language/rust/collection"
               },
@@ -483,8 +479,16 @@
                 "value": "language/rust/err-handle"
               },
               {
-                "name": "泛型 Generic, 注解 Trait, 生命周期 Lifetime",
-                "value": "language/rust/generic-trait-lifetime"
+                "name": "泛型 Generic, 生命周期 Lifetime",
+                "value": "language/rust/generic-lifetime"
+              },
+              {
+                "name": "迭代器 iterator",
+                "value": "language/rust/iterator"
+              },
+              {
+                "name": "宏 Macro",
+                "value": "language/rust/macro"
               },
               {
                 "name": "代码组织与模块",
@@ -513,6 +517,14 @@
               {
                 "name": "测试",
                 "value": "language/rust/test"
+              },
+              {
+                "name": "注解 Trait",
+                "value": "language/rust/trait"
+              },
+              {
+                "name": "不安全的 Rust",
+                "value": "language/rust/unsafe"
               }
             ]
           },
