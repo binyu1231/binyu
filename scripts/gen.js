@@ -55,7 +55,7 @@ function genPostJSON() {
 }
 
 function genShortcutJSON() {
-  const shortcutDirs = ['framework', 'language', 'thought']
+  const shortcutDirs = ['framework', 'language', 'knowledge']
   const shortcutJSON = shortcutDirs.map((dir) => {
     const dirPath = path.resolve(__dirname, '../src/pages/', dir)
     const subdirs = fs.readdirSync(dirPath, 'utf-8')
@@ -70,7 +70,6 @@ function genShortcutJSON() {
             p.parent = sdir
             return p
           })
-        console.log(formatInfos)
         return formatInfos
       })
       .filter(lv2Infos => lv2Infos.length)

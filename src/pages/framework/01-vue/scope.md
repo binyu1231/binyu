@@ -3,9 +3,13 @@ title: Scope
 index: Framework.Vue.Syntax
 ---
 
-### 使用局部变量
+[[toc]]
+
+## 使用局部变量
 
 ### 使用组件提供局部变量
+
+- Use:
 
 ``` html
 <div class="list">
@@ -23,6 +27,8 @@ index: Framework.Vue.Syntax
   </scope-toggle>
 </div>
 ```
+
+- Implement:
 
 ``` ts
 import { defineComponent, reactive, ref } from 'vue'
@@ -43,18 +49,18 @@ export default defineComponent({
       value: val,
       toggle,
     })
-    
+    // 防止在最外层产生 DOM 节点
     return () => slots.default && slots.default(data)
   }
 })
 ```
 
 
-### 防止 composition scope 冲突
+## 防止 composition scope 冲突
 
-#### `effectScope()`
-#### `getCurrentScope()`
-#### `onScopeDispose()`
+### `effectScope()`
+### `getCurrentScope()`
+### `onScopeDispose()`
 
 
 

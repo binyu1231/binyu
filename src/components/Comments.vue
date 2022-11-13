@@ -19,12 +19,12 @@ onMounted(() => {
     <div class="relative max-w-6xl mx-auto px-4 sm:px-6">
       <div class="pb-12 md:pb-20">
         <div class="max-w-3xl mx-auto">
-          <div class="mb-10">
+          <!-- <div class="mb-10">
             <GoogleAd
               slot-id="5208491859"
               client-id="ca-pub-7479088543794946"
             />
-          </div>
+          </div> -->
           <div id="waline"></div>
           <!--
 

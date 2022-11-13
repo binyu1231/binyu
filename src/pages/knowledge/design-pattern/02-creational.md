@@ -11,45 +11,54 @@ index: Thought.Design Pattern.Practice
 
 > 确保一个类只有一个实例，并提供一个全局访问点
 
-* Keywords: Unique Instance, Lazy Instantiate
+* Keywords: `Unique Instance`, `Lazy Instantiate`
 * Features:
   - 推迟创建对象（不同于静态类），在C++ 中负责隔绝动态初始化的不可预知性
   - 私有化构造器，使外部无法实例化
 * Scenes: 当需要一个“协调者”的时候去使用单例。数据库连接，线程池，对话框，缓存，偏好设置，日志，设备驱动。
-* Implement: 利用静态变量记录实例，每次调用时检查实例
+* Implements: 利用静态变量记录实例，每次调用时检查实例
+  <details>
+  <summary>Java</summary>
 
-  ``` java
-  public class Singleton {
-    private volatile static Singleton uniqueInstance;
+    ``` java
+    public class Singleton {
+      private volatile static Singleton uniqueInstance;
 
-    private Singleton () {}
-    
-    public static Singleton getInstance () {
-      if (uniqueInstance == null) {
-        // 多线程下的单例, 双重检查锁
-        sychronized (Singleton.class) {
-          if (uniqueInstance == null) {
-            uniqueInstance = new Singleton();
+      private Singleton () {}
+      
+      public static Singleton getInstance () {
+        if (uniqueInstance == null) {
+          // 多线程下的单例, 双重检查锁
+          sychronized (Singleton.class) {
+            if (uniqueInstance == null) {
+              uniqueInstance = new Singleton();
+            }
           }
         }
+
+        return uniqueInstance;
+      }
+    }
+    ```
+
+  </details>
+  <details>
+  <summary>JavaScript</summary>
+
+    ``` javascript
+    export class Singleton {
+      static #uniqueInstance
+      static getInstance () {
+        return Singleton.uniqueInstance 
+          || (Singleton.uniqueInstance = new Singleton())
       }
 
-      return uniqueInstance;
+      #Singleton () {}
     }
-  }
-  ```
+    ```
 
-  ``` javascript
-  export class Singleton {
-    static #uniqueInstance
-    static getInstance () {
-      return Singleton.uniqueInstance 
-        || (Singleton.uniqueInstance = new Singleton())
-    }
+  </details>
 
-    #Singleton () {}
-  }
-  ```
 
 * Note
   - 非OO语言可以使用命名空间实现（闭包可以理解为隔离出全局的命名空间）
@@ -64,42 +73,53 @@ index: Thought.Design Pattern.Practice
 
 > 工厂方法用来处理对象的创建并将这些行为封装在子类中
 
-* Implement:
+* Implements:
 
-  ``` java
-  public class SimplePizzaFactory {
-    public Pizza createPizza (String type) {
-      Pizza pizza = null;
+  <details>
+    <summary>Java</summary>
 
-      if (type.equals("cheese"))
-        pizza = new CheesePizza();
+    ``` java
+    public class SimplePizzaFactory {
+      public Pizza createPizza (String type) {
+        Pizza pizza = null;
 
-      else if (type.equals("pepperoni"))
-        pizza = new PepperoinPizza();
+        if (type.equals("cheese"))
+          pizza = new CheesePizza();
 
-      else if (type.equals("veggie"))
-        pizza = new VeggiePizza();
-    
-      return pizza;
-    }
-  }
-  ```
+        else if (type.equals("pepperoni"))
+          pizza = new PepperoinPizza();
 
-  ``` javascript
-  class SimplePizzaFactory {
-    createPizza (type) {
-      let pizza = null
-      if (type === 'cheese') pizza = new CheesePizza()
-      else if (type === 'pepperoni') pizza = new PepperoinPizza()
-      else if (type === 'veggie') pizza = new VeggiePizza()
+        else if (type.equals("veggie"))
+          pizza = new VeggiePizza();
       
-      return pizza
+        return pizza;
+      }
     }
-  }
+    ```
 
-  const pizzaFactory = new SimplePizzaFactory()
-  const veggiePizza = pizzaFactory.createPizza('veggie')
-  ```
+  </details>
+
+  <details>
+    <summary>JavaScript</summary>
+
+    ``` javascript
+    class SimplePizzaFactory {
+      createPizza (type) {
+        let pizza = null
+        if (type === 'cheese') pizza = new CheesePizza()
+        else if (type === 'pepperoni') pizza = new PepperoinPizza()
+        else if (type === 'veggie') pizza = new VeggiePizza()
+        
+        return pizza
+      }
+    }
+
+    const pizzaFactory = new SimplePizzaFactory()
+    const veggiePizza = pizzaFactory.createPizza('veggie')
+    ```
+
+  </details>
+
 
 * Note: 
   - 创建单一对象
@@ -111,21 +131,26 @@ index: Thought.Design Pattern.Practice
 
 > 利用静态方法定义一个简单工厂
 
-* Implement:
+* Implements:
 
-  ``` javascript
-  class StaticPizzaFactory {
-    static createPizza(type) {
-      if (type === 'cheese') return new CheesePizza()
-      if (type === 'pepperoni') return new PepperoinPizza()
-      if (type === 'veggie') return new VeggiePizza()
-      
-      return null
+  <details>
+    <summary>JavaScript</summary>
+
+    ``` javascript
+    class StaticPizzaFactory {
+      static createPizza(type) {
+        if (type === 'cheese') return new CheesePizza()
+        if (type === 'pepperoni') return new PepperoinPizza()
+        if (type === 'veggie') return new VeggiePizza()
+        
+        return null
+      }
     }
-  }
-  // 不用实例化，但也无法继承
-  const veggiePizza = StaticPizzaFactory.createPizza('veggie')
-  ```
+    // 不用实例化，但也无法继承
+    const veggiePizza = StaticPizzaFactory.createPizza('veggie')
+    ```
+
+  </details>
 
 * Notes:
   - 不需要使用创建对象的方法来实例化对象
