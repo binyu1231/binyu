@@ -9,12 +9,12 @@
 	}
 
 	h2 {
-		@apply h3 font-red-hat-display mb-6 text-gray-900 dark:text-gray-100
+		@apply font-extrabold text-2xl font-red-hat-display mb-6 text-gray-900 dark:text-gray-100
 		outline-none text-shadow;
 	}
 
 	h3 {
-		@apply h4 font-red-hat-display mb-4 text-gray-900 dark:text-gray-100
+		@apply font-extrabold text-xl font-red-hat-display mb-4 text-gray-900 dark:text-gray-100
 		outline-none text-shadow;
 	}
 
@@ -24,11 +24,18 @@
 	}
 
 	p {
-		@apply mb-6 tracking-wide;
+		@apply mb-2 tracking-wide;
+	}
+
+	> p {
+		@apply mb-6;
 	}
 
 	li {
-		@apply mb-3 tracking-normal;
+		@apply mb-2 tracking-normal;
+		li {
+			@apply mb-1;
+		}
 	}
 
 	b, strong {
@@ -40,7 +47,7 @@
 	}
 
 	ul ul, ul ol, ol ul, ol ol {
-		@apply pt-2;
+		@apply pt-1;
 	}
 
 	ul {
@@ -56,7 +63,15 @@
 	}
 
 	blockquote {
-		@apply italic pl-4 border-l-2 border-teal-500 dark:border-gray-400 mb-8;
+		@apply
+			italic 
+			px-4 pt-2 pb-3 mb-6 ml-0 font-medium
+			border-l-4 border-violet-500 dark:border-violet-900 
+			bg-gray-100 dark:bg-gray-800
+			;
+		> p {
+			@apply m-0;
+		}
 	}
 
 	hr {
@@ -71,21 +86,30 @@
 		@apply w-full mb-6;
 
 		thead tr {
-			@apply border-b-2 border-gray-400 dark:border-gray-700;
+			@apply ;
 		}
 		thead th {
-			@apply py-2;
+			@apply py-2 border-b-2 border-gray-200 dark:border-gray-700;
 		}
 
 		tbody tr {
-			@apply border-b-1 border-gray-400 dark:border-gray-700;
+			@apply ;
 		}
 
 		tbody td {
-			@apply py-1;
+			@apply py-1 border-b-1 border-gray-100 dark:border-gray-700;
 		}
 
+		tbody tr td:first-of-type {
+			@apply: whitespace-nowrap pr-4;
+		}
 	}
+
+	/* code {
+		
+	} */
+
+
 
 	.dark {
 		a {
@@ -145,10 +169,13 @@ pre[class*="language-"] {
 }
 
 /* Inline code */
+:not(pre) > code,
 :not(pre) > code[class*="language-"] {
-	padding: .1em;
 	border-radius: .3em;
 	white-space: normal;
+	@apply py-1 px-2 text-sm 
+		text-violet-600 bg-violet-50
+		dark:text-violet-200 dark:bg-violet-900;
 }
 
 .dark {
