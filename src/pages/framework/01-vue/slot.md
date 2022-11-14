@@ -1,3 +1,8 @@
+---
+title: Slot
+index: Framework.Vue.Practice
+---
+
 [[toc]]
 
 ### slot 嵌套

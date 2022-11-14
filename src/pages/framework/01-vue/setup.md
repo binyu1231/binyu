@@ -11,12 +11,13 @@ index: Framework.Vue.Syntax
 
 ```ts
 import { Btn } from '@/components'
+import { formatDate } from '@/utils'
 
 export default defineComponent({
   components: { Btn },
   setup() {
     function handleClick () {}
-    return { handleClick }
+    return { handleClick, formatDate }
   }
 })
 ```
@@ -28,7 +29,9 @@ export default defineComponent({
 // auto expose component
 import { Btn } from '@/components'
 // auto expose variable
+import { formatDate } from '@/utils'
 function handleClick () {}
+
 </script>
 ```
 
@@ -53,23 +56,24 @@ export default defineComponent({
 
 2. setup flag  
 
-``` ts
-// <script setup>
-import { defineProps } from 'vue'
-
-// <script setup>
+``` html
+<script setup>
 const props = defineProps(['disabled'])
 
-// <script setup> with default value
+// with default value
 const props = defineProps({
   disabled: { type: Boolean, default: false },
 })
 
-// <script setup lang="ts">
+</script>
+```
+
+``` html
+
+<script setup lang="ts">
 const props = defineProps<{ disabled?: boolean }>()
 
-// <script setup lang="ts"> with default value
-// 1.
+// with default value
 const props = withDefaults(
   // Note: 
   // disabled? === required: false

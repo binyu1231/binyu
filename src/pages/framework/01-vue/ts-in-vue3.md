@@ -351,7 +351,7 @@ enum ProductStatusType {
   done = 3,
 }
 
-const productStatusMap: Readonly<{ [T in ProductStatusType]: string }> = Object.freeze({
+const productStatusMap: Readonly<Record<EntityState, string>> = Object.freeze({
   [ProductStatusType.undo]: '未受理',
   [ProductStatusType.doing]: '进行中',
   [ProductStatusType.done]: '已完成',
