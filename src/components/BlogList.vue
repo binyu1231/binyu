@@ -59,12 +59,12 @@ onMounted(() => {
         </article>
       </div>
 
-      <div class="bg-gray-100 my-10 dark:bg-gray-700">
+      <!-- <div class="bg-gray-100 my-10 dark:bg-gray-700">
         <GoogleAd
           slot-id="5208491859"
           client-id="ca-pub-7479088543794946"
         />
-      </div>
+      </div> -->
       <!-- Load more button -->
       <div class="flex justify-center md:mt-16">
         <a
